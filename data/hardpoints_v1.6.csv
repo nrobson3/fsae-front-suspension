@@ -1,0 +1,25 @@
+# FSAE front suspension hardpoints, LEFT front corner (right corner = mirror y -> -y)
+# version: v1.6 (2026-10-26) damper chassis eye 4.5 mm further along the damper axis so a bump rubber fits at full bump (Week 2 close audit); everything else as v1.5; see notes/hardpoint_log.md
+# axes: ISO 8855 vehicle frame. x forward, y left, z up. Origin = ground plane at static ride height, on the front axle line, on the vehicle centreline. Units mm.
+# body: chassis = fixed to sprung mass, upright = moves with the wheel, lca = moves with the lower wishbone, rocker = rotates about RKR_P-RKR_A, arb = ARB lever, rotates about ARB_P-ARB_A
+id,body,x_mm,y_mm,z_mm,description
+UCA_F,chassis,160.000,208.800,196.600,Upper wishbone front leg inboard rod end
+UCA_R,chassis,-180.000,208.800,196.600,Upper wishbone rear leg inboard rod end
+LCA_F,chassis,171.400,195.000,104.600,Lower wishbone front leg inboard rod end
+LCA_R,chassis,-171.400,195.000,104.600,Lower wishbone rear leg inboard rod end
+TR_I,chassis,45.30,208.65,132.95,Tie rod inboard ball joint (rack end) at zero rack travel
+RKR_P,chassis,-15.0,225.0,400.0,Rocker pivot centre (on rocker axis)
+RKR_A,chassis,15.0,225.0,400.0,Second point on rocker axis
+DMP_C,chassis,-15.0,48.8,475.0,Damper chassis eye
+ARB_P,chassis,-135.0,193.0,330.0,Anti-roll bar axis point in the lever plane (bar behind the rockers, out of the footwell)
+ARB_A,chassis,-135.0,223.0,330.0,Second point on anti-roll bar axis
+UCA_O,upright,-9.149,559.619,276.000,Upper ball joint centre
+LCA_O,upright,3.449,577.299,132.000,Lower ball joint centre
+TR_O,upright,60.0,593.2,178.4,Tie rod outboard rod end (steering arm)
+PR_O,lca,1.550,545.487,163.771,Pushrod outboard rod end on the lower-wishbone node; on the line LCA_O->PR_I, 45 mm from the ball joint
+WC,upright,0.0,605.637,199.952,Wheel centre (on spin axis in wheel centre plane)
+WA,upright,0.0,655.625,201.043,Point on spin axis 50 mm outboard of WC (sets static camber and toe)
+PR_I,rocker,-15.0,268.2,440.7,Pushrod inboard rod end (rocker)
+DMP_R,rocker,-15.0,225.0,475.0,Damper rocker eye
+ARB_R,rocker,-15.0,193.0,400.0,ARB drop link rocker end
+ARB_L,arb,-15.0,193.0,330.0,ARB drop link lever end

@@ -1,0 +1,136 @@
+{
+ "_about": "Upright detail-design parameters (Week 3a). Read by scripts/bolts.py, scripts/upright/upright_geom.py (the upright solid for CAD and FEA) and scripts/fusion/fsae_parts.py (wishbone nodes, clevis gaps). mm unless stated.",
+ "material": "7075_T7351_plate",
+ "mass_target_kg": 0.6,
+ "housing": {
+  "wall_mm": 9.0,
+  "rib_bore_mm": 62.0,
+  "rib_width_mm": 2.0,
+  "end_land_mm": 2.0,
+  "note": "Bore: two 68 mm P6 cup seats from each end against a central 2 mm rib (back-to-back tapered pair, cups loaded towards the centre).",
+  "note_v2": "v2 (first FEA): wall 7 -> 9 mm. The inboard row's pressure centre (21.7 mm inboard of the wheel centre) sits inboard of every arm, so the ring carries 10-13 kN as bending at its free end (383 MPa at the bore edge, LC4) and into the lower web's corner (542 MPa principal, LC2) on the 7 mm wall; ring bending stress falls as 1/t^2."
+ },
+ "clevis": {
+  "ear_t_mm": 6.0,
+  "ear_r_mm": 16.0,
+  "spacer_mm": 5.0,
+  "inboard_edge_upper_mm": 12.5,
+  "inboard_edge_lower_mm": 14.5,
+  "note": "Ear radius 16 gives e/D 2.0 on a 5/16 in bolt and 1.7 on 3/8 in in the directions the big loads push. The inboard edge is trimmed (upright_loads.json: the lower joint's large loads push outboard, under 0.8 kN inboard; the upper joint pulls inboard up to 1.9 kN, bearing stress about 20 MPa): upper 12.5 mm (e/D 1.57 on 5/16 in), lower 14.5 mm (e/D 1.52 on 3/8 in). Spacer = gap between the wishbone node and each ear; the ball-joint misalignment spacers fill it.",
+  "lower_upper_ear_grow_mm": 8.0,
+  "note_v2": "v2 (first FEA): every ear ends 1 mm inside the web or base it joins (a round end exactly touching the outer face left a tangent sliver). The lower clevis's upper ear carries an 8 mm boss on its top side over the housing's length only, so its top lies well inside the housing: with the 9 mm housing wall the 6 mm ear only grazed the housing by about 1 mm, a crevice that is a stress singularity (LC1 peak 124 -> 222 MPa as the mesh was refined) and cannot be machined or filleted. Beyond the housing end the ear stays 6 mm: a full-length boss came within 0.5 mm of the pushrod's lower rod end at full droop and lock (sweep). The face the ball joint bears on is unchanged.",
+  "lbj_insert_boss": {
+   "dia_mm": 18.0,
+   "height_mm": 4.0,
+   "tap_drill_mm": 9.92,
+   "tap": "3/8-24 STI",
+   "note": "v4 (S-18): a boss round the lower ball-joint bolt on top of the upper ear, 18 mm across (the Heli-Coil's 11.5 mm STI thread plus a 3.25 mm wall) and 4 mm high, so ear + boss = 10 mm holds the 9.5 mm coil. Round about the bolt axis (the steering axis). The first try, 24 x 8 mm for a KNH624J, came within 2.9 mm of the pushrod's lower rod end at full droop and lock."
+  }
+ },
+ "ball_joints": {
+  "upper": {
+   "part": "Aurora COM-5",
+   "bore_in": 0.3125,
+   "od_in": 0.75,
+   "ball_w_in": 0.375,
+   "misalign_deg": 12,
+   "rating_N": 28802,
+   "rating_type": "limit",
+   "bolt": "AN5",
+   "bolt_d_mm": 7.94,
+   "bolt_Ftu_MPa": 862,
+   "bolt_Fty_MPa": 690,
+   "bolt_shear_ult_single_N": 25577
+  },
+  "lower": {
+   "part": "Aurora COM-6",
+   "bore_in": 0.375,
+   "od_in": 0.8125,
+   "ball_w_in": 0.406,
+   "misalign_deg": 10,
+   "rating_N": 24910,
+   "rating_type": "limit (8400 lbf = 37365 N ultimate / 1.5)",
+   "bolt": "NAS6606",
+   "bolt_d_mm": 9.525,
+   "bolt_Ftu_MPa": 1103,
+   "bolt_Fty_MPa": 938,
+   "bolt_shear_ult_single_N": 46660,
+   "fitting": "The 3/8-24 bolt goes in from below, head under the lower ear, and threads into a 3/8-24 Heli-Coil (1D, 9.5 mm) in the upper ear's boss; no nut: the housing end leaves no room for one above the upper ear (audit 2026-10-27). v4 (S-18): a KNH624J key-locked insert was first tried; at 12.7 mm long it needed a 24 x 8 mm boss, whose top edge came within 2.9 mm of the pushrod's rod end at full droop and lock (5 mm needed).",
+   "insert": "1191-6CN375"
+  },
+  "source": "Aurora dimension chart (aircraftspruce.com 05-01671, read 2026-10-26): COM-5 W 0.375 in, 12 deg; COM-6 0.375 bore, 0.8125 OD, W 0.406 in, 10 deg. COM-6 radial 8400 lbf (Motion / FK listings, given as ultimate). AN bolts: 125 ksi Ftu, yield taken as 0.8 Ftu (assumed). NAS6606: 160 ksi Ftu, 95 ksi shear (NAS6603-6620 series), yield taken as 0.85 Ftu (assumed).",
+  "why_lower_com6": "Bolt bending: with the 5 mm spacers the lower ball joint bolt spans 35 mm. Pin bending M = (P/2)(t_ear/2 + gap + w_ball/4) puts a 5/16 in AN5 through a COM-5 at about 900 MPa in LC4 (FoS 0.8 on its assumed yield). A 3/8 in NAS6606 through a COM-6 brings it to 514 MPa (FoS 1.8). The upper joint carries about a third of the load and stays COM-5 / AN5 (FoS 2.2)."
+ },
+ "steering_arm": {
+  "rod_end_w_mm": 12.0,
+  "bolt": "M8 10.9",
+  "bolt_d_mm": 8.0,
+  "bolt_Fty_MPa": 940
+ },
+ "upper_clevis": {
+  "separate_part": false,
+  "note": "The upper ball-joint ears, part of the upright's post (v4).",
+  "ear_r_mm": 13.0,
+  "note_v3": "v3: ears 16 -> 13 mm radius (e/D 1.64 on the 5/16 in bolt); base and shims 16 -> 18 mm half-width (flush with the post). With ears as wide as the base, the root fillets ran out onto flush faces and OCC refused them; the 5 mm step takes the 3 mm machining radius. (Lengthening the base 4 mm to give the fillets more room put the post and clevis into the rim: sweep.)",
+  "note_v4": "v4 (S-18 fastener sweep, 2026-11-03): v1-v3 bolted a separate clevis to the post over a camber shim pack. The sweep found its two M8 bolt heads inside the clevis ears and against the upper wishbone's ball-joint node (the base face was 3 mm from the node), with no hex-key path. Moving the bolts above and below the ears (M6 at 28 mm) still left the top head on the ear's R3 root fillet, the keys against the ears and the upper joint's bolt in the way, and clearing them all needed the bolts at about 33 mm, 5 mm from the end of a base that cannot grow (v3: a longer base reached the rim). The ears are now part of the post, which starts flush with the housing's inboard end (3.8 mm from the node); camber is set at the upper wishbone's chassis rod ends (camber_adjust)."
+ },
+ "caliper_mount": {
+  "lug_t_mm": 19.4,
+  "web_t_mm": 6.0,
+  "bolt_hole_mm": 8.1,
+  "lug_r_mm": 12.0,
+  "bridge": true,
+  "note": "v2 (first FEA): lugs 10 -> 12 mm radius and made one plate with a bridge between the bolt bosses and the gap between the lugs filled, so the pair works as one deep beam instead of two cantilevers. Lug roots moved 14 -> 4 mm either side of wheel-centre height so the plate meets the housing clear of the upper post (at 14 mm the two touched just above the housing, leaving a sharp crevice no fillet could fill). Plate 10 -> 14 mm (grown inboard; the caliper mounting face stays put): the pads sit 26 mm outboard of the bolts, so braking pushes one bolt in and pulls the other out and twists the plate about its radial axis (471 MPa at the upper root fillet, LC4); torsion and out-of-plane stress fall as 1/t^2. Then 19.4 mm, from the caliper mounting face to the housing's inboard end, flush with it: the 14 mm plate still peaked at 257 MPa at its inboard root fillet, which could not grow past 5 mm because the housing end was 5 mm away. Flush, that corner is gone and the plate is deeper still.",
+  "root_half_spacing_mm": 4.0,
+  "flush_inboard": true
+ },
+ "fillets": {
+  "min_mm": 3.0,
+  "load_root_mm": 8.0,
+  "note": "v2 (first FEA): arm-to-housing root fillets 5 -> 8 mm; the peaks sat at the top of the 5 mm fillets. The build tries 8, then 6, 5, 3 mm per arm and records what each arm got."
+ },
+ "wall_min_mm": 2.5,
+ "post": {
+  "t_mm": 20.0,
+  "half_width_mm": 18.0,
+  "note": "v2 (first FEA): 12 -> 20 mm along the spin axis and 32 -> 36 mm wide; the upper joint's lateral load bends the post about its thin direction."
+ },
+ "lower_web": {
+  "t_mm": 20.0,
+  "half_width_mm": 20.0,
+  "note": "v2 (first FEA): 10 -> 20 mm along the spin axis (to 4 mm short of the disc) and 32 -> 40 mm wide; the lower joint's 4 kN lateral load put 600 MPa in the 10 mm web's root.",
+  "below_lower_ear_mm": 6.0,
+  "note_v3": "v3: flat-bottomed (6 mm corner radii), ending 6 mm below the lower ear's bottom face: the round end ran about 20 mm further, carrying no load (the ball-joint loads enter through the ears). A round end raised that far left the web narrower than the ear where they meet (a sliver face the mesher could not handle).",
+  "corner_r_mm": 6.0
+ },
+ "bolt_torque": {
+  "UBJ": {
+   "bolt": "AN5 (5/16-24)",
+   "torque_Nm": 11.3,
+   "note": "100 in-lb, low end of the AN range"
+  },
+  "LBJ": {
+   "bolt": "NAS6606 (3/8-24) into a steel insert",
+   "torque_Nm": 12.4,
+   "note": "110 in-lb, below the 160-190 in-lb AN tension-nut range so the preload tension leaves bending margin"
+  },
+  "TR": {
+   "bolt": "M8 10.9",
+   "torque_Nm": 25.0,
+   "note": "VDI 2230 class value for M8 10.9 at mu 0.12 is higher; 25 N m keeps margin for bending"
+  },
+  "push": {
+   "bolt": "M8 10.9",
+   "torque_Nm": 25.0,
+   "note": "as the tie rod"
+  },
+  "K_nut_factor": 0.2,
+  "basis": "Preload F = T / (K d). The preload tension adds to the pin-bending stress at the same fibre (conservative)."
+ },
+ "camber_adjust": {
+  "method": "Upper wishbone inboard rod ends (Aurora AM-M8T, M8 x 1.25) threaded in or out at the chassis, locked by jam nuts",
+  "range_deg": 0.5,
+  "per_turn_deg": 0.5,
+  "note": "About 1.27 mm of upper-joint travel per 0.5 deg (the joints are 146 mm apart): one turn of an M8 rod end. Turn both legs together for camber only; unequal turns trade camber for caster. Replaces the v1-v3 shim pack (D20)."
+ }
+}

@@ -1,0 +1,23 @@
+# Re-runs the whole analysis from the committed data and CAD meshes, then the test suite.
+name: analysis
+
+on: [push, pull_request]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: System libraries the gmsh wheel loads (absent on the headless runner)
+        run: sudo apt-get update && sudo apt-get install -y libglu1-mesa libxrender1 libxcursor1 libxft2 libxinerama1
+      - run: pip install -r requirements.txt
+      - name: Rebuild every output (kinematics, loads, CAD sweep, mass, requirements matrix)
+        run: python scripts/run_all.py
+      - name: Tests
+        run: python -m pytest tests -q
+      - name: Requirements matrix must have no FAIL
+        run: "! grep -q '\\*\\*FAIL' notes/requirements_matrix.md"

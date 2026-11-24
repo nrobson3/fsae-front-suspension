@@ -1,0 +1,14 @@
+# intermediates (CLAUDE.md: never commit .tmp)
+.tmp/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# FEA scratch meshes and result fields (the reports in notes/ and data/ are kept)
+*.msh
+*.vtu
+
+# kept on the author's machine, not published (see README)
+/PLAN.md
+/cad/archive/
+/plots/cad/archive/

@@ -1,0 +1,114 @@
+{
+ "_about": "Inputs for the step B hand calcs (PLAN s17): brake heat (S-16), weld toes and rod-end threads (S-07b), steering free play (R-06). Keys ending _assumed are engineering assumptions; each limit cites its source, and a source only read second-hand says so.",
+ "brake_heat": {
+  "ambient_C_assumed": 30.0,
+  "endurance_km": 22.0,
+  "endurance_km_basis": "FSAE endurance: a single heat of about 22 km (rules D.12); confirm against the 2026 rules",
+  "brake_events_from": "vehicle.json duty.cycle_model.events_per_km_assumed.brake",
+  "event_speed_kph_assumed": [
+   70.0,
+   35.0
+  ],
+  "mean_speed_kph_assumed": 50.0,
+  "hardest_stop_kph_assumed": 100.0,
+  "front_share_from": "LC3 (1.5 g braking): 2 x front Fx / (m g 1.5), the fixed-bias share at the limit",
+  "disc_material": "410 stainless (assumed; the disc is a quote line, H3)",
+  "disc_density_kg_m3": 7740.0,
+  "disc_c_J_kgK": 460.0,
+  "disc_k_W_mK_assumed": 25.0,
+  "disc_props_basis": "density and specific heat from 410 stainless datasheets (AK Steel 7.74 g/cm3, about 460 J/kg K at 0-100 C) as relayed by a search, not opened; conductivity a typical value",
+  "disc_emissivity_assumed": 0.6,
+  "disc_h_W_m2K_assumed": [
+   30.0,
+   60.0,
+   100.0
+  ],
+  "disc_h_design_W_m2K_assumed": 60.0,
+  "disc_h_basis": "No verified convection correlation for a small solid disc was found (Limpert and SAE 2006-01-1974 not accessible), so the disc temperature is given over a range of h; disc_h_design is used for the mount requirement",
+  "upright_h_W_m2K_assumed": 20.0,
+  "upright_c_J_kgK": 960.0,
+  "hat_length_mm_assumed": 5.5,
+  "hat_basis": "The CAD's hat (fsae_parts.disc, v1.7): a steel tube 56-60 mm radius from the disc's outboard face to the hub flange, 5.5 mm",
+  "hub_h_W_m2K_assumed": 30.0,
+  "hub_basis": "The hub flange's inboard face and rim (60 mm radius, 14 mm wide; the outboard face is under the wheel) shed heat as they spin; h assumed. The hub and the upright are taken at one temperature (the bearings between them conduct well), so the budget counts both",
+  "contact_conductance_W_m2K_assumed": [
+   1000.0,
+   3000.0,
+   10000.0
+  ],
+  "contact_basis": "Steel or titanium on steel at light clamp: of order 1e3-1e4 W/m2 K (assumed range). The mount is judged at the high end, where contacts resist least",
+  "float": {
+   "bobbins": 6,
+   "contact_dia_mm": 8.0,
+   "path_mm": 6.0,
+   "options": {
+    "stainless": {
+     "k_W_mK": 16.0
+    },
+    "titanium": {
+     "k_W_mK": 6.7
+    }
+   },
+   "design": "titanium",
+   "basis": "Floating disc on 6 bobbins: heat crosses two contacts (8 mm faces, relieved shoulders) and 6 mm of bobbin between them (a 12 mm bobbin). Ti-6Al-4V conducts about 6.7 W/m K against stainless 16 (typical handbook values); the design takes titanium"
+  }
+ },
+ "limits": {
+  "loctite_641_C": 150.0,
+  "loctite_641_basis": "Henkel product page: service range -55 to +150 C (relayed by a search; the TDS hot-strength chart was not read)",
+  "al7075_T73_long_term_C_assumed": 120.0,
+  "al7075_basis": "Assumed. No primary exposure table was found (MMPDS not accessible); T73 is made by ageing at about 163 C (MIL-H-6088, second-hand), so strength loss from exposure should start above that. Confirm before publishing",
+  "nylon_insert_nut_C": 80.0,
+  "nylon_insert_nut_basis": "FSAE T.8.2.3: nylon lock nuts only where the temperature does not exceed 80 C (read from a team's copy of the T.8 rules; confirm against the 2026 rules)"
+ },
+ "welds": {
+  "fat_toe_MPa": 63.0,
+  "fat_root_MPa": 36.0,
+  "m": 3.0,
+  "n_ref": 2000000.0,
+  "basis": "IIW recommendations (Hobbacher), load-carrying fillet weld: toe FAT 63, root FAT 36 on the throat, slope 3, read from secondary papers (Raftar et al., LUT; another quotes FAT 80 for the toe: the lower is used). The S-N line is taken on below the 1e7 knee with no endurance limit (conservative for variable amplitude). Confirm against the IIW 2016 tables",
+  "throat_over_wall": 1.0,
+  "throat_basis": "Design rule for the drawings: every member-end fillet weld has a throat at least the tube wall (leg 1.4 x wall), so the throat stress equals the tube's"
+ },
+ "threads": {
+  "engagement_d": 1.5,
+  "engagement_basis": "Rod-end shank in the tube insert: 1.5 x d (the engagement named in the BS EN 2791/2792 aerospace rod-end titles; text not read). Goes on the drawings with the jam nut",
+  "insert_material": "4130N_tab",
+  "strip_shear_fraction": 0.5,
+  "strip_basis": "Stripping area = 0.5 x pi x d x engagement: half the cylinder at the major diameter shears (the same rule as the Heli-Coil pull-out in HC-7), at 0.577 x the insert's yield",
+  "stress_area_mm2": 36.6,
+  "stress_area_basis": "ISO 898-1, M8 x 1.25",
+  "fat_MPa": 50.0,
+  "fat_basis": "EN 1993-1-9 Table 8.1: bolts and rods with rolled or cut threads in tension, detail category 50, slope 3 (confirmed second-hand: Fraunhofer, 2023). No credit taken for the jam nut's preload",
+  "m": 3.0,
+  "n_ref": 2000000.0
+ },
+ "free_play": {
+  "limit_deg": 7.0,
+  "rack_lash_mm_assumed": 0.1,
+  "rack_basis": "Kaz rack: 'adjustable rack preload and lash' (kaztechnologies.com/steering-rack, read 2026-11-04); no figure published. 0.10 mm at the rack after adjustment is assumed",
+  "rod_end_play_mm_assumed": 0.025,
+  "rod_end_basis": "PTFE-lined rod ends run with near-zero radial play; 0.025 mm each is assumed (no Aurora figure read)",
+  "rod_ends_in_chain": 2,
+  "column_allocation_deg_assumed": 2.0,
+  "column_basis": "Steering column, two universal joints and the wheel's quick release are chassis-side, not designed here; 2 deg is the share of the 7 deg budget they are allowed",
+  "c_factor_from": "vehicle.json steering.rack_c_factor_mm_per_rev_assumed (75 mm/rev; the Kaz rack's own 4.71 in/rev, 119.6 mm, gives less play at the wheel)"
+ },
+ "arb_bar_fatigue": {
+  "surface_body": "ground",
+  "surface_spline": "machined",
+  "surface_factors": {
+   "ground": [
+    1.58,
+    -0.085
+   ],
+   "machined": [
+    4.51,
+    -0.265
+   ]
+  },
+  "basis": "Marin surface factor ka = a Sut^b (Shigley Table 6-2). The bar's body and its R4 shoulder fillets are specified form-ground (usual for torsion bars); the spline is cut, so machined. Read second-hand",
+  "reliability_ke": 0.814,
+  "reliability_basis": "99 % reliability (Shigley Table 6-5), the same factor the upright's fatigue uses (upright_fea.py, upright_fatigue.py). Left out until the step E audit, which is what failed the 150 ksi bar"
+ }
+}

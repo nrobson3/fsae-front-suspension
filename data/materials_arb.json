@@ -1,0 +1,9 @@
+{
+ "_about": "Materials added after the upright's FEA ran: the ARB bar (D26). Kept apart from materials.json because the upright FEA's fingerprint (fingerprint.fea_inputs_hash) hashes that whole file, so an entry the FEA never reads would mark it STALE. common.load_materials() merges both files.",
+ "4340_HT180": {
+  "E_MPa": 205000,
+  "Fty_MPa": 1124,
+  "Ftu_MPa": 1241,
+  "source": "AISI 4340 bar, quenched and tempered to Ftu 180 ksi: Fty 163 ksi (MMPDS low-alloy steel table, read second-hand: confirm against MMPDS before publishing). Torsion bar (D26; raised from 150 ksi in step E when the fatigue check took the 99 % reliability factor)"
+ }
+}

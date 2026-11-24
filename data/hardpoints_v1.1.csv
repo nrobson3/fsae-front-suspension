@@ -1,0 +1,25 @@
+# FSAE front suspension hardpoints, LEFT front corner (right corner = mirror y -> -y)
+# version: v1.1 (2026-10-24) steering arm for Ackermann, ARB ratio, rocker for motion ratio; see notes/hardpoint_log.md
+# axes: ISO 8855 vehicle frame. x forward, y left, z up. Origin = ground plane at static ride height, on the front axle line, on the vehicle centreline. Units mm.
+# body: chassis = fixed to sprung mass, upright = moves with the wheel, rocker = rotates about RKR_P-RKR_A, arb = ARB lever, rotates about ARB_P-ARB_A
+id,body,x_mm,y_mm,z_mm,description
+UCA_F,chassis,160.0,230.0,193.8,Upper wishbone front leg inboard rod end
+UCA_R,chassis,-180.0,230.0,193.8,Upper wishbone rear leg inboard rod end
+LCA_F,chassis,200.0,200.0,82.9,Lower wishbone front leg inboard rod end
+LCA_R,chassis,-200.0,200.0,82.9,Lower wishbone rear leg inboard rod end
+TR_I,chassis,60.0,214.5,99.6,Tie rod inboard ball joint (rack end) at zero rack travel
+RKR_P,chassis,-15.0,225.0,400.0,Rocker pivot centre (on rocker axis)
+RKR_A,chassis,15.0,225.0,400.0,Second point on rocker axis
+DMP_C,chassis,-15.0,53.3,475.0,Damper chassis eye
+ARB_P,chassis,55.0,207.0,330.0,Anti-roll bar axis point in the lever plane
+ARB_A,chassis,55.0,237.0,330.0,Second point on anti-roll bar axis
+UCA_O,upright,-10.374,557.9,290.0,Upper ball joint centre
+LCA_O,upright,5.374,580.0,110.0,Lower ball joint centre
+TR_O,upright,60.0,601.6,140.0,Tie rod outboard rod end (steering arm)
+PR_O,upright,-15.0,557.0,145.0,Pushrod outboard rod end (upright pickup)
+WC,upright,0.0,605.637,199.952,Wheel centre (on spin axis in wheel centre plane)
+WA,upright,0.0,655.625,201.043,Point on spin axis 50 mm outboard of WC (sets static camber and toe)
+PR_I,rocker,-15.0,270.7,440.3,Pushrod inboard rod end (rocker)
+DMP_R,rocker,-15.0,225.0,475.0,Damper rocker eye
+ARB_R,rocker,-15.0,207.0,400.0,ARB drop link rocker end
+ARB_L,arb,-15.0,207.0,330.0,ARB drop link lever end

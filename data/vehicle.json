@@ -1,0 +1,304 @@
+{
+ "_about": "Reference vehicle for Portfolio Project 1 (FSAE-class front suspension). Own assumptions, no team data. Geometry in mm, masses in kg, everything else SI unless the key says otherwise. Keys ending _assumed are engineering assumptions stated in the write-up; sourced values cite notes/requirements.md section 8.",
+ "_public_comparison": "Inside published FSAE ranges: wheelbase 1525-1684 mm, front track 1180-1439 mm, mass with driver about 215-328 kg, front share 45-50.5 %, CG 260-308 mm (TU Graz 2012-2019 cars on formulastudent.de: 1550 mm wheelbase, 10 in wheels, 46 % front; eForce FSE.11; NAU 2024 spec sheet; Ojaswat 2020). Round values chosen inside those ranges; no team data.",
+ "configuration": "Aero-less baseline (no wings: the rear-wing project adds aero later); mass basis is a single-cylinder combustion car with a 68 kg driver.",
+ "wheelbase_mm": 1550,
+ "track_front_mm": 1220,
+ "track_rear_mm_assumed": 1180,
+ "mass_total_kg": 290,
+ "driver_mass_kg": 68,
+ "front_weight_fraction": 0.47,
+ "cg_height_mm": 290,
+ "unsprung_mass_front_corner_kg": 11.0,
+ "unsprung_mass_rear_corner_kg_assumed": 12.0,
+ "unsprung_cg_height_mm_assumed": 200,
+ "tyre": {
+  "model": "Hoosier 43075, 16.0 x 7.5-10 (LC0 / R20)",
+  "unloaded_diameter_mm": 411.5,
+  "loaded_radius_mm": 200,
+  "vertical_stiffness_N_per_mm": 122,
+  "vertical_stiffness_basis": "Hoosier setup guideline (TTC data), 12 psi on 8 in rim: 724 lb/in at 200 lb, trend extrapolated to the 150 lb static corner load = 699 lb/in = 122 N/mm (an estimate: extrapolated)",
+  "tread_width_mm": 185,
+  "mass_kg": 3.63,
+  "pneumatic_trail_mm_assumed": 15.0,
+  "pneumatic_trail_basis": "The lateral force acts this far behind the contact patch (aligning moment = Fy x trail). Typical FSAE slicks carry 10-25 mm near the friction peak, falling towards zero at saturation, so 15 mm at the design g is a conservative middle value. Applied to the contact-patch load cases with a lateral force."
+ },
+ "wheel": {
+  "model": "Braid Sturace FSAE 10 x 6 in, made to specification (rennline.com listing: 10 in and 13 in 'in any specification')",
+  "rim_width_in": 6.0,
+  "offset_mm": 35,
+  "mass_kg": 2.5,
+  "note": "6 in rather than 7 in (RC-6): the CAD interference sweep showed no wishbone geometry keeps a 7 in rim's inboard lip clear of the legs at full steering lock. Hoosier's current spec table (hoosiertire.com/tires/circuit-racing, read 2026-10-26) gives 6-8 in as the recommended rim range for the 43075, measured on 8 in; the 2018 launch table said 7-8 in, so confirm with Hoosier before ordering. The tyre data (rate, section) are measured on 8 in; on 6 in the section is narrower and the tyre a little softer (ride-frequency effect under 1 %). Mass kept at the 10x7 figure (conservative). ET 35 moves the disc outboard to clear the steering-arm rod end.",
+  "diameter_in": 10
+ },
+ "damper": {
+  "model": "Ohlins TTX25 MkII FSAE",
+  "extended_mm": 200,
+  "stroke_mm": 57,
+  "compressed_mm": 143,
+  "eye_bore_mm": 8,
+  "spring_id_mm": 36,
+  "mass_kg": 0.394,
+  "bump_rubber_solid_mm_assumed": 6.0,
+  "bump_rubber_note": "Bump rubber on the damper shaft. Travel stops where the damper length = compressed length + the rubber's solid height; that must fall between +25 mm (FSAE V.3.1.1 jounce) and +30 mm (the end of the swept envelope the clearances were checked over). Droop is limited by the damper's extended length (top-out), which must leave at least 25 mm. The BOM rubber must have a solid height in the window that kinematics.py reports."
+ },
+ "spring_steps_lbf_in": [150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 550, 600, 650],
+ "spring_catalogue": {
+  "range": "Ohlins' TTX25 MkII FSAE (GTTX25) listing gives these 13 rates, 150-650 lb/in; Hyperco's Formula SAE springs for it (18FS<rate>: 1.450 in ID, 4.400 in free length) run 150-400 lb/in. 150 lb/in is the softest either sells",
+  "chosen_part": "Hyperco FSAE spring, 150 lb/in: Essex 09.03.FS150 (55.00 USD, sold for the TTX25 MkII); Summit lists the same rate as HYC-18FS150",
+  "source": "https://www.mlperformance.co.uk/products/ohlins-gttx25-professional-motorsport-products-ttx-25-mkii-fsae-200-57-mm (rates); https://www.summitracing.com/search/product-line/hyperco-formula-sae-coilover-springs (Hyperco line, ID and free length); https://www.essexparts.com/hyperco-fsae-coil-spring-150lbsin (part and price); read 2026-11-04. Replaces an assumed 2.5 N/mm metric list"
+ },
+ "ride_frequency_front_hz": 2.8,
+ "ride_frequency_front_basis": "Revised from PLAN's 3.2 Hz (requirement change RC-2): public FSAE practice for aero-less cars is about 2-3 Hz, and 2.8 Hz is what lets the 1.0 deg/g roll-gradient and 52 % TLLTD targets hold together",
+ "ride_frequency_rear_hz_assumed": 3.0,
+ "roll_gradient_target_deg_per_g": 1.0,
+ "tlltd_front_target_assumed": 0.52,
+ "arb_bar": {
+  "model": "Solid 4340 torsion bar, heat treated to 180 ksi, splined ends; three bars set the rate (soft, middle, stiff) and the bar is swapped to adjust; two stiff 4130N levers; drop links off = disconnected (D26)",
+  "settings": {"soft": 0.3, "middle": 0.65, "stiff": 1.0},
+  "settings_basis": "Fractions of the stiff setting's roll stiffness. The middle setting gives the TLLTD target, so the bars adjust the balance both ways from it",
+  "bars_mm": {"soft": 10.2, "middle": 12.4, "stiff": 13.9},
+  "bars_basis": "Body diameters sized so each bar (its body, plus the upset ends on to each hub's centre), in series with the two levers' bending, gives its setting within setting_tolerance_pct (vehicle_calcs.py checks it, S-22); rounded to 0.1 mm (the bodies are turned and ground)",
+  "fitted": "middle",
+  "material": "4340_HT180",
+  "shear_modulus_MPa": 80000,
+  "end_od_mm": 25.0,
+  "lever_hub_half_len_mm": 8.0,
+  "upset_runout_mm": 5.0,
+  "shoulder_fillet_mm": 4.0,
+  "shoulder_basis": "The upset starts upset_runout_mm inboard of each lever hub; the body steps up to it with an R4 fillet (the CAD shows the step sharp). HC-5 checks the fillet in fatigue (Kt from the torsion fits), S-23",
+  "spline_minor_mm": 23.0,
+  "spline_kt_assumed": 3.0,
+  "spline_basis": "Ends upset to 25 mm and splined into the levers, spline minor diameter 23 mm (the spline is not detailed; 22 / 20 mm until step E, when the fatigue check took the 99 % reliability factor and the machined spline failed). Kt 3.0 on the minor diameter in torsion is taken at the high end of the splined-shaft range (Peterson, read second-hand); HC-5 checks the ends. Machined from 28 mm bar; the body and its R4 fillets ground",
+  "setting_tolerance_pct": 3.0,
+  "lever_stiffness_ratio_min": 10.0,
+  "lever_material": "4130N_tab",
+  "lever_blade_t_mm": 8.0,
+  "lever_blade_w_mm": 25.0,
+  "lever_hub_wall_mm": 6.0,
+  "lever_offset_mm": 15.0,
+  "lever_basis": "The drop link's lever-end rod end is bolted through the lever along the bar's axis, beside it on a 5 mm misalignment spacer, with a second spacer and a 24 mm washer outside it (single shear, captured; D25). So the lever's mid-plane sits 15 mm inboard of the ball centre ARB_L (6 mm half ball + 5 mm spacer + 4 mm half lever), and the bar's free length between the lever hubs is 2 x (|ARB_P y| - 15). 8 x 25 mm (D26): strong enough at the warp torque (S-21) and much stiffer than the stiff bar (S-08); the 6 x 18 mm placeholder of D25 reached FoS 0.95",
+  "note": "History: v1.0-v1.5 a 3/4 x 0.049 in tube in series with adjustable blades (only 1.24x the stiff-blade requirement); v1.6 1.0 x 0.049 in (FoS 1.28 in warp, second Week 2 audit); v1.7 1.0 x 0.065 in. Step D (D26): blades dropped. A blade rotated to adjust turns the through-bolted rod end past its rating (D25), and a blade compliant enough to set the rate would see about 1500 MPa at the warp torque, so the rate moves into a solid bar and the levers are made stiff"
+ },
+ "roll_centre_rear_mm_assumed": 50,
+ "wheel_travel_design_mm": {
+  "bump": 30,
+  "droop": 30
+ },
+ "wheel_travel_rule_total_mm": 50,
+ "hairpin_outside_diameter_m": 9.0,
+ "hairpin_line_margin_m_assumed": 0.25,
+ "steering": {
+  "rack_c_factor_mm_per_rev_assumed": 75.0,
+  "note": "Steering-effort case LC6 (abuse case): the driver pulls 25 N m on the STEERING wheel with the road wheels blocked (kerb or stop); the whole rack force then loads one tie rod. 25 N m is an assumed hard pull, not a cited value.",
+  "driver_torque_at_wheel_Nm_assumed": 25.0
+ },
+ "load_cases": [
+  {
+   "id": "LC1",
+   "type": "g",
+   "name": "3 g bump (3 x static corner load)",
+   "ax_g": 0.0,
+   "ay_g": 0.0,
+   "bump_g": 3.0,
+   "wheel": "either"
+  },
+  {
+   "id": "LC2",
+   "type": "g",
+   "name": "1.6 g cornering, outside wheel",
+   "ax_g": 0.0,
+   "ay_g": 1.6,
+   "bump_g": 1.0,
+   "wheel": "outside"
+  },
+  {
+   "id": "LC2i",
+   "type": "g",
+   "name": "1.6 g cornering, inside wheel",
+   "ax_g": 0.0,
+   "ay_g": 1.6,
+   "bump_g": 1.0,
+   "wheel": "inside"
+  },
+  {
+   "id": "LC3",
+   "type": "g",
+   "name": "1.5 g braking",
+   "ax_g": -1.5,
+   "ay_g": 0.0,
+   "bump_g": 1.0,
+   "wheel": "either"
+  },
+  {
+   "id": "LC4",
+   "type": "g",
+   "name": "1.2 g braking + 1.2 g cornering, outside wheel (envelope: about 10 % beyond the friction ellipse)",
+   "ax_g": -1.2,
+   "ay_g": 1.2,
+   "bump_g": 1.0,
+   "wheel": "outside"
+  },
+  {
+   "id": "LC5",
+   "type": "direct",
+   "name": "pothole edge strike: 3 x static corner load at 45 deg, through the wheel centre, brakes off",
+   "fx_static": -2.1213,
+   "fy_static": 0.0,
+   "fz_static": 2.1213,
+   "apply_at": "wc"
+  },
+  {
+   "id": "LC7",
+   "type": "direct",
+   "name": "kerb strike: 2.5 x static corner load inboard on the outer sidewall, 100 mm up, plus static weight",
+   "fx_static": 0.0,
+   "fy_static": -2.5,
+   "fz_static": 1.0,
+   "apply_at": "kerb",
+   "kerb_height_mm": 100
+  },
+  {
+   "id": "LC8",
+   "type": "g",
+   "name": "1.0 g reverse braking (car rolling backwards)",
+   "ax_g": 1.0,
+   "ay_g": 0.0,
+   "bump_g": 1.0,
+   "wheel": "either"
+  }
+ ],
+ "brake": {
+  "disc_od_mm_assumed": 180,
+  "pad_effective_radius_mm_assumed": 77,
+  "pad_mu_assumed": 0.45,
+  "caliper": {
+   "model": "Wilwood PS-1 (120-5453 RH / 120-5456 LH), 2 x 1.00 in pistons, lug mount",
+   "bolt_spacing_mm": 63.5,
+   "bolt_hole_mm": 8.1,
+   "mount_below_disc_od_mm": 30.9,
+   "bridge_beyond_disc_od_mm": 23.9,
+   "width_axial_mm": 34.3,
+   "length_mm": 96.3,
+   "mass_kg": 0.5,
+   "disc_thickness_range_mm": [
+    3.8,
+    5.1
+   ],
+   "source": "https://www.wilwood.com/Calipers/CaliperProd.aspx?itemno=120-5453 and the dimension drawing https://www.wilwood.com/Images/Caliper/Images_dimensions-lg/PS-1-cm-lg.jpg (read 2026-10-26)",
+   "note": "Chosen because it is the only FSAE-class caliper with a fully dimensioned public drawing. Its bridge sits 23.9 mm beyond the disc edge, so the disc is 180 mm (not 190) to keep the bridge 7 mm inside the rim barrel. Pad effective radius = disc radius - 13 mm (half the pad height, estimated).",
+   "mount_offset_mm": 21.1,
+   "ear_thickness_mm": 10.4,
+   "pad_height_mm_estimated": 25.0,
+   "piston_dia_in": 1.0,
+   "pistons_per_side": 1,
+   "piston_basis": "PS-1: two 1.00 in pistons, one each side (Wilwood's page); the line pressure for a pad clamp force is force / one piston's area"
+  }
+ },
+ "hub": {
+  "bearings": "SKF 32008 X tapered roller pair, back-to-back (O arrangement), 40 x 68 x 19 mm; preload set by a cone spacer ground (or shimmed) to the measured bearing standout, the axle nut torqued to clamp the stack",
+  "C_kN": 60.0,
+  "C0_kN": 71.0,
+  "X0": 0.5,
+  "Y0": 0.87,
+  "bore_mm": 40.0,
+  "od_mm": 68.0,
+  "width_mm": 19.0,
+  "mass_kg_each": 0.28,
+  "row_centres_axial_mm": [
+   -15.0,
+   6.0
+  ],
+  "pressure_centre_offset_mm": 6.7,
+  "disc_axial_mm": 14.0,
+  "source": "RS Components SKF 32008 X https://uk.rs-online.com/web/p/roller-bearings/0506769 and Acorn 32008-X-XL https://www.acorn-ind.co.uk/p/fag/single-row-tapered-roller-bearings/32008-x-xl-fag (C0 71 kN, C 64.7 kN, 0.28 kg; read 2026-10-26). Y0 0.9 is a conservative value for this series (confirm with the SKF datasheet). Pressure-centre offset from the bearing centre about (d + D) / 4 x tan(14 deg) = 6.7 mm, outward for a back-to-back pair (geometric estimate). Cup width C = 14.5 mm (the overall width T = 19 mm includes the cone and rollers standing proud of the cup); the cups sit against the central rib, so each is loaded over the 14.5 mm next to the rib.",
+  "history": "Layout (v1.0-v1.7): SKF 71908 CD angular contact pair (C0 8.5 kN each) at 24 mm centres. upright_loads.py showed 9-12 kN per row in LC2 and LC4, s0 0.69-0.76: overloaded. A 7009 CD pair (C0 22.4 kN) would give about 1.9; the tapered pair gives about 5.",
+  "note": "Axial positions from the wheel centre plane, + outboard. Two 19 mm cones back to back on a ground spacer; the two 14.5 mm cups pressed against a 2 mm central rib in the upright bore.",
+  "C_basis": "Distributors list 60-64.7 kN for the 32008 X; the lowest (60) is used.",
+  "contact_angle_deg": 14.2,
+  "e": 0.38,
+  "Y": 1.58,
+  "factors_basis": "Contact angle 14.2 deg (klium.be listing of SKF 32008 X/Q); e = 1.5 tan a, Y = 0.4 cot a, Y0 = 0.22 cot a (ISO 76 / ISO 281 formulas for tapered roller bearings).",
+  "fits": {
+   "housing": "P6 on the 68 mm cup seats (13-45 um interference at 20 C), plus a bearing-retaining compound (Loctite 641)",
+   "shaft": "m6 on the 40 mm hub spindle (rotating inner-ring load)",
+   "retention": "cups pressed in from each side against a central rib in the upright bore (back-to-back pair: both cups are loaded towards the centre); cones clamped by the axle nut, which sets a light preload",
+   "hot_delta_T_C_assumed": 60.0,
+   "alpha_al_per_C": 2.36e-05,
+   "alpha_steel_per_C": 1.17e-05,
+   "cup_wall_mm_estimated": 5.0
+  },
+  "cup_width_mm": 14.5
+ },
+ "duty": {
+  "season_km_assumed": 1000.0,
+  "life_target_seasons": 3.0,
+  "spectrum_basis": "Assumed share of distance in each load state for an aero-less FSAE car over testing, autocross and endurance; inside / outside wheel split evenly. Edit to match logged data when available.",
+  "spectrum": [
+   {
+    "state": "straight, 1 g",
+    "share": 0.4,
+    "ax_g": 0.0,
+    "ay_g": 0.0,
+    "bump_g": 1.0
+   },
+   {
+    "state": "corner 0.5 g",
+    "share": 0.2,
+    "ax_g": 0.0,
+    "ay_g": 0.5,
+    "bump_g": 1.0
+   },
+   {
+    "state": "corner 1.0 g",
+    "share": 0.15,
+    "ax_g": 0.0,
+    "ay_g": 1.0,
+    "bump_g": 1.0
+   },
+   {
+    "state": "corner 1.4 g",
+    "share": 0.08,
+    "ax_g": 0.0,
+    "ay_g": 1.4,
+    "bump_g": 1.0
+   },
+   {
+    "state": "brake 0.8 g",
+    "share": 0.08,
+    "ax_g": -0.8,
+    "ay_g": 0.0,
+    "bump_g": 1.0
+   },
+   {
+    "state": "brake 1.3 g",
+    "share": 0.04,
+    "ax_g": -1.3,
+    "ay_g": 0.0,
+    "bump_g": 1.0
+   },
+   {
+    "state": "brake 0.8 g + corner 0.8 g",
+    "share": 0.03,
+    "ax_g": -0.8,
+    "ay_g": 0.8,
+    "bump_g": 1.0
+   },
+   {
+    "state": "bumps, 2 g",
+    "share": 0.02,
+    "ax_g": 0.0,
+    "ay_g": 0.0,
+    "bump_g": 2.0
+   }
+  ],
+  "cycle_model": {
+   "events_per_km_assumed": {
+    "corner": 20,
+    "brake": 8,
+    "bump": 10
+   },
+   "basis": "Events per km for a tight FSAE autocross / endurance course (about 20 direction changes and 8 braking zones per km; 10 bumps or kerb strikes at 2 g). Corner events are shared among the cornering states (including braking-while-cornering) by their distance share, brake events among the braking states, and every corner is counted as a full outside-to-inside reversal (a slalom), which is conservative: a corner followed by a straight is a smaller cycle. Brake and bump events cycle against the 1 g static state."
+  }
+ }
+}

@@ -1,0 +1,872 @@
+{
+ "_about": "Requirements register. Values and pass/fail are NOT typed here: scripts/requirements_matrix.py pulls them from the generated outputs, so the matrix cannot drift from the analysis. Value sources: kin = kinematics_summary.csv metric (its own status), veh = vehicle_derived.json key, chk_min = minimum of a member_checks.csv column, joint_min = minimum of a joint_checks.csv column, mis_min = minimum misalignment margin, upl = upright_loads.json key, brg = bearings.json key (dotted path), bolt_min = minimum of a bolt_checks.csv column, fea = upright_fea.json key and fat = upright_fatigue.json key (STALE if their inputs changed since they ran), intf_count = interference.csv status count, mass_part = summed mass_budget.csv rows of one part, mass_unsprung = mass budget, open = not yet verified (later week).",
+ "groups": [
+  {
+   "name": "Rules (FSAE Rules 2026 v1.0, read from the SAE Australasia copy; confirm against fsaeonline.com before publishing)",
+   "items": [
+    {
+     "id": "R-01",
+     "req": "Usable wheel travel with driver seated",
+     "target": ">= 50 mm total",
+     "source": "V.3.1.1",
+     "verify": "kinematics + damper fit",
+     "value": {
+      "veh": "wheel_travel_total_mm",
+      "lo": 50,
+      "unit": "mm",
+      "note": "+30 mm to the bump rubber going solid, droop to the damper top-out (V-03)"
+     }
+    },
+    {
+     "id": "R-02",
+     "req": "Wheelbase",
+     "target": ">= 1525 mm",
+     "source": "V.1.2",
+     "verify": "vehicle data",
+     "value": {
+      "veh": "wheelbase_mm",
+      "lo": 1525,
+      "unit": "mm"
+     }
+    },
+    {
+     "id": "R-03",
+     "req": "Smaller track at least 75 % of the larger",
+     "target": ">= 75 %",
+     "source": "V.1.3.2",
+     "verify": "vehicle data",
+     "value": {
+      "veh": "track_ratio_pct",
+      "lo": 75,
+      "unit": "%"
+     }
+    },
+    {
+     "id": "R-04",
+     "req": "Wheel diameter",
+     "target": ">= 203.2 mm",
+     "source": "V.4.1",
+     "verify": "BOM",
+     "value": {
+      "veh": "wheel_diameter_mm",
+      "lo": 203.2,
+      "unit": "mm"
+     }
+    },
+    {
+     "id": "R-05",
+     "req": "Positive steering stops that prevent linkage lock-up",
+     "target": "stop on the rack; arm/tie-rod angle >= 30 deg from toggle at the stop",
+     "source": "V.3.2.4",
+     "verify": "kinematics; CAD",
+     "value": {
+      "kin": "toggle_margin_at_stop"
+     }
+    },
+    {
+     "id": "R-06",
+     "req": "Steering free play",
+     "target": "< 7 deg at the steering wheel",
+     "source": "V.3.2.5",
+     "verify": "scripts/handcalcs.py (HC-10); test plan",
+     "value": {
+      "hc": "r06_free_play_deg",
+      "hi": 7.0,
+      "unit": "deg",
+      "note": "rack lash + one tie-rod chain at the rack's ratio, + 2 deg for the column (chassis side); assumed clearances, measured in the test plan"
+     }
+    },
+    {
+     "id": "R-07",
+     "req": "Rack mechanically attached to the chassis",
+     "target": "bolted brackets",
+     "source": "V.3.2.6",
+     "verify": "scripts/chassis_tabs.py (rack brackets); scripts/fasteners.py (their bolts)",
+     "value": {
+      "fast_joints": "Rack bracket bolt",
+      "lo": 4,
+      "unit": "bolts",
+      "note": "2 a side, M8 into the rack's trunnion blocks, no FAIL; the blocks' size, bolt pattern and thread depth are assumed (Kaz publishes none): an interface item"
+     }
+    },
+    {
+     "id": "R-08",
+     "req": "Rod ends and spherical bearings in double shear (or captured by an oversize washer)",
+     "target": "double-shear clevis, or single shear captured by an oversize washer",
+     "source": "V.3.1.5, V.3.2.9",
+     "verify": "scripts/fasteners.py (a double-shear row per rod end and spherical bearing)",
+     "value": {
+      "fast_count": "FAIL",
+      "check": "double shear",
+      "hi": 0,
+      "unit": "fails",
+      "note": "13 a side in two-plate clevises; the drop link's lever end through the ARB blade in single shear, its rod end captured by a 24 mm washer outside the outer spacer (D25)"
+     }
+    },
+    {
+     "id": "R-09",
+     "req": "Critical fasteners",
+     "target": "metric 8.8 / SAE 5 / AN minimum, positive locking, 2 threads past a lock nut",
+     "source": "T.8.2",
+     "verify": "scripts/fasteners.py (locking and bolt-length rows; the bolt schedule in notes/fasteners.md), BOM",
+     "value": {
+      "fast_count": "FAIL",
+      "check": [
+       "positive locking",
+       "bolt length"
+      ],
+      "hi": 0,
+      "unit": "fails",
+      "note": "grades M8 10.9 / 12.9, AN5, NAS6606; all-metal lock nuts on every nutted joint, the lower ball joint's screw-locking Heli-Coil 3591-6CN375, drilled heads wired in pairs on the caliper and rack bracket bolts; lengths from the bolt schedule: 2+ threads past each nut, 1.5 d engaged in steel, 2 d in aluminium"
+     }
+    },
+    {
+     "id": "R-10",
+     "req": "Adjustable tie-rod ends",
+     "target": "jam nut",
+     "source": "T.8.4",
+     "verify": "BOM (scripts/bom.py: J8, J9)",
+     "value": {
+      "bom_lines": [
+       "J8",
+       "J9"
+      ],
+      "lo": 2,
+      "unit": "lines",
+      "note": "a jam nut on every threaded rod end (J8) and on the rack-end clevis's 1/4-28 thread (J9); no link drawings are made, so the BOM carries the callout"
+     }
+    },
+    {
+     "id": "R-11",
+     "req": "Steering lock for the autocross hairpin (9 m minimum outside diameter)",
+     "target": "outer wheel >= 21.9 deg before the stop",
+     "source": "D.11.1.1(d), derived in requirements.md s4",
+     "verify": "kinematics",
+     "value": {
+      "kin": "lock_margin_before_stop",
+      "note": "rack travel between the required lock and the stop"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Kinematic targets (PLAN s3)",
+   "items": [
+    {
+     "id": "K-01",
+     "req": "Static camber",
+     "target": "-1.0 to -1.5 deg",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "static_camber"
+     }
+    },
+    {
+     "id": "K-02",
+     "req": "Camber recovery in roll, outside wheel (definition in s3.5)",
+     "target": "60-80 %",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "camber_recovery",
+      "note": "minimum over 0.5-2 deg roll"
+     }
+    },
+    {
+     "id": "K-03",
+     "req": "Caster",
+     "target": "3-6 deg",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "caster"
+     }
+    },
+    {
+     "id": "K-04",
+     "req": "Kingpin inclination (static; it rotates with camber gain)",
+     "target": "4-8 deg",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "kpi"
+     }
+    },
+    {
+     "id": "K-05",
+     "req": "Scrub radius",
+     "target": "0-20 mm",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "scrub"
+     }
+    },
+    {
+     "id": "K-06",
+     "req": "Mechanical trail",
+     "target": "10-20 mm",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "trail"
+     }
+    },
+    {
+     "id": "K-07",
+     "req": "Front roll-centre height",
+     "target": "20-50 mm",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "rc_height"
+     }
+    },
+    {
+     "id": "K-08a",
+     "req": "RC migration in heave, height above ground, over +/-25 mm",
+     "target": "< +/-15 mm",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "rc_migration_heave",
+      "deviation": "DV-1"
+     }
+    },
+    {
+     "id": "K-08b",
+     "req": "RC migration in roll, over +/-2 deg",
+     "target": "< +/-15 mm",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "rc_migration_roll"
+     }
+    },
+    {
+     "id": "K-09",
+     "req": "Bump steer over +/-25 mm",
+     "target": "< 0.1 deg toe change",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "bump_steer"
+     }
+    },
+    {
+     "id": "K-10a",
+     "req": "Motion ratio (damper / wheel) over +/-25 mm, minimum",
+     "target": "0.9-1.1",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "motion_ratio_min"
+     }
+    },
+    {
+     "id": "K-10b",
+     "req": "Motion ratio over +/-25 mm, maximum",
+     "target": "0.9-1.1",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "motion_ratio_max"
+     }
+    },
+    {
+     "id": "K-10c",
+     "req": "Motion-ratio progression (near linear or slightly rising)",
+     "target": "0 to +10 %",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "mr_progression"
+     }
+    },
+    {
+     "id": "K-11a",
+     "req": "Ackermann (definition in s3.5), minimum from 5 deg to the stop",
+     "target": "40-60 %",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "ackermann_min"
+     }
+    },
+    {
+     "id": "K-11b",
+     "req": "Ackermann, maximum from 5 deg to the stop",
+     "target": "40-60 %",
+     "source": "PLAN s3",
+     "verify": "kinematics",
+     "value": {
+      "kin": "ackermann_max"
+     }
+    }
+   ]
+  },
+  {
+   "name": "Ride, roll and packaging (PLAN s2 targets as revised, see change log)",
+   "items": [
+    {
+     "id": "V-01",
+     "req": "Front ride frequency (RC-2: 3.2 -> 2.8 Hz)",
+     "target": "2.8 Hz +/-5 %",
+     "source": "PLAN s2, RC-2",
+     "verify": "vehicle calcs",
+     "value": {
+      "veh": "ride_frequency_front_hz",
+      "lo": 2.66,
+      "hi": 2.94,
+      "unit": "Hz",
+      "note": "with the chosen catalogue spring"
+     }
+    },
+    {
+     "id": "V-02",
+     "req": "Roll gradient at the baseline ARB setting (incl. tyre)",
+     "target": "about 1.0 deg/g (0.9-1.1)",
+     "source": "PLAN s2",
+     "verify": "vehicle calcs",
+     "value": {
+      "veh": "roll_gradient_baseline_deg_g",
+      "lo": 0.9,
+      "hi": 1.1,
+      "unit": "deg/g"
+     }
+    },
+    {
+     "id": "V-03a",
+     "req": "Droop travel to the damper top-out (the droop stop): the other half of V.3.1.1's 50 mm",
+     "target": ">= 25 mm (2 mm margin designed in)",
+     "source": "V.3.1.1; Ohlins TTX25 data",
+     "verify": "kinematics",
+     "value": {
+      "kin": "droop_to_topout"
+     }
+    },
+    {
+     "id": "V-03b",
+     "req": "Bump travel ends at the bump rubber, between 25 mm of jounce (half of V.3.1.1's 50 mm total) and the end of the checked envelope",
+     "target": "25-30 mm",
+     "source": "V.3.1.1; Ohlins TTX25 data; bump rubber solid height assumed",
+     "verify": "kinematics",
+     "value": {
+      "kin": "bump_stop_travel"
+     }
+    },
+    {
+     "id": "V-04",
+     "req": "Every spherical joint inside its rated misalignment over heave x roll x steer",
+     "target": ">= 2 deg margin",
+     "source": "Aurora catalogue ratings",
+     "verify": "misalignment check",
+     "value": {
+      "mis_min": "margin_deg",
+      "lo": 2.0,
+      "unit": "deg"
+     }
+    },
+    {
+     "id": "V-05",
+     "req": "Main spring stays seated down to the droop stop (damper top-out)",
+     "target": "no slack (helper spring if needed)",
+     "source": "design rule",
+     "verify": "vehicle calcs; BOM",
+     "value": {
+      "veh": "spring_slack_beyond_droop_mm",
+      "hi": 0.0,
+      "lo": -1000000000.0,
+      "unit": "mm",
+      "note": "slack between the spring's free length and the droop stop",
+      "action": "a light helper (tender) spring, BOM line D3, to quote"
+     }
+    },
+    {
+     "id": "V-06",
+     "req": "No collisions between any parts (a body fully inside another counts) over heave -30..+30 mm x roll +/-2 deg x steer across the rack travel, plus warp (CAD sweep)",
+     "target": "0 collisions",
+     "source": "PLAN s5.3",
+     "verify": "CAD mesh sweep (interference.py)",
+     "value": {
+      "intf_count": "FAIL",
+      "hi": 0,
+      "unit": ""
+     }
+    },
+    {
+     "id": "V-07",
+     "req": "Clearance between parts that do not share a designed joint (rules per body): moving parts vs links and chassis; rotating wheel and disc vs caliper and upright; driver vs steering column",
+     "target": ">= 5 mm moving, >= 3 mm inside the wheel (0 warnings)",
+     "source": "design rule",
+     "verify": "CAD mesh sweep (interference.py)",
+     "value": {
+      "intf_count": "WARN",
+      "hi": 0,
+      "unit": ""
+     }
+    }
+   ]
+  },
+  {
+   "name": "Loads and strength (PLAN s4, extended by the 2026-10-24 audit)",
+   "items": [
+    {
+     "id": "S-01",
+     "req": "Tube yield FoS (4130 N x 0.8 weld knock-down) over LC1-LC8",
+     "target": ">= 1.5",
+     "source": "PLAN s4",
+     "verify": "force solver",
+     "value": {
+      "chk_min": "fos_yield",
+      "lo": 1.5
+     }
+    },
+    {
+     "id": "S-02a",
+     "req": "Column buckling FoS (Euler or Johnson, pin to pin)",
+     "target": ">= 2.0",
+     "source": "PLAN s4",
+     "verify": "force solver",
+     "value": {
+      "chk_min": "fos_buckling",
+      "lo": 2.0
+     }
+    },
+    {
+     "id": "S-02b",
+     "req": "Column buckling FoS including the slenderer rod-end shanks (stepped column)",
+     "target": ">= 2.0",
+     "source": "audit 2026-10-24",
+     "verify": "force solver",
+     "value": {
+      "chk_min": "fos_buckling_stepped",
+      "lo": 2.0
+     }
+    },
+    {
+     "id": "S-03",
+     "req": "Rod ends (Aurora AM-M8T) on their ULTIMATE rating",
+     "target": ">= 2.25 (1.5 on a limit load taken as ultimate / 1.5)",
+     "source": "PLAN s4",
+     "verify": "force solver",
+     "value": {
+      "chk_min": "fos_rod_end",
+      "lo": 2.25
+     }
+    },
+    {
+     "id": "S-04",
+     "req": "Ball joints (Aurora COM-5 upper, COM-6 lower) on their radial LIMIT rating",
+     "target": ">= 1.5",
+     "source": "PLAN s4",
+     "verify": "force solver",
+     "value": {
+      "joint_min": "fos_bearing",
+      "lo": 1.5
+     }
+    },
+    {
+     "id": "S-05a",
+     "req": "Rod-end bolt shear on the thread root (M8 10.9, double shear)",
+     "target": ">= 1.5 on yield",
+     "source": "PLAN s4",
+     "verify": "force solver",
+     "value": {
+      "chk_min": "fos_bolt_shear",
+      "lo": 1.5
+     }
+    },
+    {
+     "id": "S-05b",
+     "req": "Clevis tab bearing",
+     "target": ">= 1.5 on yield",
+     "source": "PLAN s4",
+     "verify": "force solver",
+     "value": {
+      "chk_min": "fos_tab_bearing",
+      "lo": 1.5
+     }
+    },
+    {
+     "id": "S-06a",
+     "req": "Upright: peak von Mises over all nine load cases (LC1-LC8 and LC2i; FEA, 7075-T7351 design yield 391 MPa, raw integration-point stress), excluding the roots left sharp (S-14)",
+     "target": ">= 1.5 on yield",
+     "source": "PLAN s4-5",
+     "verify": "scripts/fea/upright_fea.py",
+     "value": {
+      "fea": "fos_yield",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "governing case {crit}"
+     }
+    },
+    {
+     "id": "S-06b",
+     "req": "Upright bolt and pin holes: nominal bearing stress P / (d t), every load case",
+     "target": ">= 1.5 on 1.4 x Fty (assumed bearing yield)",
+     "source": "PLAN s4-5",
+     "verify": "scripts/fea/upright_fea.py",
+     "value": {
+      "fea": "fos_bearing",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "worst hole and case in notes/upright_fea.md"
+     }
+    },
+    {
+     "id": "S-06c",
+     "req": "Upright FEA method (mesh, pin-bearing load, integration-point stress) agrees with beam theory on a slender pin-loaded bar (RC-26; the stress-concentration and cup-seat benchmarks are S-06g and S-06h)",
+     "target": "within +/-3 %",
+     "source": "PLAN s4-5, revised RC-26",
+     "verify": "scripts/fea/benchmark_lug.py (run and recorded by upright_fea.py)",
+     "value": {
+      "fea": "validation_err_pct",
+      "hi": 3.0,
+      "unit": "%",
+      "note": "largest error of the two edge fibres; the steering-arm comparison is reported for information"
+     }
+    },
+    {
+     "id": "S-06d",
+     "req": "Upright FEA mesh-converged: governing peak changes little between the two finest meshes",
+     "target": "<= 5 %",
+     "source": "audit 2026-10-24 (verification standard)",
+     "verify": "scripts/fea/upright_fea.py",
+     "value": {
+      "fea": "convergence_change_pct",
+      "hi": 5.0,
+      "unit": "%",
+      "note": "case {crit}, solution-adaptive refinement"
+     }
+    },
+    {
+     "id": "S-06f",
+     "req": "Upright FEA within +/-10 % of a hand calc at a plain section of the upright (the original PLAN s4-5 check; tried at the steering-arm ears in LC6)",
+     "target": "within +/-10 %",
+     "source": "PLAN s4-5",
+     "verify": "scripts/fea/upright_fea.py",
+     "value": {
+      "fea": "steering_arm_err_pct",
+      "hi": 10.0,
+      "unit": "%",
+      "deviation": "DV-2",
+      "note": "the arm is 20 mm long and 32 mm wide: no section of it is plain"
+     }
+    },
+    {
+     "id": "S-06g",
+     "req": "Upright FEA method recovers a known stress concentration: a thin plate with a central hole in tension, peak raw integration-point stress against Pilkey's fit to Howland's Kt (DV-2's planned fillet benchmark, done on a hole: its reference is exact to about 1 %, a fillet chart's to about 5 %)",
+     "target": "within +/-3 %",
+     "source": "PLAN s17 step B",
+     "verify": "scripts/fea/benchmark_peaks.py",
+     "value": {
+      "bench": "hole_kt_err_abs_pct",
+      "hi": 3.0,
+      "unit": "%"
+     }
+    },
+    {
+     "id": "S-06h",
+     "req": "Upright FEA method on the cup seat: the housing ring (68 mm bore, 9 mm wall) under bore pressure against Lame, hoop stress at the bore and the bore's radial growth",
+     "target": "within +/-1 %",
+     "source": "PLAN s17 step B",
+     "verify": "scripts/fea/benchmark_peaks.py",
+     "value": {
+      "bench": "ring_err_abs_pct",
+      "hi": 1.0,
+      "unit": "%"
+     }
+    },
+    {
+     "id": "S-06e",
+     "req": "Rocker stresses (LC1 incl. bump-stop force)",
+     "target": ">= 1.5 on yield",
+     "source": "PLAN s4-5",
+     "verify": "scripts/handcalcs.py (HC-2)",
+     "value": {
+      "hc": "rocker_fos_min",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "HC-2: truss + plate bending, LC1 at +30 mm; Navy's paper check pending"
+     }
+    },
+    {
+     "id": "S-07a",
+     "req": "Upright fatigue (7075, no endurance limit): Goodman on a Marin-corrected 5e8-cycle strength, cornering LC2 <-> LC2i and braking LC3 <-> static",
+     "target": ">= 1.5",
+     "source": "audit 2026-10-24",
+     "verify": "scripts/fea/upright_fea.py",
+     "value": {
+      "fea": "fatigue_fos_min",
+      "lo": 1.5,
+      "unit": "-",
+      "deviation": "DV-3",
+      "note": "screen only: the duty-spectrum check S-07c governs"
+     }
+    },
+    {
+     "id": "S-07c",
+     "req": "Upright fatigue by Miner's rule over the duty spectrum and its cycle counts (3 seasons, assumed): the factor on every stress that brings the damage to 1, press-fit mean stress included",
+     "target": ">= 1.5",
+     "source": "S-07a's action (RC-29)",
+     "verify": "scripts/fea/upright_fatigue.py",
+     "value": {
+      "fat": "fos_min",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "level-1 mesh; cycle counts in notes/duty_loads.md"
+     }
+    },
+    {
+     "id": "S-07b",
+     "req": "Fatigue: weld toes, rod-end thread engagement",
+     "target": "Miner factor >= 1.5 on the weld class and the thread class",
+     "source": "audit 2026-10-24",
+     "verify": "scripts/handcalcs.py (HC-9)",
+     "value": {
+      "hc": "s07b_k_min",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "lowest of the member-end weld (IIW toe FAT 63, root FAT 36 on the throat) and the rod-end shank thread (EN 1993-1-9 detail 50), over the duty cycles; IIW classes read second-hand"
+     }
+    },
+    {
+     "id": "S-08",
+     "req": "ARB levers much stiffer than the stiff bar, so the bar sets the rate (three bars, D26)",
+     "target": ">= 10x",
+     "source": "design rule",
+     "verify": "vehicle calcs",
+     "value": {
+      "veh": "arb_lever_stiffness_ratio",
+      "lo": 10.0,
+      "unit": "x",
+      "note": "8 x 25 mm 4130N levers in bending against the stiff bar in torsion"
+     }
+    },
+    {
+     "id": "S-09",
+     "req": "ARB torsion bar shear in the worst twist (max lateral g roll or full warp), stiff bar: body and splined ends",
+     "target": "yield FoS >= 1.5",
+     "source": "PLAN s5 FoS convention",
+     "verify": "vehicle calcs; scripts/handcalcs.py (HC-5)",
+     "value": {
+      "hc": "arb_bar_fos_min",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "4340 heat treated to 180 ksi (Fty 1124 MPa, MMPDS second-hand); static, so no Kt at the shoulder; the ends at the spline's minor diameter with Kt 3 (assumed); fatigue is S-23"
+     }
+    },
+    {
+     "id": "S-10",
+     "req": "Hub bearings: static safety in every load case (upright free body)",
+     "target": "s0 >= 1.5",
+     "source": "SKF guidance for shock-loaded bearings",
+     "verify": "upright_loads.py",
+     "value": {
+      "upl": "worst_s0",
+      "lo": 1.5,
+      "unit": "-"
+     }
+    },
+    {
+     "id": "S-11",
+     "req": "Hub bearings: L10 rating life over the season duty spectrum (both rows)",
+     "target": ">= 3 seasons (3000 km, assumed)",
+     "source": "PLAN s4 (bearings)",
+     "verify": "bearings.py",
+     "value": {
+      "brg": "L10_min_Mkm",
+      "lo": 0.003,
+      "unit": "million km",
+      "note": "static capacity, not life, sized these bearings (D13)"
+     }
+    },
+    {
+     "id": "S-12",
+     "req": "Bearing housing: hoop stress at the largest cup interference (P6 seat, Lame)",
+     "target": ">= 1.5 on yield",
+     "source": "PLAN s4 (bearings)",
+     "verify": "bearings.py",
+     "value": {
+      "brg": "fit.hoop_fos",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "the fit goes slack hot; Loctite 641 + central rib hold the cups"
+     }
+    },
+    {
+     "id": "S-13",
+     "req": "Ball-joint and rod-end bolts: lug-pin bending plus the preload tension at the specified torque",
+     "target": ">= 1.5 on yield",
+     "source": "Week 3a",
+     "verify": "bolts.py",
+     "value": {
+      "bolt_min": "fos_combined",
+      "lo": 1.5
+     }
+    },
+    {
+     "id": "S-14",
+     "req": "Clevis ear roots the CAD kernel could not fillet (R2 machining radius on the drawing, note 5): root bending with Peterson's Kt, net section, shear-out, and fatigue",
+     "target": ">= 1.5 on yield and on Goodman",
+     "source": "Week 3a FEA (singular corners)",
+     "verify": "scripts/handcalcs.py (HC-7)",
+     "value": {
+      "hc": "ear_roots_fos_min",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "HC-7: lowest of root bending with Kt, net section, shear-out and Miner's factor; Navy's paper check pending"
+     }
+    },
+    {
+     "id": "S-15",
+     "req": "Hub spindle in rotating bending (fatigue): the wheel bearing loads on the 40 mm spindle",
+     "target": ">= 1.5 (Miner over the duty spectrum; rotating bending is fully reversed, so Goodman reduces to the S-N line)",
+     "source": "wide audit 2026-10-27",
+     "verify": "scripts/handcalcs.py (HC-4)",
+     "value": {
+      "hc": "spindle_fatigue_k",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "HC-4: Miner over the duty spectrum, one cycle per revolution, Kf = Kt, with D19's shoulder ring and R3 fillet; 1.52 with the bare 1 mm fillet; Navy's paper check pending; fretting under the press-fitted cones is not in this check (DFMEA F-12)"
+     }
+    },
+    {
+     "id": "S-16",
+     "req": "Brake heat into the upright: disc temperature, the housing's temperature against the 7075-T7351 exposure limit, the cup fit and the retaining compound (150 C)",
+     "target": "below the limits; sets the fit's temperature rise",
+     "source": "wide audit 2026-10-27",
+     "verify": "scripts/handcalcs.py (HC-8); housing temperature test",
+     "value": {
+      "hc": "s16_mount_margin",
+      "lo": 1.0,
+      "unit": "-",
+      "note": "the floating disc's titanium bobbins (D23) at the high end of the contact-conductance range, over what the upright and hub can shed at 120 C; assumed convection and contact values, housing temperature measured in the test plan",
+      "action": "thermal-break disc mount (PLAN s17 step C), all-metal lock nuts on the upright, housing temperature test (step D)"
+     }
+    },
+    {
+     "id": "S-17",
+     "req": "Bolted upper clevis joint: slip and separation under the upper ball-joint load, thread engagement in 7075, shim bedding",
+     "target": ">= 1.5",
+     "source": "wide audit 2026-10-27",
+     "verify": "-",
+     "value": {
+      "retired": "RC-30: the upper clevis is one piece with the upright (D20); camber is set at the upper wishbone's chassis rod ends, so the bolted joint no longer exists"
+     }
+    },
+    {
+     "id": "S-18",
+     "req": "Every bolt between designed parts can be fitted and tightened: head, nut or insert clear of everything over the sweep's poses, inserts in solid material, and a straight socket (turned end), a ring spanner (held end) and the bolt's insertion path each clear at some pose with the wheel off. Includes the chassis-side joints (scripts/chassis_tabs.py) since step C",
+     "target": "no clash",
+     "source": "wide audit 2026-10-27 (the lower ball-joint bolt had no room for a nut)",
+     "verify": "scripts/fasteners.py",
+     "value": {
+      "fast_count": "FAIL",
+      "hi": 0,
+      "unit": "fails",
+      "check": [
+       "fastener body",
+       "tool / insertion path",
+       "insert in solid material"
+      ]
+     }
+    },
+    {
+     "id": "S-19",
+     "req": "Chassis tabs and brackets (inboard rod ends, rocker pivot, damper eye, rack): in-plane bending plus direct stress at the weld, each joint's largest force",
+     "target": ">= 1.5 on the weld-affected yield",
+     "source": "PLAN s17 step C (D24)",
+     "verify": "scripts/handcalcs.py (HC-11)",
+     "value": {
+      "hc": "s19_tabs_fos_min",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "4130N x 0.8; the first layout failed (lower wishbone and damper tabs 0.8, rack web 1.3) and was widened"
+     }
+    },
+    {
+     "id": "S-20",
+     "req": "The drop link's lever-end bolt in single shear: bending from the lever's face to the ball's centre plus shear, at the ARB's largest torque",
+     "target": ">= 1.5 on yield",
+     "source": "PLAN s17 step C (D25, R-08)",
+     "verify": "scripts/handcalcs.py (HC-12)",
+     "value": {
+      "hc": "s20_drop_bolt_fos",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "M8 10.9 on its stress area; full warp, stiff setting"
+     }
+    },
+    {
+     "id": "S-21",
+     "req": "ARB lever at its hub (bending plus the twist from the drop link pulling beside it) and its end (shear-out past the M8 hole), at the ARB's largest torque",
+     "target": ">= 1.5 on yield",
+     "source": "PLAN s17 step C (D25)",
+     "verify": "scripts/handcalcs.py (HC-12)",
+     "value": {
+      "hc": "s21_arb_lever_fos",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "8 x 25 mm 4130N (D26; D25's 6 x 18 mm placeholder reached 0.95)"
+     }
+    },
+    {
+     "id": "S-22",
+     "req": "Each ARB bar, in series with the levers, gives its setting's roll stiffness",
+     "target": "within 3 %",
+     "source": "D26",
+     "verify": "vehicle calcs (notes/vehicle_calcs.md, ARB settings)",
+     "value": {
+      "veh": "arb_setting_error_max_pct",
+      "hi": 3.0,
+      "unit": "%",
+      "note": "worst of soft, middle and stiff"
+     }
+    },
+    {
+     "id": "S-23",
+     "req": "ARB bar in fatigue: the largest cornering roll, fully reversed, infinite life at the shoulder fillet and at the spline",
+     "target": ">= 1.5",
+     "source": "D26 (code review 2026-11-18)",
+     "verify": "scripts/handcalcs.py (HC-5)",
+     "value": {
+      "hc": "arb_bar_fatigue_fos",
+      "lo": 1.5,
+      "unit": "-",
+      "note": "Marin-corrected endurance (body and fillets ground, the spline machined; size; torsion; 99 % reliability), Kf = Kt; the stiff bar. 150 ksi and 22 mm ends failed once the reliability factor was applied (step E audit)"
+     }
+    },
+    {
+     "id": "M-01",
+     "req": "Unsprung mass per front corner incl. wheel and tyre",
+     "target": "<= 11 kg",
+     "source": "PLAN s4",
+     "verify": "CAD masses + catalogue (mass_budget.py)",
+     "value": {
+      "mass_unsprung": true,
+      "hi": 11.0,
+      "unit": "kg",
+      "note": "CAD volumes x density + catalogue masses (notes/mass_budget.md)"
+     }
+    },
+    {
+     "id": "M-02",
+     "req": "Upright machined part (one piece since v4: D20), one corner",
+     "target": "<= 0.6 kg",
+     "source": "Week 3a plan (2026-10-26)",
+     "verify": "mass_budget.py (CAD volumes)",
+     "value": {
+      "mass_part": "Upright /",
+      "hi": 0.6,
+      "unit": "kg",
+      "parts": 1,
+      "deviation": "DV-4"
+     }
+    }
+   ]
+  }
+ ]
+}

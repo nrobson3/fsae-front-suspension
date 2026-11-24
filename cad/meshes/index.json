@@ -1,0 +1,653 @@
+{
+ "_hardpoints": "v1.7",
+ "_inputs_sha": "237fb82d0cc0ae23",
+ "_upright_step_sha": "8a7b4d317191d307",
+ "Ghost_chassis__assumed_context___ghost_chassis.stl": {
+  "component": "Ghost chassis (assumed context)",
+  "body": "ghost chassis",
+  "triangles": 9972,
+  "sha": "c8ee805ad50285b2"
+ },
+ "Driver_legs_and_pedal_box__keep_out___left_foot.stl": {
+  "component": "Driver legs and pedal box (keep-out)",
+  "body": "left foot",
+  "triangles": 1168,
+  "sha": "57c413eba9e0b34b"
+ },
+ "Driver_legs_and_pedal_box__keep_out___left_shin.stl": {
+  "component": "Driver legs and pedal box (keep-out)",
+  "body": "left shin",
+  "triangles": 972,
+  "sha": "31a841978cee9f57"
+ },
+ "Driver_legs_and_pedal_box__keep_out___right_foot.stl": {
+  "component": "Driver legs and pedal box (keep-out)",
+  "body": "right foot",
+  "triangles": 1168,
+  "sha": "1ef0208ab316a391"
+ },
+ "Driver_legs_and_pedal_box__keep_out___right_shin.stl": {
+  "component": "Driver legs and pedal box (keep-out)",
+  "body": "right shin",
+  "triangles": 972,
+  "sha": "7f603c7c747b33a6"
+ },
+ "Driver_legs_and_pedal_box__keep_out___pedal_box.stl": {
+  "component": "Driver legs and pedal box (keep-out)",
+  "body": "pedal box",
+  "triangles": 12,
+  "sha": "3393e6691d22d8bc"
+ },
+ "Steering_rack_housing_and_column__envelope___rack_housing.stl": {
+  "component": "Steering rack housing and column (envelope)",
+  "body": "rack housing",
+  "triangles": 176,
+  "sha": "c4ad283b44106cb7"
+ },
+ "Steering_rack_housing_and_column__envelope___steering_column.stl": {
+  "component": "Steering rack housing and column (envelope)",
+  "body": "steering column",
+  "triangles": 44,
+  "sha": "910c1830a04ea65b"
+ },
+ "L_Wheel__Braid_10_in__envelope___wheel.stl": {
+  "component": "L Wheel (Braid 10 in, envelope)",
+  "body": "wheel",
+  "triangles": 1940,
+  "sha": "d1e498d4841aa338"
+ },
+ "L_Tyre__Hoosier_16x7_5_10__envelope___tyre.stl": {
+  "component": "L Tyre (Hoosier 16x7.5-10, envelope)",
+  "body": "tyre",
+  "triangles": 2400,
+  "sha": "7f9f126fa3040e0d"
+ },
+ "L_Hub__bearings__nut__hub.stl": {
+  "component": "L Hub, bearings, nut",
+  "body": "hub",
+  "triangles": 736,
+  "sha": "cc3b8d50beecdf2a"
+ },
+ "L_Hub__bearings__nut__axle_nut.stl": {
+  "component": "L Hub, bearings, nut",
+  "body": "axle nut",
+  "triangles": 452,
+  "sha": "cf0e1ea200d8f703"
+ },
+ "L_Hub__bearings__nut__inner_bearing.stl": {
+  "component": "L Hub, bearings, nut",
+  "body": "inner bearing",
+  "triangles": 424,
+  "sha": "a4ac6cd844a859fc"
+ },
+ "L_Hub__bearings__nut__outer_bearing.stl": {
+  "component": "L Hub, bearings, nut",
+  "body": "outer bearing",
+  "triangles": 424,
+  "sha": "ef2152bf1cfc2024"
+ },
+ "L_Brake_disc__disc.stl": {
+  "component": "L Brake disc",
+  "body": "disc",
+  "triangles": 1390,
+  "sha": "2396d1b5cdea8e4f"
+ },
+ "L_Caliper__envelope___caliper.stl": {
+  "component": "L Caliper (envelope)",
+  "body": "caliper",
+  "triangles": 288,
+  "sha": "b2118d5afbe0f35d"
+ },
+ "L_Upright__upright.stl": {
+  "component": "L Upright",
+  "body": "upright",
+  "triangles": 2892,
+  "sha": "90c0b803422d5c3d"
+ },
+ "L_Upper_wishbone__node.stl": {
+  "component": "L Upper wishbone",
+  "body": "node",
+  "triangles": 392,
+  "sha": "ebe9686e78d8e9f0"
+ },
+ "L_Upper_wishbone__legs.stl": {
+  "component": "L Upper wishbone",
+  "body": "legs",
+  "triangles": 260,
+  "sha": "928acd7fce50e52a"
+ },
+ "L_Upper_wishbone__rod_end_front.stl": {
+  "component": "L Upper wishbone",
+  "body": "rod end front",
+  "triangles": 404,
+  "sha": "114083c19aada8a4"
+ },
+ "L_Upper_wishbone__rod_end_rear.stl": {
+  "component": "L Upper wishbone",
+  "body": "rod end rear",
+  "triangles": 404,
+  "sha": "78bab4f9a90a65fc"
+ },
+ "L_Lower_wishbone__node.stl": {
+  "component": "L Lower wishbone",
+  "body": "node",
+  "triangles": 388,
+  "sha": "c468baa7ef50d932"
+ },
+ "L_Lower_wishbone__legs.stl": {
+  "component": "L Lower wishbone",
+  "body": "legs",
+  "triangles": 284,
+  "sha": "41705015d2d516e5"
+ },
+ "L_Lower_wishbone__pushrod_bracket.stl": {
+  "component": "L Lower wishbone",
+  "body": "pushrod bracket",
+  "triangles": 648,
+  "sha": "33bf0b9c693ad5c9"
+ },
+ "L_Lower_wishbone__rod_end_front.stl": {
+  "component": "L Lower wishbone",
+  "body": "rod end front",
+  "triangles": 408,
+  "sha": "b478f7182e1d7db7"
+ },
+ "L_Lower_wishbone__rod_end_rear.stl": {
+  "component": "L Lower wishbone",
+  "body": "rod end rear",
+  "triangles": 404,
+  "sha": "a71292051fd2e7e5"
+ },
+ "L_Tie_rod__tube.stl": {
+  "component": "L Tie rod",
+  "body": "tube",
+  "triangles": 128,
+  "sha": "313d24984d1b913e"
+ },
+ "L_Tie_rod__inner_rod_end.stl": {
+  "component": "L Tie rod",
+  "body": "inner rod end",
+  "triangles": 412,
+  "sha": "41d818dea6752d69"
+ },
+ "L_Tie_rod__outer_rod_end.stl": {
+  "component": "L Tie rod",
+  "body": "outer rod end",
+  "triangles": 412,
+  "sha": "9916907a5f4f027c"
+ },
+ "L_Pushrod__tube.stl": {
+  "component": "L Pushrod",
+  "body": "tube",
+  "triangles": 140,
+  "sha": "3346dab96adc0bd5"
+ },
+ "L_Pushrod__lower_rod_end.stl": {
+  "component": "L Pushrod",
+  "body": "lower rod end",
+  "triangles": 412,
+  "sha": "4817cc73c2dd2b33"
+ },
+ "L_Pushrod__upper_rod_end.stl": {
+  "component": "L Pushrod",
+  "body": "upper rod end",
+  "triangles": 412,
+  "sha": "65d7271ba5bbf1b3"
+ },
+ "L_Rocker__rocker.stl": {
+  "component": "L Rocker",
+  "body": "rocker",
+  "triangles": 788,
+  "sha": "59ab9a1fa68fd5c7"
+ },
+ "L_Damper_body__Ohlins_TTX25__envelope___damper_body.stl": {
+  "component": "L Damper body (Ohlins TTX25, envelope)",
+  "body": "damper body",
+  "triangles": 900,
+  "sha": "5b87e9b2dfec14cd"
+ },
+ "L_Damper_shaft__damper_shaft.stl": {
+  "component": "L Damper shaft",
+  "body": "damper shaft",
+  "triangles": 632,
+  "sha": "648de1513fdc7157"
+ },
+ "L_ARB_lever__lever.stl": {
+  "component": "L ARB lever",
+  "body": "lever",
+  "triangles": 432,
+  "sha": "a3c7a07c58f20c3a"
+ },
+ "L_Drop_link__rod.stl": {
+  "component": "L Drop link",
+  "body": "rod",
+  "triangles": 204,
+  "sha": "defcbf0cf503a9a6"
+ },
+ "L_Drop_link__lower_rod_end.stl": {
+  "component": "L Drop link",
+  "body": "lower rod end",
+  "triangles": 422,
+  "sha": "99f45cddc2f19bd6"
+ },
+ "L_Drop_link__upper_rod_end.stl": {
+  "component": "L Drop link",
+  "body": "upper rod end",
+  "triangles": 422,
+  "sha": "7cce90280747f1db"
+ },
+ "L_Chassis_tabs__Upper_wishbone_front_tab_A.stl": {
+  "component": "L Chassis tabs",
+  "body": "Upper wishbone front tab A",
+  "triangles": 304,
+  "sha": "f026428393b564bb"
+ },
+ "L_Chassis_tabs__Upper_wishbone_front_tab_B.stl": {
+  "component": "L Chassis tabs",
+  "body": "Upper wishbone front tab B",
+  "triangles": 304,
+  "sha": "1bf3d463a270f019"
+ },
+ "L_Chassis_tabs__Upper_wishbone_rear_tab_A.stl": {
+  "component": "L Chassis tabs",
+  "body": "Upper wishbone rear tab A",
+  "triangles": 304,
+  "sha": "76ec14ef1cd041aa"
+ },
+ "L_Chassis_tabs__Upper_wishbone_rear_tab_B.stl": {
+  "component": "L Chassis tabs",
+  "body": "Upper wishbone rear tab B",
+  "triangles": 304,
+  "sha": "3af4693ee654fbb5"
+ },
+ "L_Chassis_tabs__Lower_wishbone_front_tab_A.stl": {
+  "component": "L Chassis tabs",
+  "body": "Lower wishbone front tab A",
+  "triangles": 300,
+  "sha": "1470bf107691fa94"
+ },
+ "L_Chassis_tabs__Lower_wishbone_front_tab_B.stl": {
+  "component": "L Chassis tabs",
+  "body": "Lower wishbone front tab B",
+  "triangles": 300,
+  "sha": "b928e6a7b7aaa82a"
+ },
+ "L_Chassis_tabs__Lower_wishbone_rear_tab_A.stl": {
+  "component": "L Chassis tabs",
+  "body": "Lower wishbone rear tab A",
+  "triangles": 300,
+  "sha": "dbc6cd1f63989575"
+ },
+ "L_Chassis_tabs__Lower_wishbone_rear_tab_B.stl": {
+  "component": "L Chassis tabs",
+  "body": "Lower wishbone rear tab B",
+  "triangles": 300,
+  "sha": "e2ea5d61f36a4342"
+ },
+ "L_Chassis_tabs__Rocker_pivot_bracket_A.stl": {
+  "component": "L Chassis tabs",
+  "body": "Rocker pivot bracket A",
+  "triangles": 272,
+  "sha": "74bc82ad7c51cfab"
+ },
+ "L_Chassis_tabs__Rocker_pivot_bracket_B.stl": {
+  "component": "L Chassis tabs",
+  "body": "Rocker pivot bracket B",
+  "triangles": 272,
+  "sha": "bc492d38485efb45"
+ },
+ "L_Chassis_tabs__Damper_chassis_tab_root_A.stl": {
+  "component": "L Chassis tabs",
+  "body": "Damper chassis tab root A",
+  "triangles": 204,
+  "sha": "50a191a3b5a96276"
+ },
+ "L_Chassis_tabs__Damper_chassis_tab_root_B.stl": {
+  "component": "L Chassis tabs",
+  "body": "Damper chassis tab root B",
+  "triangles": 204,
+  "sha": "133ef4811b43af5a"
+ },
+ "L_Chassis_tabs__Damper_chassis_tab_A.stl": {
+  "component": "L Chassis tabs",
+  "body": "Damper chassis tab A",
+  "triangles": 284,
+  "sha": "fdd5069ed8459f56"
+ },
+ "L_Chassis_tabs__Damper_chassis_tab_B.stl": {
+  "component": "L Chassis tabs",
+  "body": "Damper chassis tab B",
+  "triangles": 284,
+  "sha": "42feca31cce1bbc6"
+ },
+ "L_Chassis_tabs__Rack_trunnion_block.stl": {
+  "component": "L Chassis tabs",
+  "body": "Rack trunnion block",
+  "triangles": 428,
+  "sha": "6cf0a28d9fd34b42"
+ },
+ "L_Chassis_tabs__Rack_bracket_pad.stl": {
+  "component": "L Chassis tabs",
+  "body": "Rack bracket pad",
+  "triangles": 196,
+  "sha": "38661e480b218d07"
+ },
+ "L_Chassis_tabs__Rack_bracket_web.stl": {
+  "component": "L Chassis tabs",
+  "body": "Rack bracket web",
+  "triangles": 196,
+  "sha": "89b885cc39612a93"
+ },
+ "R_Wheel__Braid_10_in__envelope___wheel.stl": {
+  "component": "R Wheel (Braid 10 in, envelope)",
+  "body": "wheel",
+  "triangles": 1940,
+  "sha": "7ede2ba142160f6b"
+ },
+ "R_Tyre__Hoosier_16x7_5_10__envelope___tyre.stl": {
+  "component": "R Tyre (Hoosier 16x7.5-10, envelope)",
+  "body": "tyre",
+  "triangles": 2400,
+  "sha": "d2144921123b8c3f"
+ },
+ "R_Hub__bearings__nut__hub.stl": {
+  "component": "R Hub, bearings, nut",
+  "body": "hub",
+  "triangles": 736,
+  "sha": "360cbd9340d66875"
+ },
+ "R_Hub__bearings__nut__axle_nut.stl": {
+  "component": "R Hub, bearings, nut",
+  "body": "axle nut",
+  "triangles": 452,
+  "sha": "dc421ec74ebde0c4"
+ },
+ "R_Hub__bearings__nut__inner_bearing.stl": {
+  "component": "R Hub, bearings, nut",
+  "body": "inner bearing",
+  "triangles": 424,
+  "sha": "b7f3c308c8220688"
+ },
+ "R_Hub__bearings__nut__outer_bearing.stl": {
+  "component": "R Hub, bearings, nut",
+  "body": "outer bearing",
+  "triangles": 424,
+  "sha": "e7a7991cac182acb"
+ },
+ "R_Brake_disc__disc.stl": {
+  "component": "R Brake disc",
+  "body": "disc",
+  "triangles": 1390,
+  "sha": "d2cab87a5b7d93a6"
+ },
+ "R_Caliper__envelope___caliper.stl": {
+  "component": "R Caliper (envelope)",
+  "body": "caliper",
+  "triangles": 288,
+  "sha": "6e5791d6f025a75d"
+ },
+ "R_Upright__upright.stl": {
+  "component": "R Upright",
+  "body": "upright",
+  "triangles": 2878,
+  "sha": "4b3076bf03d46260"
+ },
+ "R_Upper_wishbone__node.stl": {
+  "component": "R Upper wishbone",
+  "body": "node",
+  "triangles": 392,
+  "sha": "811dbcc96ef963e1"
+ },
+ "R_Upper_wishbone__legs.stl": {
+  "component": "R Upper wishbone",
+  "body": "legs",
+  "triangles": 260,
+  "sha": "d0b2064f0b367642"
+ },
+ "R_Upper_wishbone__rod_end_front.stl": {
+  "component": "R Upper wishbone",
+  "body": "rod end front",
+  "triangles": 404,
+  "sha": "b2c18eacef8418db"
+ },
+ "R_Upper_wishbone__rod_end_rear.stl": {
+  "component": "R Upper wishbone",
+  "body": "rod end rear",
+  "triangles": 404,
+  "sha": "ac229510f044bc08"
+ },
+ "R_Lower_wishbone__node.stl": {
+  "component": "R Lower wishbone",
+  "body": "node",
+  "triangles": 388,
+  "sha": "5cdffa5ac4240c4a"
+ },
+ "R_Lower_wishbone__legs.stl": {
+  "component": "R Lower wishbone",
+  "body": "legs",
+  "triangles": 284,
+  "sha": "fb01d843bc239dd1"
+ },
+ "R_Lower_wishbone__pushrod_bracket.stl": {
+  "component": "R Lower wishbone",
+  "body": "pushrod bracket",
+  "triangles": 648,
+  "sha": "f23bd48f774b3501"
+ },
+ "R_Lower_wishbone__rod_end_front.stl": {
+  "component": "R Lower wishbone",
+  "body": "rod end front",
+  "triangles": 408,
+  "sha": "aff23b6816a85ac6"
+ },
+ "R_Lower_wishbone__rod_end_rear.stl": {
+  "component": "R Lower wishbone",
+  "body": "rod end rear",
+  "triangles": 404,
+  "sha": "3f533e1166416c06"
+ },
+ "R_Tie_rod__tube.stl": {
+  "component": "R Tie rod",
+  "body": "tube",
+  "triangles": 128,
+  "sha": "21fe8f6c1e9818f7"
+ },
+ "R_Tie_rod__inner_rod_end.stl": {
+  "component": "R Tie rod",
+  "body": "inner rod end",
+  "triangles": 412,
+  "sha": "8d920077138b2349"
+ },
+ "R_Tie_rod__outer_rod_end.stl": {
+  "component": "R Tie rod",
+  "body": "outer rod end",
+  "triangles": 412,
+  "sha": "3affc08e5d34a35a"
+ },
+ "R_Pushrod__tube.stl": {
+  "component": "R Pushrod",
+  "body": "tube",
+  "triangles": 140,
+  "sha": "17dfb0d2c1258fe0"
+ },
+ "R_Pushrod__lower_rod_end.stl": {
+  "component": "R Pushrod",
+  "body": "lower rod end",
+  "triangles": 412,
+  "sha": "c530c6abf51ebb34"
+ },
+ "R_Pushrod__upper_rod_end.stl": {
+  "component": "R Pushrod",
+  "body": "upper rod end",
+  "triangles": 412,
+  "sha": "9cd07e01a53b1bdb"
+ },
+ "R_Rocker__rocker.stl": {
+  "component": "R Rocker",
+  "body": "rocker",
+  "triangles": 788,
+  "sha": "e34ce8de7be60746"
+ },
+ "R_Damper_body__Ohlins_TTX25__envelope___damper_body.stl": {
+  "component": "R Damper body (Ohlins TTX25, envelope)",
+  "body": "damper body",
+  "triangles": 900,
+  "sha": "21ac0a2b38e712fc"
+ },
+ "R_Damper_shaft__damper_shaft.stl": {
+  "component": "R Damper shaft",
+  "body": "damper shaft",
+  "triangles": 632,
+  "sha": "ff74cb9eaed05c65"
+ },
+ "R_ARB_lever__lever.stl": {
+  "component": "R ARB lever",
+  "body": "lever",
+  "triangles": 432,
+  "sha": "2b7c231557c59954"
+ },
+ "R_Drop_link__rod.stl": {
+  "component": "R Drop link",
+  "body": "rod",
+  "triangles": 204,
+  "sha": "167f1a4d491cca2b"
+ },
+ "R_Drop_link__lower_rod_end.stl": {
+  "component": "R Drop link",
+  "body": "lower rod end",
+  "triangles": 422,
+  "sha": "a5723e9c9d34f8f6"
+ },
+ "R_Drop_link__upper_rod_end.stl": {
+  "component": "R Drop link",
+  "body": "upper rod end",
+  "triangles": 422,
+  "sha": "cc1d348c78b62106"
+ },
+ "R_Chassis_tabs__Upper_wishbone_front_tab_A.stl": {
+  "component": "R Chassis tabs",
+  "body": "Upper wishbone front tab A",
+  "triangles": 304,
+  "sha": "8916ecebef41fc8b"
+ },
+ "R_Chassis_tabs__Upper_wishbone_front_tab_B.stl": {
+  "component": "R Chassis tabs",
+  "body": "Upper wishbone front tab B",
+  "triangles": 304,
+  "sha": "13b7d59440b13898"
+ },
+ "R_Chassis_tabs__Upper_wishbone_rear_tab_A.stl": {
+  "component": "R Chassis tabs",
+  "body": "Upper wishbone rear tab A",
+  "triangles": 304,
+  "sha": "4509c72ea6d196bc"
+ },
+ "R_Chassis_tabs__Upper_wishbone_rear_tab_B.stl": {
+  "component": "R Chassis tabs",
+  "body": "Upper wishbone rear tab B",
+  "triangles": 304,
+  "sha": "f8d528ea30d7359b"
+ },
+ "R_Chassis_tabs__Lower_wishbone_front_tab_A.stl": {
+  "component": "R Chassis tabs",
+  "body": "Lower wishbone front tab A",
+  "triangles": 300,
+  "sha": "3649da393ca9a0af"
+ },
+ "R_Chassis_tabs__Lower_wishbone_front_tab_B.stl": {
+  "component": "R Chassis tabs",
+  "body": "Lower wishbone front tab B",
+  "triangles": 300,
+  "sha": "88e331240097a1db"
+ },
+ "R_Chassis_tabs__Lower_wishbone_rear_tab_A.stl": {
+  "component": "R Chassis tabs",
+  "body": "Lower wishbone rear tab A",
+  "triangles": 300,
+  "sha": "21f5d1887ccbe293"
+ },
+ "R_Chassis_tabs__Lower_wishbone_rear_tab_B.stl": {
+  "component": "R Chassis tabs",
+  "body": "Lower wishbone rear tab B",
+  "triangles": 300,
+  "sha": "ac6a391c37ef047f"
+ },
+ "R_Chassis_tabs__Rocker_pivot_bracket_A.stl": {
+  "component": "R Chassis tabs",
+  "body": "Rocker pivot bracket A",
+  "triangles": 272,
+  "sha": "d9760bc5ad2fe20c"
+ },
+ "R_Chassis_tabs__Rocker_pivot_bracket_B.stl": {
+  "component": "R Chassis tabs",
+  "body": "Rocker pivot bracket B",
+  "triangles": 272,
+  "sha": "1cd8af23ab1950b8"
+ },
+ "R_Chassis_tabs__Damper_chassis_tab_root_A.stl": {
+  "component": "R Chassis tabs",
+  "body": "Damper chassis tab root A",
+  "triangles": 204,
+  "sha": "4cfd52b267312588"
+ },
+ "R_Chassis_tabs__Damper_chassis_tab_root_B.stl": {
+  "component": "R Chassis tabs",
+  "body": "Damper chassis tab root B",
+  "triangles": 204,
+  "sha": "935118eb26e33f89"
+ },
+ "R_Chassis_tabs__Damper_chassis_tab_A.stl": {
+  "component": "R Chassis tabs",
+  "body": "Damper chassis tab A",
+  "triangles": 284,
+  "sha": "2a8253a8419e791e"
+ },
+ "R_Chassis_tabs__Damper_chassis_tab_B.stl": {
+  "component": "R Chassis tabs",
+  "body": "Damper chassis tab B",
+  "triangles": 284,
+  "sha": "004de88852c24ef5"
+ },
+ "R_Chassis_tabs__Rack_trunnion_block.stl": {
+  "component": "R Chassis tabs",
+  "body": "Rack trunnion block",
+  "triangles": 428,
+  "sha": "fdd1d7f75fecdb5a"
+ },
+ "R_Chassis_tabs__Rack_bracket_pad.stl": {
+  "component": "R Chassis tabs",
+  "body": "Rack bracket pad",
+  "triangles": 196,
+  "sha": "bbe186995a7efb54"
+ },
+ "R_Chassis_tabs__Rack_bracket_web.stl": {
+  "component": "R Chassis tabs",
+  "body": "Rack bracket web",
+  "triangles": 196,
+  "sha": "d4309bf0f668bacb"
+ },
+ "ARB_bar__middle__12_4_mm_4340___ARB_bar.stl": {
+  "component": "ARB bar (middle, 12.4 mm 4340)",
+  "body": "ARB bar",
+  "triangles": 180,
+  "sha": "78ceb1ad9bf8daa7"
+ },
+ "Rack_bar__rack_bar.stl": {
+  "component": "Rack bar",
+  "body": "rack bar",
+  "triangles": 60,
+  "sha": "610cb6e82b786ddc"
+ },
+ "Rack_bar__rack_clevis_ears_L.stl": {
+  "component": "Rack bar",
+  "body": "rack clevis ears L",
+  "triangles": 624,
+  "sha": "4b4c7ad51a320cd7"
+ },
+ "Rack_bar__rack_clevis_ears_R.stl": {
+  "component": "Rack bar",
+  "body": "rack clevis ears R",
+  "triangles": 624,
+  "sha": "f8539578bc74532b"
+ }
+}

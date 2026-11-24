@@ -1,0 +1,6 @@
+# Outboard ball joints (spherical bearings in the wishbone housings) used by forces.py
+# rev B (2026-10-26; lower ball joint COM-6 + NAS6606 for bolt bending, see notes/bolts.md). rev A (2026-10-24). Aurora COM-5: 5/16 in bore, 0.750 in OD, radial static LIMIT load 6475 lbf = 28802 N (Timken/Aurora catalogue).
+# Bolt AN5 (5/16 in), single-shear ULTIMATE 5750 lbf = 25577 N (Airfasco listing; full-shank 75 ksi shear), double shear in the upright clevis.
+joint,load_key,bearing,bearing_rating_N,bearing_rating_type,bolt,bolt_shear_ult_single_N,shear_planes
+Upper ball joint,bj_upper,Aurora COM-5,28802,limit,AN5,25577,2
+Lower ball joint,bj_lower,Aurora COM-6,24910,limit (37365 N ultimate / 1.5),NAS6606,46660,2

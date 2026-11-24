@@ -1,0 +1,9 @@
+# Rated misalignment (maximum tilt of the ball relative to the housing) used by misalignment.py. rev A (2026-10-24).
+# Sources: Timken/Aurora catalogue item pages (cad.timken.com). The pages do not say per side or total; treated as per side.
+key,part,max_misalignment_deg,source
+ball_joint,Aurora COM-5 spherical bearing,12,Timken/Aurora COM-5E item page: 12 deg
+ball_joint_lower,Aurora COM-6 spherical bearing,10,Aurora dimension chart (aircraftspruce.com 05-01671): COM-6 10 deg
+rod_end,Aurora AM-M8T rod end in a double-shear clevis,18,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+rod_end_captured,"Aurora AM-M8T rod end, single shear (spacer each side, 24 mm washer outside)",18,As the clevis rating: each side of the ball the same 5 mm spacer then a face wider than the housing (the ARB blade; the 24 mm washer)
+rack_ball_joint,Rack-end rod end (Aurora AM-M8T in a clevis),18,Assumed same part and mounting as the other rod ends
+damper_eye,Ohlins TTX25 MkII eye spherical bearing (8 mm),10,ASSUMED (not published) - confirm against the Ohlins external-dimensions drawing

@@ -1,0 +1,153 @@
+{
+ "_hardpoints": "v1.7",
+ "_inputs_sha": "f22cc6bed299c7c4",
+ "level": 1,
+ "dofs": 435867,
+ "life_km": 3000.0,
+ "sn": {
+  "S_1e3_MPa": 407.7,
+  "b": -0.11465192946160957,
+  "S_5e8_MPa": 90.56133260514608
+ },
+ "fit_pressure_MPa": 7.020856391087237,
+ "state_peaks_MPa": {
+  "brake 0.8 g": 82.51810455322266,
+  "brake 0.8 g + corner 0.8 g, inside": 63.28881072998047,
+  "brake 0.8 g + corner 0.8 g, outside": 125.77839660644531,
+  "brake 1.3 g": 126.15928649902344,
+  "bumps, 2 g": 73.83687591552734,
+  "corner 0.5 g, inside": 54.731895446777344,
+  "corner 0.5 g, outside": 53.386375427246094,
+  "corner 1.0 g, inside": 65.967529296875,
+  "corner 1.0 g, outside": 103.03642272949219,
+  "corner 1.4 g, inside": 45.46739196777344,
+  "corner 1.4 g, outside": 155.66465759277344,
+  "straight, 1 g": 36.91887283325195
+ },
+ "result": {
+  "body": {
+   "k_min": 3.242192486943354,
+   "at": [
+    33.5,
+    579.3,
+    193.4
+   ],
+   "damage_at_k1": 1.1210829166235014e-06,
+   "life_km_at_k1": 2675984046.7781425,
+   "cycles": [
+    {
+     "cycle": "corner 0.5 g, outside <-> corner 0.5 g, inside",
+     "n": 26086.95652173913,
+     "amp_MPa": 15.490691184997559,
+     "mean_MPa": 20.48702049255371,
+     "damage_at_k1": 1.59978159192109e-11
+    },
+    {
+     "cycle": "corner 1.0 g, outside <-> corner 1.0 g, inside",
+     "n": 19565.217391304348,
+     "amp_MPa": 35.959171295166016,
+     "mean_MPa": 38.95309066772461,
+     "damage_at_k1": 2.7189095419544174e-08
+    },
+    {
+     "cycle": "corner 1.4 g, outside <-> corner 1.4 g, inside",
+     "n": 10434.782608695652,
+     "amp_MPa": 56.31641387939453,
+     "mean_MPa": 57.766841888427734,
+     "damage_at_k1": 1.0884845096370555e-06
+    },
+    {
+     "cycle": "brake 0.8 g + corner 0.8 g, outside <-> brake 0.8 g + corner 0.8 g, inside",
+     "n": 3913.0434782608695,
+     "amp_MPa": 35.331443786621094,
+     "mean_MPa": 45.79718017578125,
+     "damage_at_k1": 5.393279156606923e-09
+    },
+    {
+     "cycle": "brake 0.8 g <-> straight, 1 g",
+     "n": 16000.0,
+     "amp_MPa": 4.7441534996032715,
+     "mean_MPa": 13.24003791809082,
+     "damage_at_k1": 2.7954173078024525e-16
+    },
+    {
+     "cycle": "brake 1.3 g <-> straight, 1 g",
+     "n": 8000.0,
+     "amp_MPa": 8.827674865722656,
+     "mean_MPa": 17.318859100341797,
+     "damage_at_k1": 3.411485842625718e-14
+    },
+    {
+     "cycle": "bumps, 2 g <-> straight, 1 g",
+     "n": 30000.0,
+     "amp_MPa": 4.252607822418213,
+     "mean_MPa": 12.758647918701172,
+     "damage_at_k1": 1.9997550559145533e-16
+    }
+   ]
+  },
+  "hole edges": {
+   "k_min": 4.358119792716252,
+   "at": [
+    2.1,
+    580.2,
+    150.2
+   ],
+   "damage_at_k1": 5.868062081711248e-08,
+   "life_km_at_k1": 51124203497.26665,
+   "cycles": [
+    {
+     "cycle": "corner 0.5 g, outside <-> corner 0.5 g, inside",
+     "n": 26086.95652173913,
+     "amp_MPa": 9.853836059570312,
+     "mean_MPa": 15.564658164978027,
+     "damage_at_k1": 2.8029317690643485e-13
+    },
+    {
+     "cycle": "corner 1.0 g, outside <-> corner 1.0 g, inside",
+     "n": 19565.217391304348,
+     "amp_MPa": 25.7558536529541,
+     "mean_MPa": 29.247539520263672,
+     "damage_at_k1": 1.2092273848907098e-09
+    },
+    {
+     "cycle": "corner 1.4 g, outside <-> corner 1.4 g, inside",
+     "n": 10434.782608695652,
+     "amp_MPa": 41.63578414916992,
+     "mean_MPa": 43.365745544433594,
+     "damage_at_k1": 5.717417295159066e-08
+    },
+    {
+     "cycle": "brake 0.8 g + corner 0.8 g, outside <-> brake 0.8 g + corner 0.8 g, inside",
+     "n": 3913.0434782608695,
+     "amp_MPa": 26.04380226135254,
+     "mean_MPa": 34.44672775268555,
+     "damage_at_k1": 2.967667778186467e-10
+    },
+    {
+     "cycle": "brake 0.8 g <-> straight, 1 g",
+     "n": 16000.0,
+     "amp_MPa": 5.2267374992370605,
+     "mean_MPa": 13.439422607421875,
+     "damage_at_k1": 6.533084654042429e-16
+    },
+    {
+     "cycle": "brake 1.3 g <-> straight, 1 g",
+     "n": 8000.0,
+     "amp_MPa": 10.594515800476074,
+     "mean_MPa": 18.809938430786133,
+     "damage_at_k1": 1.7259150109517202e-13
+    },
+    {
+     "cycle": "bumps, 2 g <-> straight, 1 g",
+     "n": 30000.0,
+     "amp_MPa": 4.161970138549805,
+     "mean_MPa": 12.486071586608887,
+     "damage_at_k1": 1.6482599409078642e-16
+    }
+   ]
+  }
+ },
+ "fos_min": 3.242192486943354,
+ "seconds": 1630.2619459629059
+}

@@ -1,0 +1,46 @@
+# Bill of materials with cost: LEFT front corner (qty per corner) plus the per-car items of the front axle (group "car").
+# rev A (2026-10-27). Prices read on 2026-10-27 from the listed source (through a text-extraction tool; confirm at order).
+# status: priced = this exact part at this price | closest = a near part (see note), used in the estimated total
+#         estimate = no listing for the exact part; a stated reference price, used in the estimated total
+#         quote = no usable price (needs a supplier quote); excluded from both totals and listed separately
+#         in_house = made in-house; only material is costed (machining time is not)
+# qty may be a formula key that scripts/bom.py fills from other data: blank_kg (stock blank of the upright),
+#   rod_ends (count of rod ends per corner), tube:<OD x wall> (feet of that tube, from member_checks.csv).
+# Currencies other than USD are converted with ASSUMED rates in bom.py (FX), not looked up.
+id,group,part,spec,qty,unit,unit_price,currency,status,source,note
+U1,upright,"Upright, machined (FS1-UPR-001)","7075-T7351 plate, 3 in thick, blank = envelope + 3 mm a side",blank_kg,kg,51.0,USD,closest,https://speedymetals.com/p-2736-3-7075-t651-aluminum-plate.aspx,"Price is 3 in 7075-T651 (12 x 12 in, 1029.60 USD, about 51 USD/kg); T7351 at 3 in needs a distributor quote. Machining (3+2 axis) not costed."
+U4,upright,"Heli-Coil, lower ball-joint ear (H1)","3591-6CN375 screw-locking, 3/8-24 UNF, 1D, 304 SS",1,ea,0.855,USD,estimate,https://www.olander.com/items/1191-6CN562,"In the v4 boss (ear + boss 10 mm; S-18). Reference price is the 1.5D 1191-6CN562; currency taken as USD. The KNH624J key-locked insert first tried needed a boss that came too close to the pushrod rod end."
+H1,hub,Hub bearings,"SKF 32008 X/Q (cone + cup), 40 x 68 x 19 mm",2,ea,23.24,USD,priced,https://www.123bearing.com/bearing-housing/roller-bearing/tapered/32008-x-q-skf,16.72 USD at 50+.
+H2,hub,"Hub, cone spacer, axle nut",7075 round bar / steel,1,set,0,USD,quote,-,Not priced (round-bar stock and machining).
+H3,hub,Brake disc,"180 x 4 mm, laser cut and ground",1,ea,0,USD,quote,-,"No catalogue part. Closest found: kart 200 x 6 mm steel, 132.71 USD (https://pointkarting.com/products/solid-steel-brake-rotor-200mm-x-6mm); does not fit."
+H4,hub,Caliper (left),Wilwood PS-1 LH 120-5456,1,ea,107.92,USD,priced,https://www.summitracing.com/parts/wil-120-5456,The right corner uses RH 120-5453 at 111.70 USD.
+H4R,right,Caliper (right corner),Wilwood PS-1 RH 120-5453,1,ea,111.70,USD,priced,https://www.summitracing.com/parts/wil-120-5453,Replaces H4 on the right corner.
+H5,hub,Caliper bolts (H4 H5),"M8x1.25x30 class 12.9 SHCS, drilled head",2,ea,0.59,CAD,closest,https://lordco.com/Product/M8-1-25-x-25mm-Metric-Socket-Cap-Screws-Black-Oxide-Class-12-9-Coarse-FT-DIN-912-105622-318,"Price is the plain 25 mm listing; drilled heads cost more (no listing read). 30 mm from the bolt schedule (R-09): through the 19.4 mm lug and all of the caliper ear's 10.4 mm thread (taken as tapped through: Wilwood lists only a 0.32 in mount hole; confirm). The 25 mm screw listed until step C engaged 5.6 mm. Wired in pairs (C4)."
+W1,wheel,Wheel,"Braid Sturace FSAE 10 x 6 in, ET to spec",1,ea,587.0,USD,priced,https://pmbperformance.com/products/braid-sturace-fsae-wheels,"Made to spec in Europe; shipping, tariff and bolt pattern extra."
+W2,wheel,Tyre,"Hoosier 43075 R20, 16.0 x 7.5-10",1,ea,320.0,USD,priced,https://hoosiertiregp.com/16-0x7-5-10-r20/,LC0 compound same price.
+J1,links,Upper ball joint,Aurora COM-5 (5/16 in bore),1,ea,18.65,USD,priced,https://www.aircraftspruce.com/catalog/pnpages/04-01863.php,
+J2,links,Lower ball joint,Aurora COM-6 (3/8 in bore),1,ea,14.95,USD,priced,https://www.aircraftspruce.com/catalog/pnpages/04-01864.php,
+J3,links,Upper ball-joint bolt,AN5-17A,1,ea,0.89,USD,priced,https://www.aircraftspruce.com/catalog/hapages/an5.php,
+J3N,links,Upper ball-joint nut,"AN5 all-metal lock nut (MS21042L5)",1,ea,0.60,USD,estimate,-,"Was missing from the BOM (found in step B, HC-8). All-metal for the same reason as J7. No listing read: a typical price."
+J4,links,Lower ball-joint bolt,NAS6606-17 (close tolerance; grip 1.06 in to the upper ear),1,ea,8.16,USD,closest,https://store.vansaircraft.com/products/hardware/bolts-0/close-tolerance.html,"Price is the NAS6606-26 listing (a cached listing showed 4.94 USD; recheck). Shank through both shear planes; thread through the full insert."
+J5,links,Rod ends,"Aurora AM-M8T, M8x1.25 male, PTFE lined, 33135 N ultimate; at each tie rod's outer end the left-hand version (AML-M8T, part number to confirm) with a left-hand insert, so the tube is a turnbuckle",rod_ends,ea,92.60,GBP,estimate,https://uk.rs-online.com/web/p/rod-ends/1852758,"No AM-M8T listing found. Reference = the inch twin AM-8T (1/2-20), 92.60 GBP ex VAT at RS UK. Cost-down option in notes/bom.md (MM-M8, 36.96 USD, 13591 N)."
+J6,links,Rod-end clevis bolts,"M8x1.25 class 10.9 hex, 45-50 mm per the bolt schedule (notes/fasteners.md)",rod_ends,ea,0.88,USD,closest,https://boltsandnuts.com/products/m8-1-25x45-class-10-9-hex-cap-screws-zinc-clear,"Price is the 45 mm listing (0.66 USD at 25+). Lengths from the bolt schedule (R-09)."
+J7,links,Rod-end nuts,"M8 all-metal prevailing-torque, class 10 (ISO 7042)",rod_ends,ea,0.35,USD,estimate,-,"All-metal, not nylon insert: FSAE T.8.2.3 allows nylon lock nuts only below 80 C (read second-hand), and the upright and the parts bolted to it run hotter (HC-8). No listing read: a typical price."
+J9,links,Rack-end clevis jam nut,"1/4-28 UNF thin nut, steel",1,ea,0.20,USD,estimate,-,"Locks the custom clevis on the rack's 1/4-28 extension (R-10). No listing read: a typical price."
+J10,links,Drop-link lever-end washers,"M8 large washer, 24 mm OD x 2 mm (ISO 7093)",2,ea,0.10,USD,estimate,-,"Capture the lever-end rod end in single shear (R-08, D25). No listing read: a typical price."
+J11,links,Rack bracket bolts,"M8x1.25x25 class 10.9 hex, drilled head",2,ea,0.60,USD,estimate,-,"Into the Kaz trunnion block, 2 d in aluminium (R-07, R-09); wired in pairs (C4). No listing read: a typical price."
+J8,links,Rod-end jam nuts,"M8x1.25 thin nut (ISO 4035), steel; a left-hand M8x1.25 thin nut on each tie rod's left-hand outer rod end (J5)",rod_ends,ea,0.15,USD,estimate,-,"Lock every threaded rod end (R-10); the upper wishbone's set camber (D20); the tie rod's turnbuckle. No listing read: a typical price (a left-hand nut may cost more)."
+T1,links,Tube (upper wishbone legs),"4130N 5/8 x 0.035 in",tube:15.875 x 0.889,ft,6.55,USD,priced,https://www.aircraftspruce.com/catalog/pnpages/03-03600.php,
+T2,links,"Tube (lower wishbone legs, pushrod)","4130N 3/4 x 0.035 in",tube:19.05 x 0.889,ft,7.50,USD,priced,https://www.aircraftspruce.com/catalog/pnpages/03-04300.php,
+T3,links,Tube (tie rod),"4130N 5/8 x 0.049 in",tube:15.875 x 1.245,ft,5.35,USD,priced,https://www.aircraftspruce.com/catalog/pnpages/03-03700.php,Listed below the 0.035 wall; recheck at order.
+K1,links,Rocker plates and pivot,"2 x 7075 plates 5 mm, pivot boss, 2 needle bearings, pivot bolt",1,set,0,USD,quote,-,Not priced (plate offcut and bearings).
+K2,links,"Wishbone nodes, pushrod bracket, chassis clevis tabs","4130N: ball-joint node housings, 4 mm bracket plates, 2.5-4 mm tabs, rack-end clevises (1/4-28)",1,set,0,USD,quote,-,Not priced (sheet and bar stock; welding).
+K3,links,Damper and rocker mount hardware,"M8 bolts, spacers, misalignment spacers",1,set,0,USD,quote,-,Not priced.
+D1,damper,Damper,Ohlins TTX25 MkII FSAE (23.TTX25KIT),1,ea,715.0,USD,estimate,https://www.essexparts.com/ohlins-ttx25-mkii-fsae-damper,Set of 4 at 2860 USD / 4; per-damper not listed.
+D2,damper,Main spring,"Hyperco FSAE spring, 150 lb/in (26.3 N/mm): Essex 09.03.FS150; Summit lists it as HYC-18FS150, 1.450 in ID, 4.400 in free length",1,ea,55.00,USD,priced,https://www.essexparts.com/hyperco-fsae-coil-spring-150lbsin,"Hyperco's Formula SAE spring for the TTX25 MkII; the softest rate sold (Ohlins and Hyperco both start at 150 lb/in). The calcs ask for 23.9 N/mm (136 lb/in); 150 lb/in gives 2.91 Hz (V-01: 2.66-2.94)."
+D3,damper,Helper spring,36 mm ID tender spring,1,ea,0,USD,quote,-,No 36 mm ID helper found.
+D4,damper,Bump rubber,Ohlins 24630-02 (12/38/25),1,ea,23.95,AUD,closest,https://www.teknikmotorsport.com/24630-02-bump-stop-12-38-25,Currency and TTX25 fit unconfirmed; special order 8-9 weeks.
+C1,car,Steering rack,Kaz Technologies FSAE rack,1,ea,850.0,USD,priced,https://www.kaztechnologies.com/steering-rack,"3.25 in travel, 4.71 in/rev; angle sensor 150 USD extra."
+C2,car,Bearing retainer,"Loctite 641, 10 ml",1,ea,14.36,USD,priced,https://www.silmid.com/us/adhesives/Retaining-Compounds/loctite-641-10ml-bottle/,
+C4,car,Safety wire,"0.032 in stainless lock wire (MS20995C32), 1 lb",1,ea,25.0,USD,estimate,-,"Caliper and rack bracket bolts, wired in pairs (R-09). No listing read: a typical price."
+C3,car,Anti-roll bar,"three solid 4340 bars (10.2 / 12.4 / 13.9 mm, 25 mm splined ends, ground R4 shoulders, 180 ksi), two 4130N levers 8 x 25 mm",1,set,0,USD,quote,-,Not priced.

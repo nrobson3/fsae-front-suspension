@@ -1,0 +1,714 @@
+# hardpoints v1.7; cad 237fb82d0cc0ae23; inputs cf478a84f882b592; poses 279; fails 0
+check,item,against,min_mm,status,pose
+bolt length,L Caliper bolt 1 (M8 socket head),M8_SHCS x 30.0 mm,10.60,WARN,interface: Wilwood lists a 0.32 in mount hole: taken as tapped through the 10.4 mm ear (a 3/8 tap drill is 0.332 in): confirm the thread on Wilwood's drawing
+bolt length,L Caliper bolt 2 (M8 socket head),M8_SHCS x 30.0 mm,10.60,WARN,interface: Wilwood lists a 0.32 in mount hole: taken as tapped through the 10.4 mm ear (a 3/8 tap drill is 0.332 in): confirm the thread on Wilwood's drawing
+bolt length,R Caliper bolt 1 (M8 socket head),M8_SHCS x 30.0 mm,10.60,WARN,interface: Wilwood lists a 0.32 in mount hole: taken as tapped through the 10.4 mm ear (a 3/8 tap drill is 0.332 in): confirm the thread on Wilwood's drawing
+bolt length,R Caliper bolt 2 (M8 socket head),M8_SHCS x 30.0 mm,10.60,WARN,interface: Wilwood lists a 0.32 in mount hole: taken as tapped through the 10.4 mm ear (a 3/8 tap drill is 0.332 in): confirm the thread on Wilwood's drawing
+bolt length,"L Rack bracket bolt 1 (M8, into the trunnion block)",M8 x 25.0 mm,19.40,WARN,"interface: Kaz publishes no trunnion block drawing: it needs M8 threads at least 2 d deep, clear of its bore (the modelled collar is an envelope)"
+bolt length,"L Rack bracket bolt 2 (M8, into the trunnion block)",M8 x 25.0 mm,19.40,WARN,"interface: Kaz publishes no trunnion block drawing: it needs M8 threads at least 2 d deep, clear of its bore (the modelled collar is an envelope)"
+bolt length,"R Rack bracket bolt 1 (M8, into the trunnion block)",M8 x 25.0 mm,19.40,WARN,"interface: Kaz publishes no trunnion block drawing: it needs M8 threads at least 2 d deep, clear of its bore (the modelled collar is an envelope)"
+bolt length,"R Rack bracket bolt 2 (M8, into the trunnion block)",M8 x 25.0 mm,19.40,WARN,"interface: Kaz publishes no trunnion block drawing: it needs M8 threads at least 2 d deep, clear of its bore (the modelled collar is an envelope)"
+bolt length,L Pushrod upper rod end (M8),M8 x 45.0 mm,2.80,OK,thread past the nut
+bolt length,L Damper rocker eye (M8),M8 x 45.0 mm,2.80,OK,thread past the nut
+bolt length,L Drop link rocker end (M8),M8 x 45.0 mm,2.80,OK,thread past the nut
+bolt length,R Pushrod upper rod end (M8),M8 x 45.0 mm,2.80,OK,thread past the nut
+bolt length,R Damper rocker eye (M8),M8 x 45.0 mm,2.80,OK,thread past the nut
+bolt length,R Drop link rocker end (M8),M8 x 45.0 mm,2.80,OK,thread past the nut
+bolt length,"L Drop link lever end (M8, single shear, 24 mm washer)",M8_capture x 45.0 mm,3.00,OK,thread past the nut
+bolt length,"R Drop link lever end (M8, single shear, 24 mm washer)",M8_capture x 45.0 mm,3.00,OK,thread past the nut
+bolt length,L Pushrod lower rod end (M8),M8 x 45.0 mm,3.80,OK,thread past the nut
+bolt length,R Pushrod lower rod end (M8),M8 x 45.0 mm,3.80,OK,thread past the nut
+bolt length,L Tie rod outer rod end (M8),M8 x 50.0 mm,4.80,OK,thread past the nut
+bolt length,R Tie rod outer rod end (M8),M8 x 50.0 mm,4.80,OK,thread past the nut
+bolt length,L Upper ball joint (AN5),AN5 x 60.3 mm,4.95,OK,thread past the nut
+bolt length,R Upper ball joint (AN5),AN5 x 60.3 mm,4.95,OK,thread past the nut
+bolt length,L Rocker pivot (M8),M8 x 80.0 mm,5.80,OK,thread past the nut
+bolt length,L Damper chassis eye (M8),M8 x 65.0 mm,5.80,OK,thread past the nut
+bolt length,R Rocker pivot (M8),M8 x 80.0 mm,5.80,OK,thread past the nut
+bolt length,R Damper chassis eye (M8),M8 x 65.0 mm,5.80,OK,thread past the nut
+bolt length,"L Tie rod inner rod end (M8, rack-end clevis)",M8 x 50.0 mm,6.80,OK,thread past the nut
+bolt length,"R Tie rod inner rod end (M8, rack-end clevis)",M8 x 50.0 mm,6.80,OK,thread past the nut
+bolt length,L Upper wishbone front inboard rod end (M8),M8 x 45.0 mm,6.80,OK,thread past the nut
+bolt length,L Upper wishbone rear inboard rod end (M8),M8 x 45.0 mm,6.80,OK,thread past the nut
+bolt length,L Lower wishbone front inboard rod end (M8),M8 x 45.0 mm,6.80,OK,thread past the nut
+bolt length,L Lower wishbone rear inboard rod end (M8),M8 x 45.0 mm,6.80,OK,thread past the nut
+bolt length,R Upper wishbone front inboard rod end (M8),M8 x 45.0 mm,6.80,OK,thread past the nut
+bolt length,R Upper wishbone rear inboard rod end (M8),M8 x 45.0 mm,6.80,OK,thread past the nut
+bolt length,R Lower wishbone front inboard rod end (M8),M8 x 45.0 mm,6.80,OK,thread past the nut
+bolt length,R Lower wishbone rear inboard rod end (M8),M8 x 45.0 mm,6.80,OK,thread past the nut
+bolt length,L Lower ball joint (NAS6606 into a 1191-6CN375 insert),NAS6606 x 52.4 mm,9.27,OK,thread engaged
+bolt length,R Lower ball joint (NAS6606 into a 1191-6CN375 insert),NAS6606 x 52.4 mm,9.27,OK,thread engaged
+double shear,L Upper ball joint (AN5),-,2.00,OK,held both sides
+double shear,L Lower ball joint (NAS6606 into a 1191-6CN375 insert),-,2.00,OK,held both sides
+double shear,L Tie rod outer rod end (M8),-,2.00,OK,held both sides
+double shear,L Pushrod lower rod end (M8),-,2.00,OK,held both sides
+double shear,L Pushrod upper rod end (M8),-,2.00,OK,held both sides
+double shear,L Damper rocker eye (M8),-,2.00,OK,held both sides
+double shear,L Drop link rocker end (M8),-,2.00,OK,held both sides
+double shear,"L Drop link lever end (M8, single shear, 24 mm washer)",-,2.00,OK,"single shear, captured by a 24 mm washer"
+double shear,L Upper wishbone front inboard rod end (M8),-,2.00,OK,held both sides
+double shear,L Upper wishbone rear inboard rod end (M8),-,2.00,OK,held both sides
+double shear,L Lower wishbone front inboard rod end (M8),-,2.00,OK,held both sides
+double shear,L Lower wishbone rear inboard rod end (M8),-,2.00,OK,held both sides
+double shear,L Damper chassis eye (M8),-,2.00,OK,held both sides
+double shear,"L Tie rod inner rod end (M8, rack-end clevis)",-,2.00,OK,held both sides
+double shear,R Upper ball joint (AN5),-,2.00,OK,held both sides
+double shear,R Lower ball joint (NAS6606 into a 1191-6CN375 insert),-,2.00,OK,held both sides
+double shear,R Tie rod outer rod end (M8),-,2.00,OK,held both sides
+double shear,R Pushrod lower rod end (M8),-,2.00,OK,held both sides
+double shear,R Pushrod upper rod end (M8),-,2.00,OK,held both sides
+double shear,R Damper rocker eye (M8),-,2.00,OK,held both sides
+double shear,R Drop link rocker end (M8),-,2.00,OK,held both sides
+double shear,"R Drop link lever end (M8, single shear, 24 mm washer)",-,2.00,OK,"single shear, captured by a 24 mm washer"
+double shear,R Upper wishbone front inboard rod end (M8),-,2.00,OK,held both sides
+double shear,R Upper wishbone rear inboard rod end (M8),-,2.00,OK,held both sides
+double shear,R Lower wishbone front inboard rod end (M8),-,2.00,OK,held both sides
+double shear,R Lower wishbone rear inboard rod end (M8),-,2.00,OK,held both sides
+double shear,R Damper chassis eye (M8),-,2.00,OK,held both sides
+double shear,"R Tie rod inner rod end (M8, rack-end clevis)",-,2.00,OK,held both sides
+fastener body,L Caliper bolt 2 (M8 socket head): head,L Upright / upright,0.20,OK,all (same rigid group)
+fastener body,R Caliper bolt 2 (M8 socket head): head,R Upright / upright,0.20,OK,all (same rigid group)
+fastener body,L Caliper bolt 1 (M8 socket head): head,L Upright / upright,0.20,OK,all (same rigid group)
+fastener body,R Caliper bolt 1 (M8 socket head): head,R Upright / upright,0.20,OK,all (same rigid group)
+fastener body,L Upper wishbone rear inboard rod end (M8): washer (head end),L Chassis tabs / Upper wishbone rear tab A,0.20,OK,all (same rigid group)
+fastener body,R Upper wishbone rear inboard rod end (M8): washer (head end),R Chassis tabs / Upper wishbone rear tab A,0.20,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): washer (head end),L Upright / upright,0.20,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): washer (head end),R Upright / upright,0.20,OK,all (same rigid group)
+fastener body,L Lower wishbone rear inboard rod end (M8): washer (head end),L Chassis tabs / Lower wishbone rear tab A,0.20,OK,all (same rigid group)
+fastener body,R Lower wishbone rear inboard rod end (M8): washer (head end),R Chassis tabs / Lower wishbone rear tab A,0.20,OK,all (same rigid group)
+fastener body,L Upper wishbone rear inboard rod end (M8): washer (nut end),L Chassis tabs / Upper wishbone rear tab B,0.20,OK,all (same rigid group)
+fastener body,R Upper wishbone rear inboard rod end (M8): washer (nut end),R Chassis tabs / Upper wishbone rear tab B,0.20,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): washer (head end),L Upright / upright,0.20,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (head end),R Upright / upright,0.20,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): washer (nut end),L Upright / upright,0.20,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): washer (nut end),R Upright / upright,0.20,OK,all (same rigid group)
+fastener body,L Lower wishbone front inboard rod end (M8): washer (head end),L Chassis tabs / Lower wishbone front tab B,0.20,OK,all (same rigid group)
+fastener body,R Lower wishbone front inboard rod end (M8): washer (head end),R Chassis tabs / Lower wishbone front tab B,0.20,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): washer (nut end),L Upright / upright,0.20,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (nut end),R Upright / upright,0.20,OK,all (same rigid group)
+fastener body,R Lower wishbone rear inboard rod end (M8): washer (nut end),R Chassis tabs / Lower wishbone rear tab B,0.20,OK,all (same rigid group)
+fastener body,L Lower wishbone rear inboard rod end (M8): washer (nut end),L Chassis tabs / Lower wishbone rear tab B,0.20,OK,all (same rigid group)
+fastener body,L Lower wishbone front inboard rod end (M8): washer (nut end),L Chassis tabs / Lower wishbone front tab A,0.20,OK,all (same rigid group)
+fastener body,R Lower wishbone front inboard rod end (M8): washer (nut end),R Chassis tabs / Lower wishbone front tab A,0.20,OK,all (same rigid group)
+fastener body,L Upper wishbone front inboard rod end (M8): washer (nut end),L Chassis tabs / Upper wishbone front tab A,0.20,OK,all (same rigid group)
+fastener body,R Upper wishbone front inboard rod end (M8): washer (nut end),R Chassis tabs / Upper wishbone front tab A,0.20,OK,all (same rigid group)
+fastener body,L Upper wishbone front inboard rod end (M8): washer (head end),L Chassis tabs / Upper wishbone front tab B,0.20,OK,all (same rigid group)
+fastener body,R Upper wishbone front inboard rod end (M8): washer (head end),R Chassis tabs / Upper wishbone front tab B,0.20,OK,all (same rigid group)
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): washer (head end)",Rack bar / rack clevis ears L,0.20,OK,all (same rigid group)
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): washer (head end)",Rack bar / rack clevis ears R,0.20,OK,all (same rigid group)
+fastener body,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): washer (head end),L Upright / upright,0.20,OK,all (same rigid group)
+fastener body,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): washer (head end),R Upright / upright,0.20,OK,all (same rigid group)
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): washer (nut end)",Rack bar / rack clevis ears L,0.20,OK,all (same rigid group)
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): washer (nut end)",Rack bar / rack clevis ears R,0.20,OK,all (same rigid group)
+fastener body,L Pushrod lower rod end (M8): washer (head end),L Lower wishbone / pushrod bracket,0.20,OK,all (same rigid group)
+fastener body,R Pushrod lower rod end (M8): washer (head end),R Lower wishbone / pushrod bracket,0.20,OK,all (same rigid group)
+fastener body,L Pushrod lower rod end (M8): washer (nut end),L Lower wishbone / pushrod bracket,0.20,OK,all (same rigid group)
+fastener body,R Pushrod lower rod end (M8): washer (nut end),R Lower wishbone / pushrod bracket,0.20,OK,all (same rigid group)
+fastener body,"L Drop link lever end (M8, single shear, 24 mm washer): washer (nut end)",L ARB lever / lever,0.20,OK,all (same rigid group)
+fastener body,"R Drop link lever end (M8, single shear, 24 mm washer): washer (nut end)",R ARB lever / lever,0.20,OK,all (same rigid group)
+fastener body,L Rocker pivot (M8): washer (head end),L Chassis tabs / Rocker pivot bracket A,0.20,OK,all (same rigid group)
+fastener body,L Damper chassis eye (M8): washer (head end),L Chassis tabs / Damper chassis tab A,0.20,OK,all (same rigid group)
+fastener body,R Rocker pivot (M8): washer (head end),R Chassis tabs / Rocker pivot bracket A,0.20,OK,all (same rigid group)
+fastener body,R Damper chassis eye (M8): washer (head end),R Chassis tabs / Damper chassis tab A,0.20,OK,all (same rigid group)
+fastener body,L Pushrod upper rod end (M8): washer (head end),L Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,L Damper rocker eye (M8): washer (head end),L Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,L Drop link rocker end (M8): washer (head end),L Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,R Pushrod upper rod end (M8): washer (head end),R Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,R Damper rocker eye (M8): washer (head end),R Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,R Drop link rocker end (M8): washer (head end),R Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,L Pushrod upper rod end (M8): washer (nut end),L Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,L Damper rocker eye (M8): washer (nut end),L Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,L Drop link rocker end (M8): washer (nut end),L Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,L Rocker pivot (M8): washer (nut end),L Chassis tabs / Rocker pivot bracket B,0.20,OK,all (same rigid group)
+fastener body,L Damper chassis eye (M8): washer (nut end),L Chassis tabs / Damper chassis tab B,0.20,OK,all (same rigid group)
+fastener body,R Pushrod upper rod end (M8): washer (nut end),R Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,R Damper rocker eye (M8): washer (nut end),R Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,R Drop link rocker end (M8): washer (nut end),R Rocker / rocker,0.20,OK,all (same rigid group)
+fastener body,R Rocker pivot (M8): washer (nut end),R Chassis tabs / Rocker pivot bracket B,0.20,OK,all (same rigid group)
+fastener body,R Damper chassis eye (M8): washer (nut end),R Chassis tabs / Damper chassis tab B,0.20,OK,all (same rigid group)
+fastener body,"L Rack bracket bolt 1 (M8, into the trunnion block): washer (head end)",L Chassis tabs / Rack bracket pad,0.20,OK,all (same rigid group)
+fastener body,"L Rack bracket bolt 2 (M8, into the trunnion block): washer (head end)",L Chassis tabs / Rack bracket pad,0.20,OK,all (same rigid group)
+fastener body,"R Rack bracket bolt 1 (M8, into the trunnion block): washer (head end)",R Chassis tabs / Rack bracket pad,0.20,OK,all (same rigid group)
+fastener body,"R Rack bracket bolt 2 (M8, into the trunnion block): washer (head end)",R Chassis tabs / Rack bracket pad,0.20,OK,all (same rigid group)
+fastener body,L Upper wishbone rear inboard rod end (M8): head,L Chassis tabs / Upper wishbone rear tab A,1.80,OK,all (same rigid group)
+fastener body,R Upper wishbone rear inboard rod end (M8): head,R Chassis tabs / Upper wishbone rear tab A,1.80,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): head,R Upright / upright,1.80,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): head,L Upright / upright,1.80,OK,all (same rigid group)
+fastener body,L Lower wishbone rear inboard rod end (M8): head,L Chassis tabs / Lower wishbone rear tab A,1.80,OK,all (same rigid group)
+fastener body,R Lower wishbone rear inboard rod end (M8): head,R Chassis tabs / Lower wishbone rear tab A,1.80,OK,all (same rigid group)
+fastener body,L Upper wishbone rear inboard rod end (M8): nut,L Chassis tabs / Upper wishbone rear tab B,1.80,OK,all (same rigid group)
+fastener body,R Upper wishbone rear inboard rod end (M8): nut,R Chassis tabs / Upper wishbone rear tab B,1.80,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): head,L Upright / upright,1.80,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): head,R Upright / upright,1.80,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): nut,L Upright / upright,1.80,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): nut,R Upright / upright,1.80,OK,all (same rigid group)
+fastener body,L Lower wishbone front inboard rod end (M8): head,L Chassis tabs / Lower wishbone front tab B,1.80,OK,all (same rigid group)
+fastener body,R Lower wishbone front inboard rod end (M8): head,R Chassis tabs / Lower wishbone front tab B,1.80,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): nut,L Upright / upright,1.80,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): nut,R Upright / upright,1.80,OK,all (same rigid group)
+fastener body,L Lower wishbone rear inboard rod end (M8): nut,L Chassis tabs / Lower wishbone rear tab B,1.80,OK,all (same rigid group)
+fastener body,R Lower wishbone rear inboard rod end (M8): nut,R Chassis tabs / Lower wishbone rear tab B,1.80,OK,all (same rigid group)
+fastener body,R Lower wishbone front inboard rod end (M8): nut,R Chassis tabs / Lower wishbone front tab A,1.80,OK,all (same rigid group)
+fastener body,L Lower wishbone front inboard rod end (M8): nut,L Chassis tabs / Lower wishbone front tab A,1.80,OK,all (same rigid group)
+fastener body,L Upper wishbone front inboard rod end (M8): nut,L Chassis tabs / Upper wishbone front tab A,1.80,OK,all (same rigid group)
+fastener body,R Upper wishbone front inboard rod end (M8): nut,R Chassis tabs / Upper wishbone front tab A,1.80,OK,all (same rigid group)
+fastener body,L Upper wishbone front inboard rod end (M8): head,L Chassis tabs / Upper wishbone front tab B,1.80,OK,all (same rigid group)
+fastener body,R Upper wishbone front inboard rod end (M8): head,R Chassis tabs / Upper wishbone front tab B,1.80,OK,all (same rigid group)
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): head",Rack bar / rack clevis ears L,1.80,OK,all (same rigid group)
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): head",Rack bar / rack clevis ears R,1.80,OK,all (same rigid group)
+fastener body,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): head,L Upright / upright,1.80,OK,all (same rigid group)
+fastener body,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): head,R Upright / upright,1.80,OK,all (same rigid group)
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): nut",Rack bar / rack clevis ears L,1.80,OK,all (same rigid group)
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): nut",Rack bar / rack clevis ears R,1.80,OK,all (same rigid group)
+fastener body,L Pushrod lower rod end (M8): head,L Lower wishbone / pushrod bracket,1.80,OK,all (same rigid group)
+fastener body,R Pushrod lower rod end (M8): head,R Lower wishbone / pushrod bracket,1.80,OK,all (same rigid group)
+fastener body,L Pushrod lower rod end (M8): nut,L Lower wishbone / pushrod bracket,1.80,OK,all (same rigid group)
+fastener body,R Pushrod lower rod end (M8): nut,R Lower wishbone / pushrod bracket,1.80,OK,all (same rigid group)
+fastener body,L Pushrod upper rod end (M8): nut,L Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,L Damper rocker eye (M8): nut,L Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,L Drop link rocker end (M8): nut,L Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,R Pushrod upper rod end (M8): nut,R Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,R Damper rocker eye (M8): nut,R Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,R Drop link rocker end (M8): nut,R Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,L Drop link rocker end (M8): head,L Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,R Drop link rocker end (M8): head,R Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,L Pushrod upper rod end (M8): head,L Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,R Pushrod upper rod end (M8): head,R Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,R Damper rocker eye (M8): head,R Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,L Damper rocker eye (M8): head,L Rocker / rocker,1.80,OK,all (same rigid group)
+fastener body,L Damper chassis eye (M8): head,L Chassis tabs / Damper chassis tab A,1.80,OK,all (same rigid group)
+fastener body,R Damper chassis eye (M8): head,R Chassis tabs / Damper chassis tab A,1.80,OK,all (same rigid group)
+fastener body,L Rocker pivot (M8): head,L Chassis tabs / Rocker pivot bracket A,1.80,OK,all (same rigid group)
+fastener body,L Rocker pivot (M8): nut,L Chassis tabs / Rocker pivot bracket B,1.80,OK,all (same rigid group)
+fastener body,L Damper chassis eye (M8): nut,L Chassis tabs / Damper chassis tab B,1.80,OK,all (same rigid group)
+fastener body,R Rocker pivot (M8): head,R Chassis tabs / Rocker pivot bracket A,1.80,OK,all (same rigid group)
+fastener body,R Rocker pivot (M8): nut,R Chassis tabs / Rocker pivot bracket B,1.80,OK,all (same rigid group)
+fastener body,R Damper chassis eye (M8): nut,R Chassis tabs / Damper chassis tab B,1.80,OK,all (same rigid group)
+fastener body,"L Rack bracket bolt 1 (M8, into the trunnion block): head",L Chassis tabs / Rack bracket pad,1.80,OK,all (same rigid group)
+fastener body,"L Rack bracket bolt 2 (M8, into the trunnion block): head",L Chassis tabs / Rack bracket pad,1.80,OK,all (same rigid group)
+fastener body,"R Rack bracket bolt 1 (M8, into the trunnion block): head",R Chassis tabs / Rack bracket pad,1.80,OK,all (same rigid group)
+fastener body,"R Rack bracket bolt 2 (M8, into the trunnion block): head",R Chassis tabs / Rack bracket pad,1.80,OK,all (same rigid group)
+fastener body,"L Drop link lever end (M8, single shear, 24 mm washer): nut",L ARB lever / lever,2.20,OK,all (same rigid group)
+fastener body,"R Drop link lever end (M8, single shear, 24 mm washer): nut",R ARB lever / lever,2.20,OK,all (same rigid group)
+fastener body,L Damper chassis eye (M8): washer (head end),L Chassis tabs / Damper chassis tab root A,4.09,OK,all (same rigid group)
+fastener body,L Damper chassis eye (M8): washer (nut end),L Chassis tabs / Damper chassis tab root B,4.09,OK,all (same rigid group)
+fastener body,R Damper chassis eye (M8): washer (head end),R Chassis tabs / Damper chassis tab root A,4.09,OK,all (same rigid group)
+fastener body,R Damper chassis eye (M8): washer (nut end),R Chassis tabs / Damper chassis tab root B,4.09,OK,all (same rigid group)
+fastener body,L Damper chassis eye (M8): washer (head end),"L Damper body (Ohlins TTX25, envelope) / damper body",4.32,OK,"0, -30, -24.7"
+fastener body,R Damper chassis eye (M8): washer (head end),"R Damper body (Ohlins TTX25, envelope) / damper body",4.32,OK,"-30, 0, 24.7"
+fastener body,L Damper chassis eye (M8): washer (nut end),"L Damper body (Ohlins TTX25, envelope) / damper body",4.32,OK,"0, -30, -24.7"
+fastener body,R Damper chassis eye (M8): washer (nut end),"R Damper body (Ohlins TTX25, envelope) / damper body",4.32,OK,"-30, 0, 24.7"
+fastener body,L Damper chassis eye (M8): head,"L Damper body (Ohlins TTX25, envelope) / damper body",5.99,OK,"0, -30, -24.7"
+fastener body,R Damper chassis eye (M8): head,"R Damper body (Ohlins TTX25, envelope) / damper body",5.99,OK,"-30, 0, 24.7"
+fastener body,L Damper chassis eye (M8): nut,"L Damper body (Ohlins TTX25, envelope) / damper body",5.99,OK,"0, -30, -24.7"
+fastener body,R Damper chassis eye (M8): nut,"R Damper body (Ohlins TTX25, envelope) / damper body",5.99,OK,"-30, 0, 24.7"
+fastener body,R Pushrod lower rod end (M8): thread end,R Tie rod / tube,6.44,OK,"-29, 14, -24.7"
+fastener body,L Pushrod lower rod end (M8): thread end,L Tie rod / tube,6.44,OK,"14, -29, 24.7"
+fastener body,L Upper wishbone rear inboard rod end (M8): washer (nut end),L Upper wishbone / rod end rear,7.39,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone rear inboard rod end (M8): washer (nut end),R Upper wishbone / rod end rear,7.39,OK,"-30, 30, -24.7"
+fastener body,L Upper wishbone rear inboard rod end (M8): washer (head end),L Upper wishbone / rod end rear,7.39,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone rear inboard rod end (M8): washer (head end),R Upper wishbone / rod end rear,7.39,OK,"-30, 30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): washer (nut end),L Upper wishbone / rod end front,7.39,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): washer (nut end),R Upper wishbone / rod end front,7.39,OK,"-30, 30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): washer (head end),L Upper wishbone / rod end front,7.39,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): washer (head end),R Upper wishbone / rod end front,7.39,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): washer (head end),L Lower wishbone / rod end rear,7.42,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): washer (head end),R Lower wishbone / rod end rear,7.42,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): washer (nut end),L Lower wishbone / rod end rear,7.42,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): washer (nut end),R Lower wishbone / rod end rear,7.42,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): washer (head end),L Lower wishbone / rod end front,7.43,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): washer (head end),R Lower wishbone / rod end front,7.43,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): washer (nut end),L Lower wishbone / rod end front,7.43,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): washer (nut end),R Lower wishbone / rod end front,7.43,OK,"-30, 30, -24.7"
+fastener body,L Damper rocker eye (M8): washer (head end),L Damper shaft / damper shaft,8.71,OK,"-22, -22, 6.2"
+fastener body,R Damper rocker eye (M8): washer (head end),R Damper shaft / damper shaft,8.71,OK,"-22, -22, -6.2"
+fastener body,L Damper rocker eye (M8): washer (nut end),L Damper shaft / damper shaft,8.71,OK,"-22, -22, 6.2"
+fastener body,R Damper rocker eye (M8): washer (nut end),R Damper shaft / damper shaft,8.71,OK,"-22, -22, -6.2"
+fastener body,R Upper wishbone rear inboard rod end (M8): nut,R Upper wishbone / rod end rear,9.01,OK,"-30, 30, -24.7"
+fastener body,L Upper wishbone rear inboard rod end (M8): nut,L Upper wishbone / rod end rear,9.01,OK,"30, -30, 24.7"
+fastener body,L Upper wishbone rear inboard rod end (M8): head,L Upper wishbone / rod end rear,9.01,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone rear inboard rod end (M8): head,R Upper wishbone / rod end rear,9.01,OK,"-30, 30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): nut,L Upper wishbone / rod end front,9.01,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): nut,R Upper wishbone / rod end front,9.01,OK,"-30, 30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): head,L Upper wishbone / rod end front,9.01,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): head,R Upper wishbone / rod end front,9.01,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): head,L Lower wishbone / rod end rear,9.04,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): head,R Lower wishbone / rod end rear,9.04,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): nut,L Lower wishbone / rod end rear,9.04,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): nut,R Lower wishbone / rod end rear,9.04,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): head,L Lower wishbone / rod end front,9.05,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): head,R Lower wishbone / rod end front,9.05,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): nut,L Lower wishbone / rod end front,9.05,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): nut,R Lower wishbone / rod end front,9.05,OK,"-30, 30, -24.7"
+fastener body,R Tie rod outer rod end (M8): thread end,R Upright / upright,9.80,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): thread end,L Upright / upright,9.80,OK,all (same rigid group)
+fastener body,L Lower wishbone rear inboard rod end (M8): thread end,L Chassis tabs / Lower wishbone rear tab B,9.80,OK,all (same rigid group)
+fastener body,R Lower wishbone rear inboard rod end (M8): thread end,R Chassis tabs / Lower wishbone rear tab B,9.80,OK,all (same rigid group)
+fastener body,L Lower wishbone front inboard rod end (M8): thread end,L Chassis tabs / Lower wishbone front tab A,9.80,OK,all (same rigid group)
+fastener body,R Lower wishbone front inboard rod end (M8): thread end,R Chassis tabs / Lower wishbone front tab A,9.80,OK,all (same rigid group)
+fastener body,L Upper wishbone rear inboard rod end (M8): thread end,L Chassis tabs / Upper wishbone rear tab B,9.80,OK,all (same rigid group)
+fastener body,R Upper wishbone rear inboard rod end (M8): thread end,R Chassis tabs / Upper wishbone rear tab B,9.80,OK,all (same rigid group)
+fastener body,L Upper wishbone front inboard rod end (M8): thread end,L Chassis tabs / Upper wishbone front tab A,9.80,OK,all (same rigid group)
+fastener body,R Upper wishbone front inboard rod end (M8): thread end,R Chassis tabs / Upper wishbone front tab A,9.80,OK,all (same rigid group)
+fastener body,R Pushrod lower rod end (M8): nut,R Tie rod / tube,10.08,OK,"-26, -4, -24.7"
+fastener body,L Pushrod lower rod end (M8): nut,L Tie rod / tube,10.08,OK,"-4, -26, 24.7"
+fastener body,L Upper ball joint (AN5): thread end,L Upright / upright,10.10,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): thread end,R Upright / upright,10.10,OK,all (same rigid group)
+fastener body,L Upper wishbone rear inboard rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,10.16,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone rear inboard rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,10.16,OK,"-30, -30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,10.28,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,10.28,OK,"-30, -30, -24.7"
+fastener body,L Damper rocker eye (M8): head,L Damper shaft / damper shaft,10.35,OK,"-22, -22, 6.2"
+fastener body,L Damper rocker eye (M8): nut,L Damper shaft / damper shaft,10.35,OK,"-22, -22, 6.2"
+fastener body,R Damper rocker eye (M8): nut,R Damper shaft / damper shaft,10.35,OK,"-22, -22, -6.2"
+fastener body,R Damper rocker eye (M8): head,R Damper shaft / damper shaft,10.35,OK,"-22, -22, -6.2"
+fastener body,L Upper wishbone rear inboard rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,10.77,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone rear inboard rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,10.77,OK,"-30, -30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,10.84,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,10.84,OK,"-30, -30, -24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): thread end",L Chassis tabs / Rack bracket web,11.00,OK,"-30, -30, -24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): thread end",R Chassis tabs / Rack bracket web,11.00,OK,"-30, -30, 24.7"
+fastener body,"L Drop link lever end (M8, single shear, 24 mm washer): head",Ghost chassis (assumed context) / ghost chassis,11.61,OK,"-30, -30, -24.7"
+fastener body,"R Drop link lever end (M8, single shear, 24 mm washer): head",Ghost chassis (assumed context) / ghost chassis,11.61,OK,"-30, -30, -24.7"
+fastener body,L Pushrod lower rod end (M8): washer (head end),L Upright / upright,12.47,OK,"-30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): washer (head end),R Upright / upright,12.47,OK,"-30, -30, -24.7"
+fastener body,L Upper ball joint (AN5): washer (nut end),L Upper wishbone / legs,12.49,OK,"30, -30, 18.5"
+fastener body,R Upper ball joint (AN5): washer (nut end),R Upper wishbone / legs,12.49,OK,"-30, 30, -18.5"
+fastener body,R Upper wishbone rear inboard rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,12.85,OK,"-30, -30, -24.7"
+fastener body,L Upper wishbone rear inboard rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,12.85,OK,"-30, -30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,12.95,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,12.95,OK,"-30, -30, -24.7"
+fastener body,L Pushrod lower rod end (M8): washer (nut end),L Upright / upright,13.05,OK,"-30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): washer (nut end),R Upright / upright,13.05,OK,"-30, -30, 24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,13.45,OK,"-30, -30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,13.45,OK,"-30, -30, -24.7"
+fastener body,L Pushrod lower rod end (M8): head,L Upright / upright,13.56,OK,"-30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): head,R Upright / upright,13.56,OK,"-30, -30, -24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,13.57,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,13.57,OK,"-30, -30, -24.7"
+fastener body,L Drop link rocker end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,13.66,OK,"-18, 3, 0.0"
+fastener body,R Drop link rocker end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,13.66,OK,"3, -18, 0.0"
+fastener body,L Drop link rocker end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,13.67,OK,"-18, 3, 0.0"
+fastener body,R Drop link rocker end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,13.67,OK,"3, -18, 0.0"
+fastener body,L Upper ball joint (AN5): head,"L Wheel (Braid 10 in, envelope) / wheel",13.68,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): head,"R Wheel (Braid 10 in, envelope) / wheel",13.68,OK,all (same rigid group)
+fastener body,L Drop link rocker end (M8): nut,Ghost chassis (assumed context) / ghost chassis,14.15,OK,"-18, 3, 0.0"
+fastener body,R Drop link rocker end (M8): nut,Ghost chassis (assumed context) / ghost chassis,14.15,OK,"3, -18, 0.0"
+fastener body,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): washer (head end),L Lower wishbone / legs,14.16,OK,"30, -30, 18.5"
+fastener body,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): washer (head end),R Lower wishbone / legs,14.16,OK,"-30, 30, -18.5"
+fastener body,L Drop link rocker end (M8): head,Ghost chassis (assumed context) / ghost chassis,14.16,OK,"-18, 3, 0.0"
+fastener body,R Drop link rocker end (M8): head,Ghost chassis (assumed context) / ghost chassis,14.16,OK,"3, -18, 0.0"
+fastener body,R Upper ball joint (AN5): nut,R Upper wishbone / legs,14.18,OK,"-30, 30, -18.5"
+fastener body,L Upper ball joint (AN5): nut,L Upper wishbone / legs,14.18,OK,"30, -30, 18.5"
+fastener body,L Pushrod lower rod end (M8): nut,L Upright / upright,14.22,OK,"-30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): nut,R Upright / upright,14.22,OK,"-30, -30, 24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,14.53,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,14.53,OK,"-30, -30, -24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,14.58,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,14.58,OK,"-30, -30, -24.7"
+fastener body,L Upper ball joint (AN5): washer (head end),L Upper wishbone / legs,14.86,OK,"-30, -30, -18.5"
+fastener body,R Upper ball joint (AN5): washer (head end),R Upper wishbone / legs,14.86,OK,"-30, -30, 18.5"
+fastener body,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): head,L Lower wishbone / legs,16.02,OK,"30, -30, 18.5"
+fastener body,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): head,R Lower wishbone / legs,16.02,OK,"-30, 30, -18.5"
+fastener body,L Lower wishbone rear inboard rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,16.02,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,16.02,OK,"-30, -30, -24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,16.17,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,16.17,OK,"-30, -30, -24.7"
+fastener body,L Upper ball joint (AN5): head,L Upper wishbone / legs,16.57,OK,"-30, -30, -18.5"
+fastener body,R Upper ball joint (AN5): head,R Upper wishbone / legs,16.57,OK,"-30, -30, 18.5"
+fastener body,L Pushrod lower rod end (M8): washer (head end),"L Hub, bearings, nut / hub",16.65,OK,"-30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): washer (head end),"R Hub, bearings, nut / hub",16.65,OK,"-30, -30, -24.7"
+fastener body,L Pushrod lower rod end (M8): washer (nut end),"L Hub, bearings, nut / hub",16.71,OK,"-30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): washer (nut end),"R Hub, bearings, nut / hub",16.71,OK,"-30, -30, 24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): thread end",Ghost chassis (assumed context) / ghost chassis,16.78,OK,"-30, -30, -24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): thread end",Ghost chassis (assumed context) / ghost chassis,16.78,OK,"-30, -30, 24.7"
+fastener body,"L Drop link lever end (M8, single shear, 24 mm washer): washer (head end)",Ghost chassis (assumed context) / ghost chassis,16.91,OK,"-30, -30, -24.7"
+fastener body,"R Drop link lever end (M8, single shear, 24 mm washer): washer (head end)",Ghost chassis (assumed context) / ghost chassis,16.91,OK,"-30, -30, -24.7"
+fastener body,L Pushrod lower rod end (M8): thread end,L Upright / upright,17.09,OK,"-30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): thread end,R Upright / upright,17.09,OK,"-30, -30, 24.7"
+fastener body,L Upper wishbone rear inboard rod end (M8): thread end,L Upper wishbone / rod end rear,17.13,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone rear inboard rod end (M8): thread end,R Upper wishbone / rod end rear,17.13,OK,"-30, 30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): thread end,L Upper wishbone / rod end front,17.14,OK,"30, -30, 24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): thread end,R Upper wishbone / rod end front,17.14,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): thread end,L Lower wishbone / rod end rear,17.15,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): thread end,R Lower wishbone / rod end rear,17.15,OK,"-30, 30, -24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): thread end,L Lower wishbone / rod end front,17.16,OK,"30, -30, 24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): thread end,R Lower wishbone / rod end front,17.16,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): head,"L Hub, bearings, nut / hub",17.63,OK,"-30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): head,"R Hub, bearings, nut / hub",17.63,OK,"-30, -30, -24.7"
+fastener body,L Drop link rocker end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,17.66,OK,"-18, 3, 0.0"
+fastener body,R Drop link rocker end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,17.66,OK,"3, -18, 0.0"
+fastener body,R Pushrod lower rod end (M8): nut,"R Hub, bearings, nut / hub",17.70,OK,"-30, -30, 24.7"
+fastener body,L Pushrod lower rod end (M8): nut,"L Hub, bearings, nut / hub",17.70,OK,"-30, -30, -24.7"
+fastener body,L Upper ball joint (AN5): washer (head end),"L Wheel (Braid 10 in, envelope) / wheel",18.79,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): washer (head end),"R Wheel (Braid 10 in, envelope) / wheel",18.79,OK,all (same rigid group)
+fastener body,L Damper rocker eye (M8): thread end,L Damper shaft / damper shaft,18.85,OK,"-22, -22, 6.2"
+fastener body,R Damper rocker eye (M8): thread end,R Damper shaft / damper shaft,18.85,OK,"-22, -22, -6.2"
+fastener body,L Upper ball joint (AN5): head,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",19.57,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): head,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",19.57,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): thread end,"R Hub, bearings, nut / hub",20.92,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): thread end,"L Hub, bearings, nut / hub",20.92,OK,all (same rigid group)
+fastener body,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): head,"L Wheel (Braid 10 in, envelope) / wheel",21.34,OK,all (same rigid group)
+fastener body,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): head,"R Wheel (Braid 10 in, envelope) / wheel",21.34,OK,all (same rigid group)
+fastener body,L Lower wishbone front inboard rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,21.36,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,21.36,OK,"-30, -30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,21.49,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,21.49,OK,"-30, -30, -24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): nut",Ghost chassis (assumed context) / ghost chassis,22.25,OK,"-30, -30, -24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): nut",Ghost chassis (assumed context) / ghost chassis,22.25,OK,"-30, -30, 24.7"
+fastener body,L Lower wishbone front inboard rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,22.27,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone front inboard rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,22.27,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,22.42,OK,"-30, -30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,22.42,OK,"-30, -30, -24.7"
+fastener body,R Upper ball joint (AN5): thread end,R Upper wishbone / legs,23.06,OK,"-30, 30, -24.7"
+fastener body,L Upper ball joint (AN5): thread end,L Upper wishbone / legs,23.06,OK,"30, -30, 24.7"
+fastener body,"L Rack bracket bolt 1 (M8, into the trunnion block): head",Ghost chassis (assumed context) / ghost chassis,24.36,OK,"-30, -30, -24.7"
+fastener body,"R Rack bracket bolt 1 (M8, into the trunnion block): head",Ghost chassis (assumed context) / ghost chassis,24.36,OK,"-30, -30, -24.7"
+fastener body,"L Rack bracket bolt 2 (M8, into the trunnion block): head",Ghost chassis (assumed context) / ghost chassis,24.36,OK,"-30, -30, -24.7"
+fastener body,"R Rack bracket bolt 2 (M8, into the trunnion block): head",Ghost chassis (assumed context) / ghost chassis,24.36,OK,"-30, -30, -24.7"
+fastener body,L Lower wishbone rear inboard rod end (M8): thread end,Driver legs and pedal box (keep-out) / left shin,24.41,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): thread end,Driver legs and pedal box (keep-out) / right shin,24.41,OK,"-30, -30, -24.7"
+fastener body,L Pushrod lower rod end (M8): thread end,"L Hub, bearings, nut / hub",24.58,OK,"-30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): thread end,"R Hub, bearings, nut / hub",24.58,OK,"-30, -30, 24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,24.59,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,24.59,OK,"-30, -30, -24.7"
+fastener body,L Upper wishbone rear inboard rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,24.62,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone rear inboard rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,24.62,OK,"-30, -30, -24.7"
+fastener body,L Upper ball joint (AN5): washer (head end),"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",24.67,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): washer (head end),"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",24.67,OK,all (same rigid group)
+fastener body,L Lower wishbone rear inboard rod end (M8): nut,Driver legs and pedal box (keep-out) / left shin,25.30,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): nut,Driver legs and pedal box (keep-out) / right shin,25.30,OK,"-30, -30, -24.7"
+fastener body,L Upper wishbone front inboard rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,25.69,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone front inboard rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,25.69,OK,"-30, -30, -24.7"
+fastener body,L Upper wishbone rear inboard rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,25.73,OK,"-30, -30, -24.7"
+fastener body,R Upper wishbone rear inboard rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,25.73,OK,"-30, -30, -24.7"
+fastener body,L Upper ball joint (AN5): nut,"L Hub, bearings, nut / hub",25.87,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): nut,"R Hub, bearings, nut / hub",25.87,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): washer (nut end),"L Hub, bearings, nut / hub",26.73,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (nut end),"R Hub, bearings, nut / hub",26.73,OK,all (same rigid group)
+fastener body,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): washer (head end),"L Wheel (Braid 10 in, envelope) / wheel",27.12,OK,all (same rigid group)
+fastener body,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): washer (head end),"R Wheel (Braid 10 in, envelope) / wheel",27.12,OK,all (same rigid group)
+fastener body,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): head,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",27.25,OK,all (same rigid group)
+fastener body,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): head,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",27.25,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): nut,"L Hub, bearings, nut / hub",27.48,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): nut,"R Hub, bearings, nut / hub",27.48,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): washer (head end),"L Hub, bearings, nut / hub",27.57,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (head end),"R Hub, bearings, nut / hub",27.57,OK,all (same rigid group)
+fastener body,"L Rack bracket bolt 2 (M8, into the trunnion block): washer (head end)",Ghost chassis (assumed context) / ghost chassis,27.86,OK,"-30, -30, -24.7"
+fastener body,"R Rack bracket bolt 2 (M8, into the trunnion block): washer (head end)",Ghost chassis (assumed context) / ghost chassis,27.86,OK,"-30, -30, -24.7"
+fastener body,"L Rack bracket bolt 1 (M8, into the trunnion block): washer (head end)",Ghost chassis (assumed context) / ghost chassis,27.86,OK,"-30, -30, -24.7"
+fastener body,"R Rack bracket bolt 1 (M8, into the trunnion block): washer (head end)",Ghost chassis (assumed context) / ghost chassis,27.86,OK,"-30, -30, -24.7"
+fastener body,L Tie rod outer rod end (M8): head,"L Hub, bearings, nut / hub",28.20,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): head,"R Hub, bearings, nut / hub",28.20,OK,all (same rigid group)
+fastener body,L Lower wishbone rear inboard rod end (M8): washer (nut end),Driver legs and pedal box (keep-out) / left shin,29.57,OK,"-30, -30, -24.7"
+fastener body,R Lower wishbone rear inboard rod end (M8): washer (nut end),Driver legs and pedal box (keep-out) / right shin,29.57,OK,"-30, -30, -24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): washer (nut end)",Ghost chassis (assumed context) / ghost chassis,29.90,OK,"-30, -30, -24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): washer (nut end)",Ghost chassis (assumed context) / ghost chassis,29.90,OK,"-30, -30, 24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): head",Ghost chassis (assumed context) / ghost chassis,32.48,OK,"-30, -30, -24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): head",Ghost chassis (assumed context) / ghost chassis,32.48,OK,"-30, -30, 24.7"
+fastener body,L Tie rod outer rod end (M8): thread end,"L Hub, bearings, nut / hub",32.69,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): thread end,"R Hub, bearings, nut / hub",32.69,OK,all (same rigid group)
+fastener body,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): washer (head end),"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",33.03,OK,all (same rigid group)
+fastener body,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): washer (head end),"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",33.03,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): washer (nut end),"R Hub, bearings, nut / hub",34.17,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): washer (nut end),"L Hub, bearings, nut / hub",34.17,OK,all (same rigid group)
+fastener body,R Caliper bolt 2 (M8 socket head): head,R Lower wishbone / legs,35.60,OK,"-30, -30, -24.7"
+fastener body,L Caliper bolt 2 (M8 socket head): head,L Lower wishbone / legs,35.60,OK,"-30, -30, 24.7"
+fastener body,L Rocker pivot (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,35.67,OK,"-30, -30, -24.7"
+fastener body,L Rocker pivot (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,35.67,OK,"-30, -30, -24.7"
+fastener body,R Rocker pivot (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,35.67,OK,"-30, -30, -24.7"
+fastener body,R Rocker pivot (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,35.67,OK,"-30, -30, -24.7"
+fastener body,R Tie rod outer rod end (M8): thread end,"R Wheel (Braid 10 in, envelope) / wheel",36.07,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): thread end,"L Wheel (Braid 10 in, envelope) / wheel",36.07,OK,all (same rigid group)
+fastener body,L Rocker pivot (M8): head,Ghost chassis (assumed context) / ghost chassis,36.16,OK,"-30, -30, -24.7"
+fastener body,L Rocker pivot (M8): nut,Ghost chassis (assumed context) / ghost chassis,36.16,OK,"-30, -30, -24.7"
+fastener body,R Rocker pivot (M8): head,Ghost chassis (assumed context) / ghost chassis,36.16,OK,"-30, -30, -24.7"
+fastener body,R Rocker pivot (M8): nut,Ghost chassis (assumed context) / ghost chassis,36.16,OK,"-30, -30, -24.7"
+fastener body,R Tie rod outer rod end (M8): nut,"R Wheel (Braid 10 in, envelope) / wheel",36.62,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): nut,"L Wheel (Braid 10 in, envelope) / wheel",36.62,OK,all (same rigid group)
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): washer (head end)",Ghost chassis (assumed context) / ghost chassis,37.77,OK,"-30, -30, -24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): washer (head end)",Ghost chassis (assumed context) / ghost chassis,37.77,OK,"-30, -30, 24.7"
+fastener body,L Tie rod outer rod end (M8): washer (nut end),"L Wheel (Braid 10 in, envelope) / wheel",38.29,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (nut end),"R Wheel (Braid 10 in, envelope) / wheel",38.29,OK,all (same rigid group)
+fastener body,L Rocker pivot (M8): thread end,Ghost chassis (assumed context) / ghost chassis,39.66,OK,"-30, -30, -24.7"
+fastener body,R Rocker pivot (M8): thread end,Ghost chassis (assumed context) / ghost chassis,39.66,OK,"-30, -30, -24.7"
+fastener body,R Caliper bolt 1 (M8 socket head): head,R Upper wishbone / legs,39.73,OK,"-30, 30, -24.7"
+fastener body,L Caliper bolt 1 (M8 socket head): head,L Upper wishbone / legs,39.73,OK,"30, -30, 24.7"
+fastener body,L Caliper bolt 2 (M8 socket head): head,"L Hub, bearings, nut / hub",40.69,OK,all (same rigid group)
+fastener body,R Caliper bolt 2 (M8 socket head): head,"R Hub, bearings, nut / hub",40.69,OK,all (same rigid group)
+fastener body,L Caliper bolt 1 (M8 socket head): head,"L Hub, bearings, nut / hub",40.69,OK,all (same rigid group)
+fastener body,R Caliper bolt 1 (M8 socket head): head,"R Hub, bearings, nut / hub",40.69,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): nut,L Lower wishbone / legs,40.89,OK,"-30, -30, -24.7"
+fastener body,R Tie rod outer rod end (M8): nut,R Lower wishbone / legs,40.89,OK,"-30, -30, 24.7"
+fastener body,L Tie rod outer rod end (M8): washer (head end),"L Wheel (Braid 10 in, envelope) / wheel",41.57,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (head end),"R Wheel (Braid 10 in, envelope) / wheel",41.57,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): thread end,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",42.06,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): thread end,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",42.06,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): head,"L Wheel (Braid 10 in, envelope) / wheel",42.20,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): head,"R Wheel (Braid 10 in, envelope) / wheel",42.20,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): nut,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",42.46,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): nut,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",42.46,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (nut end),R Lower wishbone / legs,42.74,OK,"-30, -30, 24.7"
+fastener body,L Tie rod outer rod end (M8): washer (nut end),L Lower wishbone / legs,42.74,OK,"-30, -30, -24.7"
+fastener body,L Tie rod outer rod end (M8): thread end,L Lower wishbone / legs,43.46,OK,"-30, -30, -24.7"
+fastener body,R Tie rod outer rod end (M8): thread end,R Lower wishbone / legs,43.46,OK,"-30, -30, 24.7"
+fastener body,L Damper rocker eye (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,46.31,OK,"30, -30, 24.7"
+fastener body,R Damper rocker eye (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,46.31,OK,"-30, 30, -24.7"
+fastener body,L Damper rocker eye (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,46.31,OK,"30, -30, 24.7"
+fastener body,R Damper rocker eye (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,46.31,OK,"-30, 30, -24.7"
+fastener body,"R Drop link lever end (M8, single shear, 24 mm washer): washer (nut end)",Ghost chassis (assumed context) / ghost chassis,46.53,OK,"-30, -30, 24.7"
+fastener body,"L Drop link lever end (M8, single shear, 24 mm washer): washer (nut end)",Ghost chassis (assumed context) / ghost chassis,46.53,OK,"-30, -30, -24.7"
+fastener body,L Damper rocker eye (M8): head,Ghost chassis (assumed context) / ghost chassis,46.80,OK,"30, -30, 24.7"
+fastener body,R Damper rocker eye (M8): head,Ghost chassis (assumed context) / ghost chassis,46.80,OK,"-30, 30, -24.7"
+fastener body,L Damper rocker eye (M8): nut,Ghost chassis (assumed context) / ghost chassis,46.81,OK,"30, -30, 24.7"
+fastener body,R Damper rocker eye (M8): nut,Ghost chassis (assumed context) / ghost chassis,46.81,OK,"-30, 30, -24.7"
+fastener body,L Tie rod outer rod end (M8): washer (nut end),"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",46.89,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (nut end),"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",46.89,OK,all (same rigid group)
+fastener body,R Caliper bolt 2 (M8 socket head): head,"R Wheel (Braid 10 in, envelope) / wheel",47.24,OK,all (same rigid group)
+fastener body,L Caliper bolt 2 (M8 socket head): head,"L Wheel (Braid 10 in, envelope) / wheel",47.24,OK,all (same rigid group)
+fastener body,L Caliper bolt 1 (M8 socket head): head,"L Wheel (Braid 10 in, envelope) / wheel",47.24,OK,all (same rigid group)
+fastener body,R Caliper bolt 1 (M8 socket head): head,"R Wheel (Braid 10 in, envelope) / wheel",47.24,OK,all (same rigid group)
+fastener body,L Damper chassis eye (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,47.62,OK,"-30, -30, -24.7"
+fastener body,R Damper chassis eye (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,47.62,OK,"-30, -30, -24.7"
+fastener body,L Damper chassis eye (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,47.62,OK,"-30, -30, -24.7"
+fastener body,R Damper chassis eye (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,47.62,OK,"-30, -30, -24.7"
+fastener body,L Damper chassis eye (M8): head,Ghost chassis (assumed context) / ghost chassis,48.76,OK,"-30, -30, -24.7"
+fastener body,R Damper chassis eye (M8): head,Ghost chassis (assumed context) / ghost chassis,48.76,OK,"-30, -30, -24.7"
+fastener body,L Damper chassis eye (M8): nut,Ghost chassis (assumed context) / ghost chassis,48.76,OK,"-30, -30, -24.7"
+fastener body,R Damper chassis eye (M8): nut,Ghost chassis (assumed context) / ghost chassis,48.76,OK,"-30, -30, -24.7"
+fastener body,"L Drop link lever end (M8, single shear, 24 mm washer): nut",Ghost chassis (assumed context) / ghost chassis,49.90,OK,"-30, -30, -24.7"
+fastener body,"R Drop link lever end (M8, single shear, 24 mm washer): nut",Ghost chassis (assumed context) / ghost chassis,49.90,OK,"-30, -30, 24.7"
+fastener body,L Damper rocker eye (M8): thread end,Ghost chassis (assumed context) / ghost chassis,50.31,OK,"30, -30, 24.7"
+fastener body,R Damper rocker eye (M8): thread end,Ghost chassis (assumed context) / ghost chassis,50.31,OK,"-30, 30, -24.7"
+fastener body,R Caliper bolt 2 (M8 socket head): head,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",53.12,OK,all (same rigid group)
+fastener body,L Caliper bolt 2 (M8 socket head): head,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",53.12,OK,all (same rigid group)
+fastener body,R Caliper bolt 1 (M8 socket head): head,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",53.14,OK,all (same rigid group)
+fastener body,L Caliper bolt 1 (M8 socket head): head,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",53.14,OK,all (same rigid group)
+fastener body,"L Drop link lever end (M8, single shear, 24 mm washer): thread end",Ghost chassis (assumed context) / ghost chassis,53.33,OK,"-30, -30, -24.7"
+fastener body,"R Drop link lever end (M8, single shear, 24 mm washer): thread end",Ghost chassis (assumed context) / ghost chassis,53.33,OK,"-30, -30, 24.7"
+fastener body,R Damper chassis eye (M8): thread end,Ghost chassis (assumed context) / ghost chassis,55.70,OK,"-30, -30, -24.7"
+fastener body,L Damper chassis eye (M8): thread end,Ghost chassis (assumed context) / ghost chassis,55.70,OK,"-30, -30, -24.7"
+fastener body,L Tie rod outer rod end (M8): washer (head end),"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",60.19,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): washer (head end),"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",60.19,OK,all (same rigid group)
+fastener body,L Tie rod outer rod end (M8): head,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",60.92,OK,all (same rigid group)
+fastener body,R Tie rod outer rod end (M8): head,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",60.92,OK,all (same rigid group)
+fastener body,"R Rack bracket bolt 1 (M8, into the trunnion block): washer (head end)",Driver legs and pedal box (keep-out) / right foot,60.96,OK,"-30, -30, -24.7"
+fastener body,"L Rack bracket bolt 1 (M8, into the trunnion block): washer (head end)",Driver legs and pedal box (keep-out) / left foot,60.96,OK,"-30, -30, -24.7"
+fastener body,"L Rack bracket bolt 1 (M8, into the trunnion block): head",Driver legs and pedal box (keep-out) / left foot,62.46,OK,"-30, -30, -24.7"
+fastener body,"R Rack bracket bolt 1 (M8, into the trunnion block): head",Driver legs and pedal box (keep-out) / right foot,62.46,OK,"-30, -30, -24.7"
+fastener body,R Upper ball joint (AN5): washer (nut end),"R Wheel (Braid 10 in, envelope) / wheel",64.13,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): washer (nut end),"L Wheel (Braid 10 in, envelope) / wheel",64.13,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): nut,"R Wheel (Braid 10 in, envelope) / wheel",65.81,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): nut,"L Wheel (Braid 10 in, envelope) / wheel",65.81,OK,all (same rigid group)
+fastener body,R Pushrod lower rod end (M8): nut,"R Wheel (Braid 10 in, envelope) / wheel",65.90,OK,"-30, 30, 24.7"
+fastener body,L Pushrod lower rod end (M8): nut,"L Wheel (Braid 10 in, envelope) / wheel",65.90,OK,"30, -30, -24.7"
+fastener body,L Pushrod lower rod end (M8): thread end,"L Wheel (Braid 10 in, envelope) / wheel",66.30,OK,"30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): thread end,"R Wheel (Braid 10 in, envelope) / wheel",66.30,OK,"-30, 30, 24.7"
+fastener body,R Pushrod lower rod end (M8): head,"R Wheel (Braid 10 in, envelope) / wheel",66.41,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): head,"L Wheel (Braid 10 in, envelope) / wheel",66.41,OK,"30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): washer (head end),"R Wheel (Braid 10 in, envelope) / wheel",68.43,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): washer (head end),"L Wheel (Braid 10 in, envelope) / wheel",68.43,OK,"30, -30, 24.7"
+fastener body,L Pushrod lower rod end (M8): washer (nut end),"L Wheel (Braid 10 in, envelope) / wheel",69.77,OK,"30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): washer (nut end),"R Wheel (Braid 10 in, envelope) / wheel",69.77,OK,"-30, 30, 24.7"
+fastener body,R Upper ball joint (AN5): washer (nut end),"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",70.04,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): washer (nut end),"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",70.04,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): thread end,"R Wheel (Braid 10 in, envelope) / wheel",71.73,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): thread end,"L Wheel (Braid 10 in, envelope) / wheel",71.73,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): nut,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",71.74,OK,all (same rigid group)
+fastener body,L Upper ball joint (AN5): nut,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",71.74,OK,all (same rigid group)
+fastener body,L Pushrod lower rod end (M8): nut,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",71.84,OK,"30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): nut,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",71.84,OK,"-30, 30, 24.7"
+fastener body,R Pushrod lower rod end (M8): thread end,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",72.21,OK,"-30, 30, 24.7"
+fastener body,L Pushrod lower rod end (M8): thread end,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",72.21,OK,"30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): head,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",72.31,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): head,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",72.31,OK,"30, -30, 24.7"
+fastener body,L Pushrod lower rod end (M8): washer (head end),"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",74.31,OK,"30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): washer (head end),"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",74.31,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): washer (nut end),"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",75.77,OK,"30, -30, -24.7"
+fastener body,R Pushrod lower rod end (M8): washer (nut end),"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",75.77,OK,"-30, 30, 24.7"
+fastener body,R Pushrod upper rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,77.67,OK,"-30, 30, -24.7"
+fastener body,L Pushrod upper rod end (M8): washer (nut end),Ghost chassis (assumed context) / ghost chassis,77.67,OK,"30, -30, 24.7"
+fastener body,R Pushrod upper rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,77.69,OK,"-30, 30, -24.7"
+fastener body,L Pushrod upper rod end (M8): washer (head end),Ghost chassis (assumed context) / ghost chassis,77.69,OK,"30, -30, 24.7"
+fastener body,R Pushrod upper rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,78.16,OK,"-30, 30, -24.7"
+fastener body,L Pushrod upper rod end (M8): nut,Ghost chassis (assumed context) / ghost chassis,78.16,OK,"30, -30, 24.7"
+fastener body,R Pushrod upper rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,78.18,OK,"-30, 30, -24.7"
+fastener body,L Pushrod upper rod end (M8): head,Ghost chassis (assumed context) / ghost chassis,78.18,OK,"30, -30, 24.7"
+fastener body,"R Rack bracket bolt 2 (M8, into the trunnion block): washer (head end)",Driver legs and pedal box (keep-out) / right foot,80.05,OK,"-30, -30, -24.7"
+fastener body,"L Rack bracket bolt 2 (M8, into the trunnion block): washer (head end)",Driver legs and pedal box (keep-out) / left foot,80.05,OK,"-30, -30, -24.7"
+fastener body,L Upper ball joint (AN5): thread end,"L Tyre (Hoosier 16x7.5-10, envelope) / tyre",80.54,OK,all (same rigid group)
+fastener body,R Upper ball joint (AN5): thread end,"R Tyre (Hoosier 16x7.5-10, envelope) / tyre",80.54,OK,all (same rigid group)
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): washer (nut end)",R Lower wishbone / legs,81.44,OK,"-30, 30, -24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): washer (nut end)",L Lower wishbone / legs,81.44,OK,"30, -30, 24.7"
+fastener body,"R Rack bracket bolt 2 (M8, into the trunnion block): head",Driver legs and pedal box (keep-out) / right foot,81.56,OK,"-30, -30, -24.7"
+fastener body,"L Rack bracket bolt 2 (M8, into the trunnion block): head",Driver legs and pedal box (keep-out) / left foot,81.56,OK,"-30, -30, -24.7"
+fastener body,R Pushrod upper rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,81.67,OK,"-30, 30, -24.7"
+fastener body,L Pushrod upper rod end (M8): thread end,Ghost chassis (assumed context) / ghost chassis,81.67,OK,"30, -30, 24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): nut",L Lower wishbone / legs,81.91,OK,"-3, 18, 24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): nut",R Lower wishbone / legs,81.91,OK,"18, -3, -24.7"
+fastener body,L Tie rod outer rod end (M8): head,L Upper wishbone / legs,82.71,OK,"30, -30, -24.7"
+fastener body,R Tie rod outer rod end (M8): head,R Upper wishbone / legs,82.71,OK,"-30, 30, 24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): thread end",R Lower wishbone / legs,85.13,OK,"-30, -30, -24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): thread end",L Lower wishbone / legs,85.13,OK,"-30, -30, 24.7"
+fastener body,L Tie rod outer rod end (M8): washer (head end),L Upper wishbone / legs,86.81,OK,"30, -30, -24.7"
+fastener body,R Tie rod outer rod end (M8): washer (head end),R Upper wishbone / legs,86.81,OK,"-30, 30, 24.7"
+fastener body,R Pushrod lower rod end (M8): washer (nut end),R Upper wishbone / legs,88.80,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): washer (nut end),L Upper wishbone / legs,88.80,OK,"30, -30, 24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): washer (head end)",R Lower wishbone / legs,88.82,OK,"-30, 30, -24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): washer (head end)",L Lower wishbone / legs,88.82,OK,"30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): nut,R Upper wishbone / legs,89.30,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): nut,L Upper wishbone / legs,89.30,OK,"30, -30, 24.7"
+fastener body,"L Tie rod inner rod end (M8, rack-end clevis): head",L Lower wishbone / legs,89.91,OK,"30, -30, 24.7"
+fastener body,"R Tie rod inner rod end (M8, rack-end clevis): head",R Lower wishbone / legs,89.91,OK,"-30, 30, -24.7"
+fastener body,R Pushrod lower rod end (M8): washer (head end),R Upper wishbone / legs,91.03,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): washer (head end),L Upper wishbone / legs,91.03,OK,"30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): head,R Upper wishbone / legs,91.08,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): head,L Upper wishbone / legs,91.08,OK,"30, -30, 24.7"
+fastener body,R Caliper bolt 2 (M8 socket head): head,R Upper wishbone / legs,91.30,OK,"-30, 30, -24.7"
+fastener body,L Caliper bolt 2 (M8 socket head): head,L Upper wishbone / legs,91.30,OK,"30, -30, 24.7"
+fastener body,R Pushrod lower rod end (M8): thread end,R Upper wishbone / legs,93.12,OK,"-30, 30, -24.7"
+fastener body,L Pushrod lower rod end (M8): thread end,L Upper wishbone / legs,93.12,OK,"30, -30, 24.7"
+insert in solid material,L Lower ball joint (NAS6606 into a 1191-6CN375 insert),upright,144.00,OK,0 of 144 points outside the material (2 mm wall)
+insert in solid material,R Lower ball joint (NAS6606 into a 1191-6CN375 insert),upright,144.00,OK,0 of 144 points outside the material (2 mm wall)
+positive locking,L Upper ball joint (AN5),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Lower ball joint (NAS6606 into a 1191-6CN375 insert),screw-locking insert,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Tie rod outer rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Caliper bolt 1 (M8 socket head),safety wire,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Caliper bolt 2 (M8 socket head),safety wire,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Pushrod lower rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Pushrod upper rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Damper rocker eye (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Drop link rocker end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,"L Drop link lever end (M8, single shear, 24 mm washer)",all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Upper wishbone front inboard rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Upper wishbone rear inboard rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Lower wishbone front inboard rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Lower wishbone rear inboard rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Rocker pivot (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,L Damper chassis eye (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,"L Tie rod inner rod end (M8, rack-end clevis)",all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,"L Rack bracket bolt 1 (M8, into the trunnion block)",safety wire,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,"L Rack bracket bolt 2 (M8, into the trunnion block)",safety wire,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Upper ball joint (AN5),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Lower ball joint (NAS6606 into a 1191-6CN375 insert),screw-locking insert,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Tie rod outer rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Caliper bolt 1 (M8 socket head),safety wire,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Caliper bolt 2 (M8 socket head),safety wire,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Pushrod lower rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Pushrod upper rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Damper rocker eye (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Drop link rocker end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,"R Drop link lever end (M8, single shear, 24 mm washer)",all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Upper wishbone front inboard rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Upper wishbone rear inboard rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Lower wishbone front inboard rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Lower wishbone rear inboard rod end (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Rocker pivot (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,R Damper chassis eye (M8),all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,"R Tie rod inner rod end (M8, rack-end clevis)",all-metal prevailing-torque nut,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,"R Rack bracket bolt 1 (M8, into the trunnion block)",safety wire,0.00,OK,FSAE T.8.3 (fasteners.json)
+positive locking,"R Rack bracket bolt 2 (M8, into the trunnion block)",safety wire,0.00,OK,FSAE T.8.3 (fasteners.json)
+tool / insertion path,L Caliper bolt 2 (M8 socket head): hex key on the head (turned),-,0.21,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Caliper bolt 2 (M8 socket head): hex key on the head (turned),-,0.21,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Caliper bolt 1 (M8 socket head): hex key on the head (turned),-,0.21,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Caliper bolt 1 (M8 socket head): hex key on the head (turned),-,0.21,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Caliper bolt 2 (M8 socket head): bolt insertion path (30 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Caliper bolt 2 (M8 socket head): bolt insertion path (30 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Caliper bolt 1 (M8 socket head): bolt insertion path (30 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Caliper bolt 1 (M8 socket head): bolt insertion path (30 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Upper wishbone rear inboard rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper wishbone rear inboard rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Upper ball joint (AN5): bolt insertion path (60 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper ball joint (AN5): bolt insertion path (60 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Lower wishbone rear inboard rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Lower wishbone rear inboard rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Tie rod outer rod end (M8): bolt insertion path (50 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Tie rod outer rod end (M8): bolt insertion path (50 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Lower wishbone front inboard rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Lower wishbone front inboard rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Upper wishbone front inboard rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper wishbone front inboard rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Tie rod inner rod end (M8, rack-end clevis): bolt insertion path (50 mm)",-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Tie rod inner rod end (M8, rack-end clevis): bolt insertion path (50 mm)",-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): bolt insertion path (52 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): bolt insertion path (52 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Pushrod lower rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Pushrod lower rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Pushrod upper rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Damper rocker eye (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Drop link rocker end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Rocker pivot (M8): bolt insertion path (80 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Damper chassis eye (M8): bolt insertion path (65 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Pushrod upper rod end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Damper rocker eye (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Drop link rocker end (M8): bolt insertion path (45 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Rocker pivot (M8): bolt insertion path (80 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Damper chassis eye (M8): bolt insertion path (65 mm),-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Rack bracket bolt 1 (M8, into the trunnion block): bolt insertion path (25 mm)",-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Rack bracket bolt 2 (M8, into the trunnion block): bolt insertion path (25 mm)",-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Rack bracket bolt 1 (M8, into the trunnion block): bolt insertion path (25 mm)",-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Rack bracket bolt 2 (M8, into the trunnion block): bolt insertion path (25 mm)",-,0.30,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Drop link lever end (M8, single shear, 24 mm washer): socket on the head (turned)",-,0.75,OK,"clear at 18, -3, 0.0"
+tool / insertion path,"R Drop link lever end (M8, single shear, 24 mm washer): socket on the head (turned)",-,0.75,OK,"clear at -3, 18, 0.0"
+tool / insertion path,"L Drop link lever end (M8, single shear, 24 mm washer): bolt insertion path (45 mm)",-,0.75,OK,"clear at 26, 4, 0.0"
+tool / insertion path,L Upper wishbone rear inboard rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper wishbone rear inboard rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Upper ball joint (AN5): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper ball joint (AN5): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Lower wishbone rear inboard rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Lower wishbone rear inboard rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper wishbone rear inboard rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Upper wishbone rear inboard rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Tie rod outer rod end (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Tie rod outer rod end (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Upper ball joint (AN5): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper ball joint (AN5): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Lower wishbone front inboard rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Lower wishbone front inboard rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Tie rod outer rod end (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Tie rod outer rod end (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Upper wishbone front inboard rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper wishbone front inboard rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Lower wishbone rear inboard rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Lower wishbone rear inboard rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Lower wishbone front inboard rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Lower wishbone front inboard rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Upper wishbone front inboard rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Upper wishbone front inboard rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Tie rod inner rod end (M8, rack-end clevis): ring spanner on the head (held)",-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Tie rod inner rod end (M8, rack-end clevis): ring spanner on the head (held)",-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Lower ball joint (NAS6606 into a 1191-6CN375 insert): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Lower ball joint (NAS6606 into a 1191-6CN375 insert): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Tie rod inner rod end (M8, rack-end clevis): socket on the nut (turned)",-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Tie rod inner rod end (M8, rack-end clevis): socket on the nut (turned)",-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Pushrod lower rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Pushrod lower rod end (M8): socket on the head (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Pushrod lower rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Pushrod lower rod end (M8): ring spanner on the nut (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Damper chassis eye (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Damper chassis eye (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Pushrod upper rod end (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Damper rocker eye (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Drop link rocker end (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Pushrod upper rod end (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Damper rocker eye (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Drop link rocker end (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Pushrod upper rod end (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Damper rocker eye (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Drop link rocker end (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Rocker pivot (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Rocker pivot (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,L Damper chassis eye (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Pushrod upper rod end (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Damper rocker eye (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Drop link rocker end (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Rocker pivot (M8): ring spanner on the head (held),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Rocker pivot (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,R Damper chassis eye (M8): socket on the nut (turned),-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Rack bracket bolt 1 (M8, into the trunnion block): socket on the head (turned)",-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Rack bracket bolt 2 (M8, into the trunnion block): socket on the head (turned)",-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Rack bracket bolt 1 (M8, into the trunnion block): socket on the head (turned)",-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Rack bracket bolt 2 (M8, into the trunnion block): socket on the head (turned)",-,1.81,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"L Drop link lever end (M8, single shear, 24 mm washer): ring spanner on the nut (held)",-,2.21,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Drop link lever end (M8, single shear, 24 mm washer): ring spanner on the nut (held)",-,2.21,OK,"clear at 0, 0, 0.0"
+tool / insertion path,"R Drop link lever end (M8, single shear, 24 mm washer): bolt insertion path (45 mm)",-,2.48,OK,"clear at 0, 30, 0.0"

@@ -1,0 +1,119 @@
+{
+ "_about": "Fastener envelopes for the S-18 fastener sweep (scripts/fasteners.py). Hex heads and nuts are modelled as cylinders on their across-corners diameter (AF / cos 30 deg), so a clear result is conservative. Sizes from the standards named; tool envelopes are a 3/8 in drive socket (or a hex bit in a 1/4 in drive holder) plus a short extension, straight along the bolt axis. Assembly is with the wheel off: tools and bolt insertion paths are not checked against the wheel or tyre, and they only need to be clear at SOME pose of the corner (it can be moved by hand while being assembled). Each joint has one TURNED end (it needs the straight socket path) and one HELD end (a ring spanner from the side: an envelope round the hex, radius 0.9 x AF, as high as the hex; the handle can point any free way).",
+ "seat_gap_mm": 0.2,
+ "tool_length_mm": 40.0,
+ "sizes": {
+  "AN5": {
+   "d": 7.94,
+   "head": "hex",
+   "head_af": 12.7,
+   "head_h": 5.2,
+   "washer_od": 15.9,
+   "washer_t": 1.6,
+   "nut_af": 12.7,
+   "nut_h": 8.3,
+   "pitch": 1.06,
+   "socket_od": 18.5,
+   "source": "AN5 hex head 1/2 in AF; AN960-516 washer; AN365-524 nylon-insert nut 0.328 in high; 1/2 in socket, 3/8 in drive. The nut is an MS21042L5 all-metal lock nut (R-09); the envelope keeps the larger AN365's size",
+   "length_step_mm": 3.175,
+   "length_basis": "AN lengths in 1/8 in"
+  },
+  "NAS6606": {
+   "d": 9.525,
+   "head": "hex",
+   "head_af": 14.29,
+   "head_h": 6.0,
+   "washer_od": 19.05,
+   "washer_t": 1.6,
+   "nut_af": 14.29,
+   "nut_h": 9.0,
+   "pitch": 1.06,
+   "socket_od": 22.2,
+   "source": "NAS6606 hex head 9/16 in AF; AN960-616 washer; 9/16 in socket, 3/8 in drive (0.875 in OD)",
+   "length_step_mm": 1.5875,
+   "length_basis": "NAS66xx grip codes in 1/16 in"
+  },
+  "M8": {
+   "d": 8.0,
+   "head": "hex",
+   "head_af": 13.0,
+   "head_h": 5.3,
+   "washer_od": 16.0,
+   "washer_t": 1.6,
+   "nut_af": 13.0,
+   "nut_h": 8.0,
+   "pitch": 1.25,
+   "socket_od": 18.0,
+   "source": "ISO 4017 M8 hex head; ISO 7089 washer; ISO 10511 / DIN 985 nylon-insert nut; 13 mm socket, 3/8 in drive. Nuts are ISO 7042 all-metal prevailing-torque nuts (R-09; nylon inserts are limited to 80 C), the same 13 mm hex; the 8 mm height is kept",
+   "length_step_mm": 5.0,
+   "length_basis": "ISO 4017 / 4014 lengths, 5 mm steps"
+  },
+  "M8_SHCS": {
+   "d": 8.0,
+   "head": "round",
+   "head_dia": 13.0,
+   "head_h": 8.0,
+   "washer_od": 0.0,
+   "washer_t": 0.0,
+   "nut_af": 0.0,
+   "nut_h": 0.0,
+   "pitch": 1.25,
+   "socket_od": 14.0,
+   "source": "ISO 4762 M8 socket head (13 mm, 8 mm high); 6 mm hex bit in a 1/4 in drive holder",
+   "length_step_mm": 5.0,
+   "length_basis": "ISO 4762 lengths, 5 mm steps"
+  },
+  "M8_capture": {
+   "d": 8.0,
+   "head": "hex",
+   "head_af": 13.0,
+   "head_h": 5.3,
+   "washer_od": 24.0,
+   "washer_t": 2.0,
+   "nut_af": 13.0,
+   "nut_h": 8.0,
+   "pitch": 1.25,
+   "socket_od": 18.0,
+   "source": "M8 as above with ISO 7093 large washers (24 mm OD, 2 mm): the washer on the rod end's face is larger than the ball housing's bore, so it captures the rod end in single shear (R-08's alternative)",
+   "length_step_mm": 5.0,
+   "length_basis": "ISO 4017 / 4014 lengths, 5 mm steps"
+  }
+ },
+ "inserts": {
+  "KNH624J": {
+   "internal": "3/8-24 UNF",
+   "external": "9/16-12",
+   "length_mm": 12.7,
+   "tap_drill_mm": 13.1,
+   "countersink_mm": 14.53,
+   "boss_dia_mm": 24.0,
+   "boss_basis": "Insert countersink 14.5 mm plus a 4.7 mm wall each side; the boss is round about the bolt axis, which is the steering axis, so it does not sweep towards the pushrod rod end as the wheel steers",
+   "source": "clinserts.com KNHL624J (same shell): 9/16-12 external, 0.516 in tap drill, 0.572 in countersink, 0.50 in long (read 2026-10-27)",
+   "note": "v4 first try: needed a 24 x 8 mm boss whose top edge came within 2.9 mm of the pushrod's rod end at full droop and lock; replaced by the 1D Heli-Coil"
+  },
+  "1191-6CN375": {
+   "internal": "3/8-24 UNF",
+   "external": "3/8-24 STI",
+   "length_mm": 9.53,
+   "tap_drill_mm": 9.92,
+   "countersink_mm": 11.5,
+   "boss_dia_mm": 18.0,
+   "boss_basis": "STI thread major 11.5 mm (0.4529 in) plus a 3.25 mm wall each side; the 1D coil (9.5 mm) needs ear + boss >= 10 mm",
+   "source": "Heli-Coil 1191-6CN375: 3/8-24 UNF free-running insert, 1D (0.375 in) long, 304 SS; STI tap drill 25/64 in; STI major 0.4529 in (STI thread tables). The 1.5D 1191-6CN562 is 0.855 USD at olander.com (read 2026-10-27)",
+   "locking_version": "3591-6CN375",
+   "locking_basis": "Heli-Coil screw-locking insert, 3/8-24 UNF, 1D, 304 stainless (Govets A3591-6CN375, Exact Industrial 00063305; read 2026-11-08): the same size as the free-running 1191, its prevailing torque locks the bolt (R-09)"
+  }
+ },
+ "ring_spanner_r_per_af": 0.9,
+ "thread_engagement_d": 1.5,
+ "length_tol_mm": 1e-06,
+ "rod_end_ball_d_mm": 15.88,
+ "rod_end_ball_basis": "Aurora AM-M8T ball, 15.88 mm (Timken item page, as notes/bom.md): a capture washer must be larger, so the housing cannot slide off the bolt if the ball leaves its liner (R-08)",
+ "locking_allowed": [
+  "all-metal prevailing-torque nut",
+  "screw-locking insert",
+  "safety wire"
+ ],
+ "locking_basis": "FSAE T.8.3 positive locking (read from a team's copy, confirm against the 2026 rules): safety wire, cotter pins, prevailing-torque lock nuts; nylon lock nuts only below 80 C; Loctite does not count",
+ "thread_engagement_basis": "Bolts into tapped holes: at least 1.5 d of thread in steel; a joint into aluminium (the Wilwood caliper, the Kaz rack's trunnion blocks) declares engage_d 2.0, the usual rule for steel bolts in aluminium. Neither part's thread depth is published in what we read: an interface item (the bolt must not bottom)"
+}

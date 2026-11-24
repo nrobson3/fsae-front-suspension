@@ -1,0 +1,13 @@
+{
+ "_hardpoints": "v1.7",
+ "_hardpoints_sha": "a6e6e32e304ae9f7",
+ "min_mm": 6.434357809271614,
+ "link": "lca_R",
+ "z_mm": 30.0,
+ "rack_mm": 24.6923,
+ "steer_deg": 26.149291612181987,
+ "rim_half_width_mm": 76.19999999999999,
+ "rack_stop_mm": 24.6923,
+ "rim_inner_radius_mm_assumed": 121.0,
+ "refined": true
+}

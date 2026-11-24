@@ -1,0 +1,216 @@
+{
+ "_about": "Interface assumptions for the ghost chassis and the driver's lower legs (LEFT side; mirrored for the right). Context only: the chassis is out of scope, but the steering rack, column, ARB and pushrods must clear these envelopes. mm, vehicle axes (x fwd, y left, z up).",
+ "chassis_tube_od_mm": 25.4,
+ "chassis_nodes_left": {
+  "fbh_bottom": [
+   420,
+   170,
+   72
+  ],
+  "fbh_top": [
+   420,
+   170,
+   360
+  ],
+  "low_front": [
+   250,
+   175,
+   72
+  ],
+  "low_rear": [
+   -250,
+   175,
+   72
+  ],
+  "hoop_bottom": [
+   -650,
+   230,
+   70
+  ],
+  "mid_front": [
+   240,
+   170,
+   200
+  ],
+  "mid_rear": [
+   -250,
+   170,
+   200
+  ],
+  "mid_fbh": [
+   420,
+   180,
+   200
+  ],
+  "mid_hoop": [
+   -650,
+   230,
+   200
+  ],
+  "top_fbh": [
+   420,
+   170,
+   360
+  ],
+  "top_front": [
+   230,
+   160,
+   412
+  ],
+  "top_rear": [
+   -250,
+   160,
+   412
+  ],
+  "top_hoop": [
+   -650,
+   220,
+   560
+  ]
+ },
+ "chassis_members_left": [
+  [
+   "fbh_bottom",
+   "low_front"
+  ],
+  [
+   "low_front",
+   "low_rear"
+  ],
+  [
+   "low_rear",
+   "hoop_bottom"
+  ],
+  [
+   "mid_fbh",
+   "mid_front"
+  ],
+  [
+   "mid_front",
+   "mid_rear"
+  ],
+  [
+   "mid_rear",
+   "mid_hoop"
+  ],
+  [
+   "top_fbh",
+   "top_front"
+  ],
+  [
+   "top_front",
+   "top_rear"
+  ],
+  [
+   "top_rear",
+   "top_hoop"
+  ],
+  [
+   "fbh_bottom",
+   "mid_fbh"
+  ],
+  [
+   "low_front",
+   "mid_front"
+  ],
+  [
+   "low_rear",
+   "mid_rear"
+  ],
+  [
+   "hoop_bottom",
+   "mid_hoop"
+  ],
+  [
+   "mid_front",
+   "top_front"
+  ],
+  [
+   "mid_rear",
+   "top_rear"
+  ],
+  [
+   "mid_hoop",
+   "top_hoop"
+  ],
+  [
+   "mid_fbh",
+   "top_fbh"
+  ]
+ ],
+ "chassis_cross_members": [
+  [
+   "fbh_bottom"
+  ],
+  [
+   "fbh_top"
+  ],
+  [
+   "hoop_bottom"
+  ],
+  [
+   "top_front"
+  ],
+  [
+   "top_rear"
+  ]
+ ],
+ "driver_left": {
+  "_note": "95th-percentile-ish legs: heel rest 150 mm behind the front axle, feet up to the pedal faces at x = +75; pedal box ahead of that. These place the low front rack under the pedal faces.",
+  "foot": {
+   "from": [
+    -150,
+    100,
+    85
+   ],
+   "to": [
+    75,
+    110,
+    285
+   ],
+   "r": 45
+  },
+  "shin": {
+   "from": [
+    -130,
+    100,
+    130
+   ],
+   "to": [
+    -520,
+    120,
+    440
+   ],
+   "r": 60
+  },
+  "pedal_box": {
+   "x": [
+    85,
+    300
+   ],
+   "y": [
+    -150,
+    150
+   ],
+   "z": [
+    60,
+    340
+   ]
+  },
+  "pedal_box_note": "2026-11-08: narrowed from +/-170 to +/-150 mm. The side rails' inner faces were at 162 mm, so the old box overlapped the assumed chassis itself; found when the chassis tabs became parts the sweep checks against it. The upper side rail (mid_front, mid_rear) also moved 10 mm inboard, to y 170: with the upper wishbone bolts tilted towards it (normal to the leg, for the rod ends' misalignment), heads and tools 25-35 mm from it had no room"
+ },
+ "steering_column": {
+  "pinion": [
+   60,
+   0,
+   105
+  ],
+  "wheel_centre": [
+   -560,
+   0,
+   520
+  ],
+  "od_mm": 20
+ },
+ "_chassis_note": "Rails sit 25-35 mm from the suspension pickups and the verticals sit clear of them, so pickup brackets have room (rod-end head radius 12 mm + tube radius 12.7 mm). Top rail inboard of the rocker. Upper rail moved to y 170 on 2026-11-08 (see driver_left.pedal_box_note)."
+}

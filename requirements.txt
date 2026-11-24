@@ -1,0 +1,14 @@
+# Python 3.13. Exact versions the committed outputs were produced with (2026-10-26).
+numpy==2.5.2
+scipy==1.18.1
+matplotlib==3.11.2
+trimesh==5.2.0
+mapbox-earcut==2.1.0
+python-fcl==0.7.0.11
+rtree==1.4.1
+pytest==9.1.1
+# FEA (scripts/fea): meshing, solver, mesh I/O, optional AMG preconditioner
+gmsh==4.15.2
+scikit-fem==12.0.2
+meshio==5.3.5
+pyamg==5.3.0

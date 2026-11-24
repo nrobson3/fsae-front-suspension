@@ -1,0 +1,14 @@
+{
+ "_fea_inputs_sha": "eeca6594bbacfb8f",
+ "case": "LC4",
+ "level": 1,
+ "dofs": 434682,
+ "peak_MPa": 167.2474103015002,
+ "peak_at": [
+  -32.5,
+  584.0,
+  228.5
+ ],
+ "stored_level_peak_MPa": 166.6407603681035,
+ "base_mesh_peak_MPa": 169.98142309433308
+}

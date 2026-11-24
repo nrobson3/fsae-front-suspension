@@ -1,0 +1,6 @@
+# hardpoints v1.7
+joint,bolt,load_N,critical_lc,arm_mm,moment_Nm,bending_MPa,fos_bending,preload_N,tension_MPa,fos_combined
+Upper ball joint,AN5,1860,LC4,16.6,15.39,313,2.20,7116,144,1.51
+Lower ball joint,NAS6606,4854,LC4,17.9,43.56,513,1.83,6509,91,1.55
+Tie rod outer rod end,M8 10.9,2094,LC6,11.0,11.52,229,4.10,15625,311,1.74
+Pushrod lower rod end (LCA bracket),M8 10.9,2741,LC1,10.0,13.71,273,3.45,15625,311,1.61

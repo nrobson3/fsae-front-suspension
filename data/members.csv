@@ -1,0 +1,11 @@
+# Two-force members of the left front corner: section, hardware and allowables used by forces.py
+# rev D (2026-10-26; pushrod clevis tabs 3 -> 4 mm for the knee bracket, v1.7; hardware revision, not the hardpoint version). LCA legs 3/4 x 0.035 in from v1.5 (buckling with the narrower leg spread). Rod end = Aurora AM-M8T (M8x1.25 male, 8 mm bore, 15.88 mm ball, PTFE-lined, heat-treated alloy steel; part number corrected 2026-10-27 from "AM-M8", which does not exist), ultimate radial static load 33135 N (Timken/Aurora catalogue).
+# out/in = hardpoint ids of the outboard and inboard ends. Tube = US 4130 N stock (OD x wall, mm). Rod-end bolts = M8 class 10.9 in a double-shear clevis, sheared on the thread root (conservative).
+# rod_end_shank_mm = slender rod-end length at each end of the column (ball centre to tube insert), assumed 40 mm.
+member,out,in,tube_od_mm,tube_wall_mm,tube_material,rod_end,rod_end_ult_N,rod_end_pitch_mm,rod_end_shank_mm,bolt,bolt_d_mm,bolt_pitch_mm,shear_planes,bolt_material,tab_t_mm,tab_material
+UCA front leg,UCA_O,UCA_F,15.875,0.889,4130N_tube,Aurora AM-M8T,33135,1.25,40,M8 10.9,8.0,1.25,2,bolt_10.9,2.5,4130N_tab
+UCA rear leg,UCA_O,UCA_R,15.875,0.889,4130N_tube,Aurora AM-M8T,33135,1.25,40,M8 10.9,8.0,1.25,2,bolt_10.9,2.5,4130N_tab
+LCA front leg,LCA_O,LCA_F,19.05,0.889,4130N_tube,Aurora AM-M8T,33135,1.25,40,M8 10.9,8.0,1.25,2,bolt_10.9,2.5,4130N_tab
+LCA rear leg,LCA_O,LCA_R,19.05,0.889,4130N_tube,Aurora AM-M8T,33135,1.25,40,M8 10.9,8.0,1.25,2,bolt_10.9,2.5,4130N_tab
+Tie rod,TR_O,TR_I,15.875,1.245,4130N_tube,Aurora AM-M8T,33135,1.25,40,M8 10.9,8.0,1.25,2,bolt_10.9,3.0,4130N_tab
+Pushrod,PR_O,PR_I,19.05,0.889,4130N_tube,Aurora AM-M8T,33135,1.25,40,M8 10.9,8.0,1.25,2,bolt_10.9,4.0,4130N_tab

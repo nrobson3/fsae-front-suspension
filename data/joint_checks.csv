@@ -1,0 +1,4 @@
+# hardpoints,v1.7
+joint,max_load_N,critical_lc,fos_bearing,fos_bolt
+Upper ball joint,1859.890,LC4,15.486,27.504
+Lower ball joint,5234.630,LC4,4.759,17.827

@@ -1,0 +1,45 @@
+{
+ "_about": "Material and fastener allowables for the hand-calc checks, MPa. 'source' says where each number comes from (full references in notes/requirements.md section 8).",
+ "4130N_tube": {
+  "E_MPa": 205000,
+  "Fty_MPa": 435,
+  "Ftu_MPa": 670,
+  "weld_knockdown": 0.8,
+  "fsae_generic_welded_Sy_MPa": 180,
+  "source": "AISI 4130 normalized, typical (MatWeb) - below MIL-HDBK-5H normalized tubing Fty 70-75 ksi, so conservative. Weld knock-down 0.8 follows MIL-HDBK-5H welded-HAZ Ftu 72 ksi vs 90 ksi parent. FSAE 2026 F.3.4.2 generic welded steel Sy 180 MPa is reported as a worst-case sensitivity only."
+ },
+ "4130N_tab": {
+  "E_MPa": 205000,
+  "Fty_MPa": 435,
+  "Ftu_MPa": 670,
+  "bearing_allow_factor": 1.0,
+  "source": "Same as tube. Bearing checked against Fty x 1.0 (conservative; MMPDS-style bearing yield is about 1.5 Fty at e/D = 2)."
+ },
+ "bolt_10.9": {
+  "Fty_MPa": 940,
+  "Ftu_MPa": 1040,
+  "shear_yield_factor": 0.577,
+  "source": "ISO 898-1 property class 10.9, Rp0.2 min 940 MPa, Rm min 1040 MPa. Shear yield = 0.577 Rp0.2 (von Mises)."
+ },
+ "7075_T7351_plate": {
+  "E_MPa": 71700,
+  "nu": 0.33,
+  "density_kg_m3": 2810,
+  "Fty_typical_MPa": 434,
+  "Ftu_typical_MPa": 503,
+  "Fty_MPa": 391,
+  "Ftu_MPa": 453,
+  "Fty_ST_MPa": 352,
+  "fatigue_strength_5e8_MPa": 150,
+  "source": "Typical 63 / 73 ksi from onlinemetals.com 1 in 7075-T7351 plate (read 2026-10-26). Design values = 0.9 x typical, standing in for MMPDS A-basis until checked against MMPDS; through-thickness (ST) a further 10 % lower. Unnotched fatigue strength at 5e8 cycles about 150 MPa (typical for 7075 tempers, R = -1). T7351: chosen for stress-corrosion resistance under the sustained bearing-fit and bolt clamp stresses.",
+  "fatigue_f_1e3": 0.9,
+  "fatigue_kd_temperature_assumed": 0.95,
+  "fatigue_basis": "S-N line (Shigley's construction for aluminium, which has no endurance limit): straight on log-log axes from f x Ftu at 1e3 cycles to the Marin-corrected fatigue strength at 5e8 cycles (150 MPa unnotched x ka machined x kb 0.9 size x kd temperature (assumed 0.95 until the brake-heat check, S-16) x ke 0.814 for 99 % reliability). Mean stress by Goodman to the design Ftu. MMPDS S-N curves for 7075-T7351 plate would replace this when available."
+ },
+ "bolt_12.9": {
+  "Fty_MPa": 1100,
+  "Fproof_MPa": 970,
+  "Ftu_MPa": 1220,
+  "source": "ISO 898-1 property class 12.9: Rp0.2 min 1100 MPa, proof stress 970 MPa, Rm min 1220 MPa."
+ }
+}

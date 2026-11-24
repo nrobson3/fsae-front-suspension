@@ -1,0 +1,37 @@
+# hardpoints,v1.7
+metric,value,target_lo,target_hi,unit,status,note
+static_camber,-1.2503,-1.5,-1.0,deg,PASS,"body frame, z = 0"
+camber_recovery,61.8915,60.0,80.0,%,PASS,"min over roll 0.5-2.0 deg, outside wheel"
+camber_recovery_max,62.5519,60.0,80.0,%,PASS,max over the same window
+caster,4.9999,3.0,6.0,deg,PASS,
+kpi,6.9996,4.0,8.0,deg,PASS,
+scrub,16.4953,0.0,20.0,mm,PASS,
+trail,14.9972,10.0,20.0,mm,PASS,
+rc_height,39.0847,20.0,50.0,mm,PASS,"static, above ground"
+rc_migration_heave,35.2492,0.0,15.0,mm,FAIL,"max change of RC height above ground over +/-25 mm heave; FAIL accepted as deviation DV-1 (packaging-limited, see notes/requirements.md)"
+rc_arm_change_heave,10.2026,,,mm,,"same window, change of the CG-to-RC roll arm (RC relative to the sprung mass; information)"
+rc_migration_roll,1.3912,0.0,15.0,mm,PASS,max |dRC height| over +/-2 deg roll
+rc_lateral_roll,115.5784,,,mm,,max |lateral RC shift| over +/-2 deg roll (information)
+bump_steer,0.0001,0.0,0.1,deg,PASS,max |toe change| over +/-25 mm
+motion_ratio,0.9299,0.9,1.1,-,PASS,"static, damper / wheel"
+motion_ratio_min,0.9077,0.9,1.1,-,PASS,over +/-25 mm
+motion_ratio_max,0.9350,0.9,1.1,-,PASS,over +/-25 mm
+mr_progression,2.0192,0.0,10.0,%,PASS,(MR(+25) - MR(-25)) / MR(0)
+damper_stroke_used,55.4324,0.0,57.0,mm,PASS,for -30..+30 mm wheel travel; Ohlins TTX25 MkII FSAE stroke 57 mm
+damper_len_static,175.2000,,,mm,,eye-to-eye at static ride height (information)
+bump_stop_travel,28.1190,25.0,30.0,mm,PASS,"wheel bump at which the bump rubber (6 mm solid, assumed) goes solid; the damper cannot bottom"
+bump_rubber_solid_min,4.2719,,,mm,,smallest rubber solid height that stops travel by +30 mm (information)
+bump_rubber_solid_max,8.8811,,,mm,,largest rubber solid height that still allows 25 mm of jounce (information)
+droop_to_topout,27.0117,25.0,1000000000.0,mm,PASS,wheel droop at which the damper reaches its extended length (the droop stop); FSAE V.3.1.1 needs 50 mm in total: 25 mm each way here
+anti_dive,-0.0004,,,%,,"outboard brakes, LC3 brake split (information)"
+fvsa,989.6800,,,mm,,front-view swing-arm length (information)
+hairpin_lock_required,21.8897,,,deg,,"outer wheel, CP radius 4.16 m"
+rack_travel_at_lock,24.1286,,,mm,,rack travel giving the required outer angle
+ackermann,44.9868,40.0,60.0,%,PASS,at the hairpin lock
+inner_angle_at_lock,25.7370,,,deg,,
+rack_travel_at_stop,24.6923,,,mm,,steering stop on the rack at outer angle = lock + 0.5 deg
+lock_margin_before_stop,0.5637,0.0,1000000000.0,mm,PASS,rack travel left between the hairpin lock and the stop
+toggle_margin_at_stop,43.8200,30.0,90.0,deg,PASS,"steering arm vs tie rod at the stop, deg from lock-up (FSAE V.3.2.4)"
+ackermann_min,43.7736,40.0,60.0,%,PASS,over 5 deg .. steering stop
+ackermann_max,44.9949,40.0,60.0,%,PASS,over 5 deg .. steering stop
+arb_twist_per_roll,4.0135,,,deg/deg,,ARB twist per deg of roll (installation ratio)

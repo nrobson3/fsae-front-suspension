@@ -1,0 +1,16 @@
+# hardpoints,v1.7
+joint,part,worst_deg,limit_deg,margin_deg,status,at_z_mm,at_rack_mm,rating_source
+Upper ball joint,Aurora COM-5 spherical bearing,3.09,12.00,8.91,PASS,30.00,24.69,Timken/Aurora COM-5E item page: 12 deg
+Lower ball joint,Aurora COM-6 spherical bearing,2.74,10.00,7.26,PASS,30.00,24.69,Aurora dimension chart (aircraftspruce.com 05-01671): COM-6 10 deg
+UCA front inboard rod end,Aurora AM-M8T rod end in a double-shear clevis,2.13,18.00,15.87,PASS,30.00,24.69,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+UCA rear inboard rod end,Aurora AM-M8T rod end in a double-shear clevis,2.15,18.00,15.85,PASS,30.00,24.69,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+LCA front inboard rod end,Aurora AM-M8T rod end in a double-shear clevis,1.87,18.00,16.13,PASS,30.00,24.69,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+LCA rear inboard rod end,Aurora AM-M8T rod end in a double-shear clevis,1.93,18.00,16.07,PASS,30.00,24.69,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+Tie rod outer rod end,Aurora AM-M8T rod end in a double-shear clevis,3.32,18.00,14.68,PASS,30.00,24.69,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+Tie rod inner joint,Rack-end rod end (Aurora AM-M8T in a clevis),5.09,18.00,12.91,PASS,30.00,24.69,Assumed same part and mounting as the other rod ends
+Pushrod lower rod end,Aurora AM-M8T rod end in a double-shear clevis,0.20,18.00,17.80,PASS,30.00,24.69,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+Pushrod upper rod end,Aurora AM-M8T rod end in a double-shear clevis,0.98,18.00,17.02,PASS,30.00,24.69,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+Damper chassis eye,Ohlins TTX25 MkII eye spherical bearing (8 mm),0.00,10.00,10.00,PASS,-30.00,-24.69,ASSUMED (not published) - confirm against the Ohlins external-dimensions drawing
+Damper rocker eye,Ohlins TTX25 MkII eye spherical bearing (8 mm),0.00,10.00,10.00,PASS,-30.00,-24.69,ASSUMED (not published) - confirm against the Ohlins external-dimensions drawing
+Drop link rocker end,Aurora AM-M8T rod end in a double-shear clevis,0.55,18.00,17.45,PASS,30.00,24.69,Timken/Aurora AM-M8T item page: a1 clevis mounted 18 deg
+Drop link lever end,"Aurora AM-M8T rod end, single shear (spacer each side, 24 mm washer outside)",2.15,18.00,15.85,PASS,30.00,24.69,As the clevis rating: each side of the ball the same 5 mm spacer then a face wider than the housing (the ARB blade; the 24 mm washer)
